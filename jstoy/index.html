@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="paul">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>JSToy</title>
+  </head>
+  <body>
+    <h1>JSToy</h1>
+    <div id="toy-in">
+      <div id="info">
+        <span>use `print()` for raw output, </span>
+        <span>use `load(file, callback)` for loading script files</span>
+      </div>
+      <div>
+        <form name="edit" id="input" type="post" action="">
+          <div>
+            <span class="txtspace">
+              <textarea name="code" form="input" rows="24" cols="80"
+                  spellcheck="false" autocorrect="off"></textarea>
+            </span>
+          </div>
+          <div>
+            <span class="btnspace">
+              <input name="submit" type="submit" value="eval()">
+            </span>
+            <span class="btnspace">
+              <input name="save" type="button" value="save">
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="toy-out">
+      <div id="result"></div>
+      <span id="print"></span>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,34 @@
+h1 {
+    padding-left: 24px;
+    color: teal;
+    font-size: 1.6em;
+}
+
+#info {
+    margin-left: 6px;
+    color: gray;
+}
+
+#toy-in textarea {
+    width: 100%;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.btnspace {
+    margin-right: 24px;
+}
+
+#result {
+    margin: 6px;
+    color: darkslategray;
+    background-color: ghostwhite;
+    font-size: 18px;
+}
+
+.printline {
+    padding-left: 6px;
+    color: teal;
+    font-family: monospace;
+    font-size: 15px;
+}
