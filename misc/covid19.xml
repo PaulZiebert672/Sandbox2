@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gnm:Workbook xmlns:gnm="http://www.gnumeric.org/v10.dtd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gnumeric.org/v9.xsd">
+  <gnm:Version Epoch="1" Major="12" Minor="23" Full="1.12.23"/>
+  <gnm:Attributes>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_horizontal_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_vertical_scrollbar</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::show_notebook_tabs</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::do_auto_completion</gnm:name>
+      <gnm:value>TRUE</gnm:value>
+    </gnm:Attribute>
+    <gnm:Attribute>
+      <gnm:name>WorkbookView::is_protected</gnm:name>
+      <gnm:value>FALSE</gnm:value>
+    </gnm:Attribute>
+  </gnm:Attributes>
+  <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
+    <office:meta>
+      <dc:date>2020-05-06T16:23:09Z</dc:date>
+      <meta:creation-date>2020-03-26T08:10:01Z</meta:creation-date>
+    </office:meta>
+  </office:document-meta>
+  <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
+  <gnm:SheetNameIndex>
+    <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet_Data</gnm:SheetName>
+    <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_T</gnm:SheetName>
+    <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_R</gnm:SheetName>
+  </gnm:SheetNameIndex>
+  <gnm:Geometry Width="1494" Height="831"/>
+  <gnm:Sheets>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Sheet_Data</gnm:Name>
+      <gnm:MaxCol>15</gnm:MaxCol>
+      <gnm:MaxRow>74</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:Names>
+        <gnm:Name>
+          <gnm:name>Print_Area</gnm:name>
+          <gnm:value>#REF!</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+        <gnm:Name>
+          <gnm:name>Sheet_Title</gnm:name>
+          <gnm:value>&quot;Sheet_Data&quot;</gnm:value>
+          <gnm:position>A1</gnm:position>
+        </gnm:Name>
+      </gnm:Names>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>portrait</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="0" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="0" startRow="1" endCol="0" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="1" startRow="0" endCol="1" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="yyyy-mm-dd">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="1" startRow="1" endCol="1" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="yyyy-mm-dd">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="2" startRow="0" endCol="2" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="2" startRow="1" endCol="2" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="3" startRow="0" endCol="4" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="0">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="3" startRow="1" endCol="4" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="0">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="5" startRow="0" endCol="5" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="0">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="5" startRow="1" endCol="5" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="0">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="6" startRow="0" endCol="6" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="6" startRow="1" endCol="6" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="7" startRow="0" endCol="7" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="7" startRow="1" endCol="7" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="8" startRow="0" endCol="10" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="8" startRow="1" endCol="8" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="9" startRow="1" endCol="9" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="10" startRow="1" endCol="10" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="11" startRow="0" endCol="11" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="11" startRow="1" endCol="11" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="12" startRow="0" endCol="14" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="12" startRow="1" endCol="12" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="13" startRow="1" endCol="14" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="15" startRow="0" endCol="15" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="12" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Droid Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="15" startRow="1" endCol="15" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="1" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+            <gnm:StyleBorder>
+              <gnm:Right Style="1" Color="0:0:0"/>
+            </gnm:StyleBorder>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="16" startRow="0" endCol="255" endRow="0">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="1" Indent="0" Locked="1" Hidden="0" Fore="0:0:8080" Back="C0C0:C0C0:C0C0" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+        <gnm:StyleRegion startCol="16" startRow="1" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48">
+        <gnm:ColInfo No="1" Unit="72" HardSize="1"/>
+        <gnm:ColInfo No="2" Unit="59.25"/>
+        <gnm:ColInfo No="4" Unit="60" HardSize="1"/>
+        <gnm:ColInfo No="5" Unit="55.5" HardSize="1"/>
+        <gnm:ColInfo No="6" Unit="63"/>
+        <gnm:ColInfo No="7" Unit="54.75" HardSize="1"/>
+        <gnm:ColInfo No="8" Unit="58.5"/>
+        <gnm:ColInfo No="9" Unit="51"/>
+        <gnm:ColInfo No="10" Unit="57.75"/>
+        <gnm:ColInfo No="11" Unit="52.5"/>
+        <gnm:ColInfo No="12" Unit="59.25"/>
+        <gnm:ColInfo No="13" Unit="51.75"/>
+        <gnm:ColInfo No="14" Unit="59.25"/>
+        <gnm:ColInfo No="15" Unit="54"/>
+      </gnm:Cols>
+      <gnm:Rows DefaultSizePts="12.75">
+        <gnm:RowInfo No="0" Unit="17.25"/>
+        <gnm:RowInfo No="1" Unit="14.25" Count="73"/>
+      </gnm:Rows>
+      <gnm:Selections CursorCol="8" CursorRow="73">
+        <gnm:Selection startCol="8" startRow="73" endCol="8" endRow="73"/>
+      </gnm:Selections>
+      <gnm:Cells>
+        <gnm:Cell Row="0" Col="0" ValueType="60">N</gnm:Cell>
+        <gnm:Cell Row="0" Col="1" ValueType="60">Date</gnm:Cell>
+        <gnm:Cell Row="0" Col="2" ValueType="60">IT_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="3" ValueType="60">IT_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="4" ValueType="60">LOM_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="5" ValueType="60">LOM_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="6" ValueType="60">DE_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="7" ValueType="60">DE_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="8" ValueType="60">US_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="9" ValueType="60">US_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="10" ValueType="60">NYC_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="11" ValueType="60">NYC_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="12" ValueType="60">RU_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="13" ValueType="60">RU_diff</gnm:Cell>
+        <gnm:Cell Row="0" Col="14" ValueType="60">MOS_total</gnm:Cell>
+        <gnm:Cell Row="0" Col="15" ValueType="60">MOS_diff</gnm:Cell>
+        <gnm:Cell Row="1" Col="0" ValueType="40">-5</gnm:Cell>
+        <gnm:Cell Row="1" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43885</gnm:Cell>
+        <gnm:Cell Row="1" Col="2" ValueType="40">229</gnm:Cell>
+        <gnm:Cell Row="1" Col="5" ValueType="40">61</gnm:Cell>
+        <gnm:Cell Row="1" Col="6" ValueType="40">16</gnm:Cell>
+        <gnm:Cell Row="2" Col="0" ValueType="40">-4</gnm:Cell>
+        <gnm:Cell Row="2" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43886</gnm:Cell>
+        <gnm:Cell Row="2" Col="2" ValueType="40">322</gnm:Cell>
+        <gnm:Cell Row="2" Col="3" ExprID="1">=C3-C2</gnm:Cell>
+        <gnm:Cell Row="2" Col="5" ValueType="40">67</gnm:Cell>
+        <gnm:Cell Row="2" Col="6" ValueType="40">18</gnm:Cell>
+        <gnm:Cell Row="2" Col="7" ExprID="1"/>
+        <gnm:Cell Row="3" Col="0" ValueType="40">-3</gnm:Cell>
+        <gnm:Cell Row="3" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43887</gnm:Cell>
+        <gnm:Cell Row="3" Col="2" ValueType="40">445</gnm:Cell>
+        <gnm:Cell Row="3" Col="3" ExprID="1"/>
+        <gnm:Cell Row="3" Col="5" ValueType="40">65</gnm:Cell>
+        <gnm:Cell Row="3" Col="6" ValueType="40">21</gnm:Cell>
+        <gnm:Cell Row="3" Col="7" ExprID="1"/>
+        <gnm:Cell Row="3" Col="8" ValueType="40">15</gnm:Cell>
+        <gnm:Cell Row="4" Col="0" ValueType="40">-2</gnm:Cell>
+        <gnm:Cell Row="4" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43888</gnm:Cell>
+        <gnm:Cell Row="4" Col="2" ValueType="40">650</gnm:Cell>
+        <gnm:Cell Row="4" Col="3" ExprID="1"/>
+        <gnm:Cell Row="4" Col="5" ValueType="40">98</gnm:Cell>
+        <gnm:Cell Row="4" Col="6" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="4" Col="7" ExprID="1"/>
+        <gnm:Cell Row="4" Col="8" ValueType="40">15</gnm:Cell>
+        <gnm:Cell Row="4" Col="9" ExprID="1"/>
+        <gnm:Cell Row="5" Col="0" ValueType="40">-1</gnm:Cell>
+        <gnm:Cell Row="5" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43889</gnm:Cell>
+        <gnm:Cell Row="5" Col="2" ValueType="40">888</gnm:Cell>
+        <gnm:Cell Row="5" Col="3" ExprID="1"/>
+        <gnm:Cell Row="5" Col="5" ValueType="40">128</gnm:Cell>
+        <gnm:Cell Row="5" Col="6" ValueType="40">53</gnm:Cell>
+        <gnm:Cell Row="5" Col="7" ExprID="1"/>
+        <gnm:Cell Row="5" Col="8" ValueType="40">19</gnm:Cell>
+        <gnm:Cell Row="5" Col="9" ExprID="1"/>
+        <gnm:Cell Row="6" Col="0" ValueType="40">0</gnm:Cell>
+        <gnm:Cell Row="6" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43890</gnm:Cell>
+        <gnm:Cell Row="6" Col="2" ValueType="40">1128</gnm:Cell>
+        <gnm:Cell Row="6" Col="3" ExprID="1"/>
+        <gnm:Cell Row="6" Col="5" ValueType="40">84</gnm:Cell>
+        <gnm:Cell Row="6" Col="6" ValueType="40">66</gnm:Cell>
+        <gnm:Cell Row="6" Col="7" ExprID="1"/>
+        <gnm:Cell Row="6" Col="8" ValueType="40">24</gnm:Cell>
+        <gnm:Cell Row="6" Col="9" ExprID="1"/>
+        <gnm:Cell Row="7" Col="0" ValueType="40">1</gnm:Cell>
+        <gnm:Cell Row="7" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43891</gnm:Cell>
+        <gnm:Cell Row="7" Col="2" ValueType="40">1694</gnm:Cell>
+        <gnm:Cell Row="7" Col="3" ExprID="1"/>
+        <gnm:Cell Row="7" Col="5" ValueType="40">369</gnm:Cell>
+        <gnm:Cell Row="7" Col="6" ValueType="40">117</gnm:Cell>
+        <gnm:Cell Row="7" Col="7" ExprID="1"/>
+        <gnm:Cell Row="7" Col="8" ValueType="40">42</gnm:Cell>
+        <gnm:Cell Row="7" Col="9" ExprID="1"/>
+        <gnm:Cell Row="8" Col="0" ValueType="40">2</gnm:Cell>
+        <gnm:Cell Row="8" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43892</gnm:Cell>
+        <gnm:Cell Row="8" Col="2" ValueType="40">2036</gnm:Cell>
+        <gnm:Cell Row="8" Col="3" ExprID="1"/>
+        <gnm:Cell Row="8" Col="5" ValueType="40">270</gnm:Cell>
+        <gnm:Cell Row="8" Col="6" ValueType="40">150</gnm:Cell>
+        <gnm:Cell Row="8" Col="7" ExprID="1"/>
+        <gnm:Cell Row="8" Col="8" ValueType="40">57</gnm:Cell>
+        <gnm:Cell Row="8" Col="9" ExprID="1"/>
+        <gnm:Cell Row="9" Col="0" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="9" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43893</gnm:Cell>
+        <gnm:Cell Row="9" Col="2" ValueType="40">2502</gnm:Cell>
+        <gnm:Cell Row="9" Col="3" ExprID="1"/>
+        <gnm:Cell Row="9" Col="5" ValueType="40">266</gnm:Cell>
+        <gnm:Cell Row="9" Col="6" ValueType="40">188</gnm:Cell>
+        <gnm:Cell Row="9" Col="7" ExprID="1"/>
+        <gnm:Cell Row="9" Col="8" ValueType="40">85</gnm:Cell>
+        <gnm:Cell Row="9" Col="9" ExprID="1"/>
+        <gnm:Cell Row="10" Col="0" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="10" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43894</gnm:Cell>
+        <gnm:Cell Row="10" Col="2" ValueType="40">3089</gnm:Cell>
+        <gnm:Cell Row="10" Col="3" ExprID="1"/>
+        <gnm:Cell Row="10" Col="5" ValueType="40">300</gnm:Cell>
+        <gnm:Cell Row="10" Col="6" ValueType="40">240</gnm:Cell>
+        <gnm:Cell Row="10" Col="7" ExprID="1"/>
+        <gnm:Cell Row="10" Col="8" ValueType="40">111</gnm:Cell>
+        <gnm:Cell Row="10" Col="9" ExprID="1"/>
+        <gnm:Cell Row="11" Col="0" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="11" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43895</gnm:Cell>
+        <gnm:Cell Row="11" Col="2" ValueType="40">3858</gnm:Cell>
+        <gnm:Cell Row="11" Col="3" ExprID="1"/>
+        <gnm:Cell Row="11" Col="5" ValueType="40">431</gnm:Cell>
+        <gnm:Cell Row="11" Col="6" ValueType="40">349</gnm:Cell>
+        <gnm:Cell Row="11" Col="7" ExprID="1"/>
+        <gnm:Cell Row="11" Col="8" ValueType="40">175</gnm:Cell>
+        <gnm:Cell Row="11" Col="9" ExprID="1"/>
+        <gnm:Cell Row="12" Col="0" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="12" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43896</gnm:Cell>
+        <gnm:Cell Row="12" Col="2" ValueType="40">4636</gnm:Cell>
+        <gnm:Cell Row="12" Col="3" ExprID="1"/>
+        <gnm:Cell Row="12" Col="5" ValueType="40">361</gnm:Cell>
+        <gnm:Cell Row="12" Col="6" ValueType="40">534</gnm:Cell>
+        <gnm:Cell Row="12" Col="7" ExprID="1"/>
+        <gnm:Cell Row="12" Col="8" ValueType="40">252</gnm:Cell>
+        <gnm:Cell Row="12" Col="9" ExprID="1"/>
+        <gnm:Cell Row="12" Col="12" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="12" Col="15" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="13" Col="0" ValueType="40">7</gnm:Cell>
+        <gnm:Cell Row="13" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43897</gnm:Cell>
+        <gnm:Cell Row="13" Col="2" ValueType="40">5883</gnm:Cell>
+        <gnm:Cell Row="13" Col="3" ExprID="1"/>
+        <gnm:Cell Row="13" Col="5" ValueType="40">808</gnm:Cell>
+        <gnm:Cell Row="13" Col="6" ValueType="40">684</gnm:Cell>
+        <gnm:Cell Row="13" Col="7" ExprID="1"/>
+        <gnm:Cell Row="13" Col="8" ValueType="40">353</gnm:Cell>
+        <gnm:Cell Row="13" Col="9" ExprID="1"/>
+        <gnm:Cell Row="13" Col="10" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="13" Col="11" ExprID="1"/>
+        <gnm:Cell Row="13" Col="12" ValueType="40">14</gnm:Cell>
+        <gnm:Cell Row="13" Col="13" ExprID="1"/>
+        <gnm:Cell Row="14" Col="0" ValueType="40">8</gnm:Cell>
+        <gnm:Cell Row="14" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43898</gnm:Cell>
+        <gnm:Cell Row="14" Col="2" ValueType="40">7375</gnm:Cell>
+        <gnm:Cell Row="14" Col="3" ExprID="1"/>
+        <gnm:Cell Row="14" Col="5" ValueType="40">769</gnm:Cell>
+        <gnm:Cell Row="14" Col="6" ValueType="40">847</gnm:Cell>
+        <gnm:Cell Row="14" Col="7" ExprID="1"/>
+        <gnm:Cell Row="14" Col="8" ValueType="40">497</gnm:Cell>
+        <gnm:Cell Row="14" Col="9" ExprID="1"/>
+        <gnm:Cell Row="14" Col="10" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="14" Col="11" ExprID="1"/>
+        <gnm:Cell Row="14" Col="12" ValueType="40">17</gnm:Cell>
+        <gnm:Cell Row="14" Col="13" ExprID="1"/>
+        <gnm:Cell Row="15" Col="0" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="15" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43899</gnm:Cell>
+        <gnm:Cell Row="15" Col="2" ValueType="40">9172</gnm:Cell>
+        <gnm:Cell Row="15" Col="3" ExprID="1"/>
+        <gnm:Cell Row="15" Col="5" ValueType="40">1280</gnm:Cell>
+        <gnm:Cell Row="15" Col="6" ValueType="40">1112</gnm:Cell>
+        <gnm:Cell Row="15" Col="7" ExprID="1"/>
+        <gnm:Cell Row="15" Col="8" ValueType="40">645</gnm:Cell>
+        <gnm:Cell Row="15" Col="9" ExprID="1"/>
+        <gnm:Cell Row="15" Col="10" ValueType="40">19</gnm:Cell>
+        <gnm:Cell Row="15" Col="11" ExprID="1"/>
+        <gnm:Cell Row="15" Col="12" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="15" Col="13" ExprID="1"/>
+        <gnm:Cell Row="15" Col="15" ValueType="40">3</gnm:Cell>
+        <gnm:Cell Row="16" Col="0" ValueType="40">10</gnm:Cell>
+        <gnm:Cell Row="16" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43900</gnm:Cell>
+        <gnm:Cell Row="16" Col="2" ValueType="40">10149</gnm:Cell>
+        <gnm:Cell Row="16" Col="3" ExprID="1"/>
+        <gnm:Cell Row="16" Col="5" ValueType="40">322</gnm:Cell>
+        <gnm:Cell Row="16" Col="6" ValueType="40">1460</gnm:Cell>
+        <gnm:Cell Row="16" Col="7" ExprID="1"/>
+        <gnm:Cell Row="16" Col="8" ValueType="40">936</gnm:Cell>
+        <gnm:Cell Row="16" Col="9" ExprID="1"/>
+        <gnm:Cell Row="16" Col="10" ValueType="40">36</gnm:Cell>
+        <gnm:Cell Row="16" Col="11" ExprID="1"/>
+        <gnm:Cell Row="16" Col="12" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="16" Col="13" ExprID="1"/>
+        <gnm:Cell Row="17" Col="0" ValueType="40">11</gnm:Cell>
+        <gnm:Cell Row="17" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43901</gnm:Cell>
+        <gnm:Cell Row="17" Col="2" ValueType="40">12462</gnm:Cell>
+        <gnm:Cell Row="17" Col="3" ExprID="1"/>
+        <gnm:Cell Row="17" Col="5" ValueType="40">1489</gnm:Cell>
+        <gnm:Cell Row="17" Col="6" ValueType="40">1884</gnm:Cell>
+        <gnm:Cell Row="17" Col="7" ExprID="1"/>
+        <gnm:Cell Row="17" Col="8" ValueType="40">1205</gnm:Cell>
+        <gnm:Cell Row="17" Col="9" ExprID="1"/>
+        <gnm:Cell Row="17" Col="10" ValueType="40">52</gnm:Cell>
+        <gnm:Cell Row="17" Col="11" ExprID="1"/>
+        <gnm:Cell Row="17" Col="12" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="17" Col="13" ExprID="1"/>
+        <gnm:Cell Row="17" Col="15" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="18" Col="0" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="18" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43902</gnm:Cell>
+        <gnm:Cell Row="18" Col="2" ValueType="40">15113</gnm:Cell>
+        <gnm:Cell Row="18" Col="3" ExprID="1"/>
+        <gnm:Cell Row="18" Col="5" ValueType="40">1445</gnm:Cell>
+        <gnm:Cell Row="18" Col="6" ValueType="40">2369</gnm:Cell>
+        <gnm:Cell Row="18" Col="7" ExprID="1"/>
+        <gnm:Cell Row="18" Col="8" ValueType="40">1598</gnm:Cell>
+        <gnm:Cell Row="18" Col="9" ExprID="1"/>
+        <gnm:Cell Row="18" Col="10" ValueType="40">95</gnm:Cell>
+        <gnm:Cell Row="18" Col="11" ExprID="1"/>
+        <gnm:Cell Row="18" Col="12" ValueType="40">34</gnm:Cell>
+        <gnm:Cell Row="18" Col="13" ExprID="1"/>
+        <gnm:Cell Row="18" Col="15" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="19" Col="0" ValueType="40">13</gnm:Cell>
+        <gnm:Cell Row="19" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43903</gnm:Cell>
+        <gnm:Cell Row="19" Col="2" ValueType="40">17660</gnm:Cell>
+        <gnm:Cell Row="19" Col="3" ExprID="1"/>
+        <gnm:Cell Row="19" Col="5" ValueType="40">1095</gnm:Cell>
+        <gnm:Cell Row="19" Col="6" ValueType="40">3062</gnm:Cell>
+        <gnm:Cell Row="19" Col="7" ExprID="1"/>
+        <gnm:Cell Row="19" Col="8" ValueType="40">2163</gnm:Cell>
+        <gnm:Cell Row="19" Col="9" ExprID="1"/>
+        <gnm:Cell Row="19" Col="10" ValueType="40">124</gnm:Cell>
+        <gnm:Cell Row="19" Col="11" ExprID="1"/>
+        <gnm:Cell Row="19" Col="12" ValueType="40">45</gnm:Cell>
+        <gnm:Cell Row="19" Col="13" ExprID="1"/>
+        <gnm:Cell Row="19" Col="15" ValueType="40">5</gnm:Cell>
+        <gnm:Cell Row="20" Col="0" ValueType="40">14</gnm:Cell>
+        <gnm:Cell Row="20" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43904</gnm:Cell>
+        <gnm:Cell Row="20" Col="2" ValueType="40">21157</gnm:Cell>
+        <gnm:Cell Row="20" Col="3" ExprID="1"/>
+        <gnm:Cell Row="20" Col="5" ValueType="40">1865</gnm:Cell>
+        <gnm:Cell Row="20" Col="6" ValueType="40">3795</gnm:Cell>
+        <gnm:Cell Row="20" Col="7" ExprID="1"/>
+        <gnm:Cell Row="20" Col="8" ValueType="40">2825</gnm:Cell>
+        <gnm:Cell Row="20" Col="9" ExprID="1"/>
+        <gnm:Cell Row="20" Col="10" ValueType="40">269</gnm:Cell>
+        <gnm:Cell Row="20" Col="11" ExprID="1"/>
+        <gnm:Cell Row="20" Col="12" ValueType="40">59</gnm:Cell>
+        <gnm:Cell Row="20" Col="13" ExprID="1"/>
+        <gnm:Cell Row="20" Col="15" ValueType="40">9</gnm:Cell>
+        <gnm:Cell Row="21" Col="0" ValueType="40">15</gnm:Cell>
+        <gnm:Cell Row="21" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43905</gnm:Cell>
+        <gnm:Cell Row="21" Col="2" ValueType="40">24747</gnm:Cell>
+        <gnm:Cell Row="21" Col="3" ExprID="1"/>
+        <gnm:Cell Row="21" Col="5" ValueType="40">1587</gnm:Cell>
+        <gnm:Cell Row="21" Col="6" ValueType="40">4838</gnm:Cell>
+        <gnm:Cell Row="21" Col="7" ExprID="1"/>
+        <gnm:Cell Row="21" Col="8" ValueType="40">3501</gnm:Cell>
+        <gnm:Cell Row="21" Col="9" ExprID="1"/>
+        <gnm:Cell Row="21" Col="10" ValueType="40">329</gnm:Cell>
+        <gnm:Cell Row="21" Col="11" ExprID="1"/>
+        <gnm:Cell Row="21" Col="12" ValueType="40">63</gnm:Cell>
+        <gnm:Cell Row="21" Col="13" ExprID="1"/>
+        <gnm:Cell Row="22" Col="0" ValueType="40">16</gnm:Cell>
+        <gnm:Cell Row="22" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43906</gnm:Cell>
+        <gnm:Cell Row="22" Col="2" ValueType="40">27980</gnm:Cell>
+        <gnm:Cell Row="22" Col="3" ExprID="1"/>
+        <gnm:Cell Row="22" Col="5" ValueType="40">1377</gnm:Cell>
+        <gnm:Cell Row="22" Col="6" ValueType="40">6012</gnm:Cell>
+        <gnm:Cell Row="22" Col="7" ExprID="1"/>
+        <gnm:Cell Row="22" Col="8" ValueType="40">4373</gnm:Cell>
+        <gnm:Cell Row="22" Col="9" ExprID="1"/>
+        <gnm:Cell Row="22" Col="10" ValueType="40">463</gnm:Cell>
+        <gnm:Cell Row="22" Col="11" ExprID="1"/>
+        <gnm:Cell Row="22" Col="12" ValueType="40">93</gnm:Cell>
+        <gnm:Cell Row="22" Col="13" ExprID="1"/>
+        <gnm:Cell Row="22" Col="15" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="23" Col="0" ValueType="40">17</gnm:Cell>
+        <gnm:Cell Row="23" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43907</gnm:Cell>
+        <gnm:Cell Row="23" Col="2" ValueType="40">31506</gnm:Cell>
+        <gnm:Cell Row="23" Col="3" ExprID="1"/>
+        <gnm:Cell Row="23" Col="5" ValueType="40">1571</gnm:Cell>
+        <gnm:Cell Row="23" Col="6" ValueType="40">7156</gnm:Cell>
+        <gnm:Cell Row="23" Col="7" ExprID="1"/>
+        <gnm:Cell Row="23" Col="8" ValueType="40">5662</gnm:Cell>
+        <gnm:Cell Row="23" Col="9" ExprID="1"/>
+        <gnm:Cell Row="23" Col="10" ValueType="40">644</gnm:Cell>
+        <gnm:Cell Row="23" Col="11" ExprID="1"/>
+        <gnm:Cell Row="23" Col="12" ValueType="40">114</gnm:Cell>
+        <gnm:Cell Row="23" Col="13" ExprID="1"/>
+        <gnm:Cell Row="23" Col="15" ValueType="40">4</gnm:Cell>
+        <gnm:Cell Row="24" Col="0" ValueType="40">18</gnm:Cell>
+        <gnm:Cell Row="24" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43908</gnm:Cell>
+        <gnm:Cell Row="24" Col="2" ValueType="40">35713</gnm:Cell>
+        <gnm:Cell Row="24" Col="3" ExprID="1"/>
+        <gnm:Cell Row="24" Col="5" ValueType="40">1493</gnm:Cell>
+        <gnm:Cell Row="24" Col="6" ValueType="40">8198</gnm:Cell>
+        <gnm:Cell Row="24" Col="7" ExprID="1"/>
+        <gnm:Cell Row="24" Col="8" ValueType="40">8074</gnm:Cell>
+        <gnm:Cell Row="24" Col="9" ExprID="1"/>
+        <gnm:Cell Row="24" Col="10" ValueType="40">1339</gnm:Cell>
+        <gnm:Cell Row="24" Col="11" ExprID="1"/>
+        <gnm:Cell Row="24" Col="12" ValueType="40">147</gnm:Cell>
+        <gnm:Cell Row="24" Col="13" ExprID="1"/>
+        <gnm:Cell Row="24" Col="15" ValueType="40">31</gnm:Cell>
+        <gnm:Cell Row="25" Col="0" ValueType="40">19</gnm:Cell>
+        <gnm:Cell Row="25" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43909</gnm:Cell>
+        <gnm:Cell Row="25" Col="2" ValueType="40">41035</gnm:Cell>
+        <gnm:Cell Row="25" Col="3" ExprID="1"/>
+        <gnm:Cell Row="25" Col="5" ValueType="40">2171</gnm:Cell>
+        <gnm:Cell Row="25" Col="6" ValueType="40">10999</gnm:Cell>
+        <gnm:Cell Row="25" Col="7" ExprID="1"/>
+        <gnm:Cell Row="25" Col="8" ValueType="40">12018</gnm:Cell>
+        <gnm:Cell Row="25" Col="9" ExprID="1"/>
+        <gnm:Cell Row="25" Col="10" ValueType="40">2469</gnm:Cell>
+        <gnm:Cell Row="25" Col="11" ExprID="1"/>
+        <gnm:Cell Row="25" Col="12" ValueType="40">199</gnm:Cell>
+        <gnm:Cell Row="25" Col="13" ExprID="1"/>
+        <gnm:Cell Row="25" Col="15" ValueType="40">12</gnm:Cell>
+        <gnm:Cell Row="26" Col="0" ValueType="40">20</gnm:Cell>
+        <gnm:Cell Row="26" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43910</gnm:Cell>
+        <gnm:Cell Row="26" Col="2" ValueType="40">47021</gnm:Cell>
+        <gnm:Cell Row="26" Col="3" ExprID="1"/>
+        <gnm:Cell Row="26" Col="5" ValueType="40">2380</gnm:Cell>
+        <gnm:Cell Row="26" Col="6" ValueType="40">13957</gnm:Cell>
+        <gnm:Cell Row="26" Col="7" ExprID="1"/>
+        <gnm:Cell Row="26" Col="8" ValueType="40">17439</gnm:Cell>
+        <gnm:Cell Row="26" Col="9" ExprID="1"/>
+        <gnm:Cell Row="26" Col="10" ValueType="40">4408</gnm:Cell>
+        <gnm:Cell Row="26" Col="11" ExprID="1"/>
+        <gnm:Cell Row="26" Col="12" ValueType="40">253</gnm:Cell>
+        <gnm:Cell Row="26" Col="13" ExprID="1"/>
+        <gnm:Cell Row="26" Col="15" ValueType="40">33</gnm:Cell>
+        <gnm:Cell Row="27" Col="0" ValueType="40">21</gnm:Cell>
+        <gnm:Cell Row="27" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43911</gnm:Cell>
+        <gnm:Cell Row="27" Col="2" ValueType="40">53578</gnm:Cell>
+        <gnm:Cell Row="27" Col="3" ExprID="1"/>
+        <gnm:Cell Row="27" Col="5" ValueType="40">3251</gnm:Cell>
+        <gnm:Cell Row="27" Col="6" ValueType="40">16662</gnm:Cell>
+        <gnm:Cell Row="27" Col="7" ExprID="1"/>
+        <gnm:Cell Row="27" Col="8" ValueType="40">23710</gnm:Cell>
+        <gnm:Cell Row="27" Col="9" ExprID="1"/>
+        <gnm:Cell Row="27" Col="10" ValueType="40">6211</gnm:Cell>
+        <gnm:Cell Row="27" Col="11" ExprID="1"/>
+        <gnm:Cell Row="27" Col="12" ValueType="40">306</gnm:Cell>
+        <gnm:Cell Row="27" Col="13" ExprID="1"/>
+        <gnm:Cell Row="27" Col="15" ValueType="40">6</gnm:Cell>
+        <gnm:Cell Row="28" Col="0" ValueType="40">22</gnm:Cell>
+        <gnm:Cell Row="28" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43912</gnm:Cell>
+        <gnm:Cell Row="28" Col="2" ValueType="40">59138</gnm:Cell>
+        <gnm:Cell Row="28" Col="3" ExprID="1"/>
+        <gnm:Cell Row="28" Col="5" ValueType="40">1691</gnm:Cell>
+        <gnm:Cell Row="28" Col="6" ValueType="40">18610</gnm:Cell>
+        <gnm:Cell Row="28" Col="7" ExprID="1"/>
+        <gnm:Cell Row="28" Col="8" ValueType="40">32341</gnm:Cell>
+        <gnm:Cell Row="28" Col="9" ExprID="1"/>
+        <gnm:Cell Row="28" Col="10" ValueType="40">9045</gnm:Cell>
+        <gnm:Cell Row="28" Col="11" ExprID="1"/>
+        <gnm:Cell Row="28" Col="12" ValueType="40">367</gnm:Cell>
+        <gnm:Cell Row="28" Col="13" ExprID="1"/>
+        <gnm:Cell Row="28" Col="15" ValueType="40">54</gnm:Cell>
+        <gnm:Cell Row="29" Col="0" ValueType="40">23</gnm:Cell>
+        <gnm:Cell Row="29" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43913</gnm:Cell>
+        <gnm:Cell Row="29" Col="2" ValueType="40">63927</gnm:Cell>
+        <gnm:Cell Row="29" Col="3" ExprID="1"/>
+        <gnm:Cell Row="29" Col="5" ValueType="40">1555</gnm:Cell>
+        <gnm:Cell Row="29" Col="6" ValueType="40">22672</gnm:Cell>
+        <gnm:Cell Row="29" Col="7" ExprID="1"/>
+        <gnm:Cell Row="29" Col="8" ValueType="40">42749</gnm:Cell>
+        <gnm:Cell Row="29" Col="9" ExprID="1"/>
+        <gnm:Cell Row="29" Col="10" ValueType="40">12305</gnm:Cell>
+        <gnm:Cell Row="29" Col="11" ExprID="1"/>
+        <gnm:Cell Row="29" Col="12" ValueType="40">438</gnm:Cell>
+        <gnm:Cell Row="29" Col="13" ExprID="1"/>
+        <gnm:Cell Row="29" Col="15" ValueType="40">71</gnm:Cell>
+        <gnm:Cell Row="30" Col="0" ValueType="40">24</gnm:Cell>
+        <gnm:Cell Row="30" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43914</gnm:Cell>
+        <gnm:Cell Row="30" Col="2" ValueType="40">69176</gnm:Cell>
+        <gnm:Cell Row="30" Col="3" ExprID="1"/>
+        <gnm:Cell Row="30" Col="5" ValueType="40">1942</gnm:Cell>
+        <gnm:Cell Row="30" Col="6" ValueType="40">27436</gnm:Cell>
+        <gnm:Cell Row="30" Col="7" ExprID="1"/>
+        <gnm:Cell Row="30" Col="8" ValueType="40">52685</gnm:Cell>
+        <gnm:Cell Row="30" Col="9" ExprID="1"/>
+        <gnm:Cell Row="30" Col="10" ValueType="40">14904</gnm:Cell>
+        <gnm:Cell Row="30" Col="11" ExprID="1"/>
+        <gnm:Cell Row="30" Col="12" ValueType="40">495</gnm:Cell>
+        <gnm:Cell Row="30" Col="13" ExprID="1"/>
+        <gnm:Cell Row="30" Col="15" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="31" Col="0" ValueType="40">25</gnm:Cell>
+        <gnm:Cell Row="31" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43915</gnm:Cell>
+        <gnm:Cell Row="31" Col="2" ValueType="40">74386</gnm:Cell>
+        <gnm:Cell Row="31" Col="3" ExprID="1"/>
+        <gnm:Cell Row="31" Col="5" ValueType="40">1643</gnm:Cell>
+        <gnm:Cell Row="31" Col="6" ValueType="40">31554</gnm:Cell>
+        <gnm:Cell Row="31" Col="7" ExprID="1"/>
+        <gnm:Cell Row="31" Col="8" ValueType="40">64916</gnm:Cell>
+        <gnm:Cell Row="31" Col="9" ExprID="1"/>
+        <gnm:Cell Row="31" Col="10" ValueType="40">17856</gnm:Cell>
+        <gnm:Cell Row="31" Col="11" ExprID="1"/>
+        <gnm:Cell Row="31" Col="12" ValueType="40">658</gnm:Cell>
+        <gnm:Cell Row="31" Col="13" ExprID="1"/>
+        <gnm:Cell Row="31" Col="15" ValueType="40">120</gnm:Cell>
+        <gnm:Cell Row="32" Col="0" ValueType="40">26</gnm:Cell>
+        <gnm:Cell Row="32" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43916</gnm:Cell>
+        <gnm:Cell Row="32" Col="2" ValueType="40">80589</gnm:Cell>
+        <gnm:Cell Row="32" Col="3" ExprID="1"/>
+        <gnm:Cell Row="32" Col="5" ValueType="40">2543</gnm:Cell>
+        <gnm:Cell Row="32" Col="6" ValueType="40">36508</gnm:Cell>
+        <gnm:Cell Row="32" Col="7" ExprID="1"/>
+        <gnm:Cell Row="32" Col="8" ValueType="40">81964</gnm:Cell>
+        <gnm:Cell Row="32" Col="9" ExprID="1"/>
+        <gnm:Cell Row="32" Col="10" ValueType="40">21393</gnm:Cell>
+        <gnm:Cell Row="32" Col="11" ExprID="1"/>
+        <gnm:Cell Row="32" Col="12" ValueType="40">840</gnm:Cell>
+        <gnm:Cell Row="32" Col="13" ExprID="1"/>
+        <gnm:Cell Row="32" Col="15" ValueType="40">136</gnm:Cell>
+        <gnm:Cell Row="33" Col="0" ValueType="40">27</gnm:Cell>
+        <gnm:Cell Row="33" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43917</gnm:Cell>
+        <gnm:Cell Row="33" Col="2" ValueType="40">86498</gnm:Cell>
+        <gnm:Cell Row="33" Col="3" ExprID="1"/>
+        <gnm:Cell Row="33" Col="5" ValueType="40">2409</gnm:Cell>
+        <gnm:Cell Row="33" Col="6" ValueType="40">42288</gnm:Cell>
+        <gnm:Cell Row="33" Col="7" ExprID="1"/>
+        <gnm:Cell Row="33" Col="8" ValueType="40">100997</gnm:Cell>
+        <gnm:Cell Row="33" Col="9" ExprID="1"/>
+        <gnm:Cell Row="33" Col="10" ValueType="40">25398</gnm:Cell>
+        <gnm:Cell Row="33" Col="11" ExprID="1"/>
+        <gnm:Cell Row="33" Col="12" ValueType="40">1036</gnm:Cell>
+        <gnm:Cell Row="33" Col="13" ExprID="1"/>
+        <gnm:Cell Row="33" Col="15" ValueType="40">157</gnm:Cell>
+        <gnm:Cell Row="34" Col="0" ValueType="40">28</gnm:Cell>
+        <gnm:Cell Row="34" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43918</gnm:Cell>
+        <gnm:Cell Row="34" Col="2" ValueType="40">92472</gnm:Cell>
+        <gnm:Cell Row="34" Col="3" ExprID="1"/>
+        <gnm:Cell Row="34" Col="5" ValueType="40">2117</gnm:Cell>
+        <gnm:Cell Row="34" Col="6" ValueType="40">48582</gnm:Cell>
+        <gnm:Cell Row="34" Col="7" ExprID="1"/>
+        <gnm:Cell Row="34" Col="8" ValueType="40">121105</gnm:Cell>
+        <gnm:Cell Row="34" Col="9" ExprID="1"/>
+        <gnm:Cell Row="34" Col="10" ValueType="40">29766</gnm:Cell>
+        <gnm:Cell Row="34" Col="11" ExprID="1"/>
+        <gnm:Cell Row="34" Col="12" ValueType="40">1264</gnm:Cell>
+        <gnm:Cell Row="34" Col="13" ExprID="1"/>
+        <gnm:Cell Row="34" Col="15" ValueType="40">114</gnm:Cell>
+        <gnm:Cell Row="35" Col="0" ValueType="40">29</gnm:Cell>
+        <gnm:Cell Row="35" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43919</gnm:Cell>
+        <gnm:Cell Row="35" Col="2" ValueType="40">97689</gnm:Cell>
+        <gnm:Cell Row="35" Col="3" ExprID="1"/>
+        <gnm:Cell Row="35" Col="5" ValueType="40">1592</gnm:Cell>
+        <gnm:Cell Row="35" Col="6" ValueType="40">52547</gnm:Cell>
+        <gnm:Cell Row="35" Col="7" ExprID="1"/>
+        <gnm:Cell Row="35" Col="8" ValueType="40">140223</gnm:Cell>
+        <gnm:Cell Row="35" Col="9" ExprID="1"/>
+        <gnm:Cell Row="35" Col="10" ValueType="40">33768</gnm:Cell>
+        <gnm:Cell Row="35" Col="11" ExprID="1"/>
+        <gnm:Cell Row="35" Col="12" ValueType="40">1534</gnm:Cell>
+        <gnm:Cell Row="35" Col="13" ExprID="1"/>
+        <gnm:Cell Row="35" Col="15" ValueType="40">197</gnm:Cell>
+        <gnm:Cell Row="36" Col="0" ValueType="40">30</gnm:Cell>
+        <gnm:Cell Row="36" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43920</gnm:Cell>
+        <gnm:Cell Row="36" Col="2" ValueType="40">101739</gnm:Cell>
+        <gnm:Cell Row="36" Col="3" ExprID="1"/>
+        <gnm:Cell Row="36" Col="5" ValueType="40">1154</gnm:Cell>
+        <gnm:Cell Row="36" Col="6" ValueType="40">57298</gnm:Cell>
+        <gnm:Cell Row="36" Col="7" ExprID="1"/>
+        <gnm:Cell Row="36" Col="8" ValueType="40">160686</gnm:Cell>
+        <gnm:Cell Row="36" Col="9" ExprID="1"/>
+        <gnm:Cell Row="36" Col="10" ValueType="40">37453</gnm:Cell>
+        <gnm:Cell Row="36" Col="11" ExprID="1"/>
+        <gnm:Cell Row="36" Col="12" ValueType="40">1836</gnm:Cell>
+        <gnm:Cell Row="36" Col="13" ExprID="1"/>
+        <gnm:Cell Row="36" Col="15" ValueType="40">212</gnm:Cell>
+        <gnm:Cell Row="37" Col="0" ValueType="40">31</gnm:Cell>
+        <gnm:Cell Row="37" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43921</gnm:Cell>
+        <gnm:Cell Row="37" Col="2" ValueType="40">105792</gnm:Cell>
+        <gnm:Cell Row="37" Col="3" ExprID="1"/>
+        <gnm:Cell Row="37" Col="5" ValueType="40">1047</gnm:Cell>
+        <gnm:Cell Row="37" Col="6" ValueType="40">61913</gnm:Cell>
+        <gnm:Cell Row="37" Col="7" ExprID="1"/>
+        <gnm:Cell Row="37" Col="8" ValueType="40">186082</gnm:Cell>
+        <gnm:Cell Row="37" Col="9" ExprID="1"/>
+        <gnm:Cell Row="37" Col="10" ValueType="40">43139</gnm:Cell>
+        <gnm:Cell Row="37" Col="11" ExprID="1"/>
+        <gnm:Cell Row="37" Col="12" ValueType="40">2337</gnm:Cell>
+        <gnm:Cell Row="37" Col="13" ExprID="1"/>
+        <gnm:Cell Row="37" Col="15" ValueType="40">387</gnm:Cell>
+        <gnm:Cell Row="38" Col="0" ValueType="40">32</gnm:Cell>
+        <gnm:Cell Row="38" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43922</gnm:Cell>
+        <gnm:Cell Row="38" Col="2" ValueType="40">110574</gnm:Cell>
+        <gnm:Cell Row="38" Col="3" ExprID="1"/>
+        <gnm:Cell Row="38" Col="5" ValueType="40">1565</gnm:Cell>
+        <gnm:Cell Row="38" Col="6" ValueType="40">67366</gnm:Cell>
+        <gnm:Cell Row="38" Col="7" ExprID="1"/>
+        <gnm:Cell Row="38" Col="8" ValueType="40">212814</gnm:Cell>
+        <gnm:Cell Row="38" Col="9" ExprID="1"/>
+        <gnm:Cell Row="38" Col="10" ValueType="40">47439</gnm:Cell>
+        <gnm:Cell Row="38" Col="11" ExprID="1"/>
+        <gnm:Cell Row="38" Col="12" ValueType="40">2777</gnm:Cell>
+        <gnm:Cell Row="38" Col="13" ExprID="1"/>
+        <gnm:Cell Row="38" Col="15" ValueType="40">267</gnm:Cell>
+        <gnm:Cell Row="39" Col="0" ValueType="40">33</gnm:Cell>
+        <gnm:Cell Row="39" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43923</gnm:Cell>
+        <gnm:Cell Row="39" Col="2" ValueType="40">115242</gnm:Cell>
+        <gnm:Cell Row="39" Col="3" ExprID="1"/>
+        <gnm:Cell Row="39" Col="5" ValueType="40">1292</gnm:Cell>
+        <gnm:Cell Row="39" Col="6" ValueType="40">73522</gnm:Cell>
+        <gnm:Cell Row="39" Col="7" ExprID="1"/>
+        <gnm:Cell Row="39" Col="8" ValueType="40">241626</gnm:Cell>
+        <gnm:Cell Row="39" Col="9" ExprID="1"/>
+        <gnm:Cell Row="39" Col="10" ValueType="40">51809</gnm:Cell>
+        <gnm:Cell Row="39" Col="11" ExprID="1"/>
+        <gnm:Cell Row="39" Col="12" ValueType="40">3548</gnm:Cell>
+        <gnm:Cell Row="39" Col="13" ExprID="1"/>
+        <gnm:Cell Row="39" Col="15" ValueType="40">595</gnm:Cell>
+        <gnm:Cell Row="40" Col="0" ValueType="40">34</gnm:Cell>
+        <gnm:Cell Row="40" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43924</gnm:Cell>
+        <gnm:Cell Row="40" Col="2" ValueType="40">119827</gnm:Cell>
+        <gnm:Cell Row="40" Col="3" ExprID="1"/>
+        <gnm:Cell Row="40" Col="5" ValueType="40">1455</gnm:Cell>
+        <gnm:Cell Row="40" Col="6" ValueType="40">79696</gnm:Cell>
+        <gnm:Cell Row="40" Col="7" ExprID="1"/>
+        <gnm:Cell Row="40" Col="8" ValueType="40">273808</gnm:Cell>
+        <gnm:Cell Row="40" Col="9" ExprID="1"/>
+        <gnm:Cell Row="40" Col="10" ValueType="40">57159</gnm:Cell>
+        <gnm:Cell Row="40" Col="11" ExprID="1"/>
+        <gnm:Cell Row="40" Col="12" ValueType="40">4149</gnm:Cell>
+        <gnm:Cell Row="40" Col="13" ExprID="1"/>
+        <gnm:Cell Row="40" Col="15" ValueType="40">448</gnm:Cell>
+        <gnm:Cell Row="41" Col="0" ValueType="40">35</gnm:Cell>
+        <gnm:Cell Row="41" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43925</gnm:Cell>
+        <gnm:Cell Row="41" Col="2" ValueType="40">124632</gnm:Cell>
+        <gnm:Cell Row="41" Col="3" ExprID="1"/>
+        <gnm:Cell Row="41" Col="5" ValueType="40">1598</gnm:Cell>
+        <gnm:Cell Row="41" Col="6" ValueType="40">85778</gnm:Cell>
+        <gnm:Cell Row="41" Col="7" ExprID="1"/>
+        <gnm:Cell Row="41" Col="8" ValueType="40">307876</gnm:Cell>
+        <gnm:Cell Row="41" Col="9" ExprID="1"/>
+        <gnm:Cell Row="41" Col="10" ValueType="40">63306</gnm:Cell>
+        <gnm:Cell Row="41" Col="11" ExprID="1"/>
+        <gnm:Cell Row="41" Col="12" ValueType="40">4731</gnm:Cell>
+        <gnm:Cell Row="41" Col="13" ExprID="1"/>
+        <gnm:Cell Row="41" Col="15" ValueType="40">434</gnm:Cell>
+        <gnm:Cell Row="42" Col="0" ValueType="40">36</gnm:Cell>
+        <gnm:Cell Row="42" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43926</gnm:Cell>
+        <gnm:Cell Row="42" Col="2" ValueType="40">128948</gnm:Cell>
+        <gnm:Cell Row="42" Col="3" ExprID="1"/>
+        <gnm:Cell Row="42" Col="5" ValueType="40">1337</gnm:Cell>
+        <gnm:Cell Row="42" Col="6" ValueType="40">91714</gnm:Cell>
+        <gnm:Cell Row="42" Col="7" ExprID="1"/>
+        <gnm:Cell Row="42" Col="8" ValueType="40">333593</gnm:Cell>
+        <gnm:Cell Row="42" Col="9" ExprID="1"/>
+        <gnm:Cell Row="42" Col="10" ValueType="40">67551</gnm:Cell>
+        <gnm:Cell Row="42" Col="11" ExprID="1"/>
+        <gnm:Cell Row="42" Col="12" ValueType="40">5389</gnm:Cell>
+        <gnm:Cell Row="42" Col="13" ExprID="1"/>
+        <gnm:Cell Row="42" Col="15" ValueType="40">536</gnm:Cell>
+        <gnm:Cell Row="43" Col="0" ValueType="40">37</gnm:Cell>
+        <gnm:Cell Row="43" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43927</gnm:Cell>
+        <gnm:Cell Row="43" Col="2" ValueType="40">132547</gnm:Cell>
+        <gnm:Cell Row="43" Col="3" ExprID="1"/>
+        <gnm:Cell Row="43" Col="5" ValueType="40">1079</gnm:Cell>
+        <gnm:Cell Row="43" Col="6" ValueType="40">95391</gnm:Cell>
+        <gnm:Cell Row="43" Col="7" ExprID="1"/>
+        <gnm:Cell Row="43" Col="8" ValueType="40">362955</gnm:Cell>
+        <gnm:Cell Row="43" Col="9" ExprID="1"/>
+        <gnm:Cell Row="43" Col="10" ValueType="40">72181</gnm:Cell>
+        <gnm:Cell Row="43" Col="11" ExprID="1"/>
+        <gnm:Cell Row="43" Col="12" ValueType="40">6343</gnm:Cell>
+        <gnm:Cell Row="43" Col="13" ExprID="1"/>
+        <gnm:Cell Row="43" Col="15" ValueType="40">591</gnm:Cell>
+        <gnm:Cell Row="44" Col="0" ValueType="40">38</gnm:Cell>
+        <gnm:Cell Row="44" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43928</gnm:Cell>
+        <gnm:Cell Row="44" Col="2" ValueType="40">135586</gnm:Cell>
+        <gnm:Cell Row="44" Col="3" ExprID="1"/>
+        <gnm:Cell Row="44" Col="5" ValueType="40">791</gnm:Cell>
+        <gnm:Cell Row="44" Col="6" ValueType="40">99225</gnm:Cell>
+        <gnm:Cell Row="44" Col="7" ExprID="1"/>
+        <gnm:Cell Row="44" Col="8" ValueType="40">393707</gnm:Cell>
+        <gnm:Cell Row="44" Col="9" ExprID="1"/>
+        <gnm:Cell Row="44" Col="10" ValueType="40">76876</gnm:Cell>
+        <gnm:Cell Row="44" Col="11" ExprID="1"/>
+        <gnm:Cell Row="44" Col="12" ValueType="40">7497</gnm:Cell>
+        <gnm:Cell Row="44" Col="13" ExprID="1"/>
+        <gnm:Cell Row="44" Col="15" ValueType="40">697</gnm:Cell>
+        <gnm:Cell Row="45" Col="0" ValueType="40">39</gnm:Cell>
+        <gnm:Cell Row="45" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43929</gnm:Cell>
+        <gnm:Cell Row="45" Col="2" ValueType="40">139422</gnm:Cell>
+        <gnm:Cell Row="45" Col="3" ExprID="1"/>
+        <gnm:Cell Row="45" Col="5" ValueType="40">1089</gnm:Cell>
+        <gnm:Cell Row="45" Col="6" ValueType="40">103228</gnm:Cell>
+        <gnm:Cell Row="45" Col="7" ExprID="1"/>
+        <gnm:Cell Row="45" Col="8" ValueType="40">425746</gnm:Cell>
+        <gnm:Cell Row="45" Col="9" ExprID="1"/>
+        <gnm:Cell Row="45" Col="10" ValueType="40">81803</gnm:Cell>
+        <gnm:Cell Row="45" Col="11" ExprID="1"/>
+        <gnm:Cell Row="45" Col="12" ValueType="40">8672</gnm:Cell>
+        <gnm:Cell Row="45" Col="13" ExprID="1"/>
+        <gnm:Cell Row="45" Col="15" ValueType="40">660</gnm:Cell>
+        <gnm:Cell Row="46" Col="0" ValueType="40">40</gnm:Cell>
+        <gnm:Cell Row="46" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43930</gnm:Cell>
+        <gnm:Cell Row="46" Col="2" ValueType="40">143626</gnm:Cell>
+        <gnm:Cell Row="46" Col="3" ExprID="1"/>
+        <gnm:Cell Row="46" Col="5" ValueType="40">1388</gnm:Cell>
+        <gnm:Cell Row="46" Col="6" ValueType="40">108202</gnm:Cell>
+        <gnm:Cell Row="46" Col="7" ExprID="1"/>
+        <gnm:Cell Row="46" Col="8" ValueType="40">459989</gnm:Cell>
+        <gnm:Cell Row="46" Col="9" ExprID="1"/>
+        <gnm:Cell Row="46" Col="10" ValueType="40">87028</gnm:Cell>
+        <gnm:Cell Row="46" Col="11" ExprID="1"/>
+        <gnm:Cell Row="46" Col="12" ValueType="40">10131</gnm:Cell>
+        <gnm:Cell Row="46" Col="13" ExprID="1"/>
+        <gnm:Cell Row="46" Col="15" ValueType="40">857</gnm:Cell>
+        <gnm:Cell Row="47" Col="0" ValueType="40">41</gnm:Cell>
+        <gnm:Cell Row="47" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43931</gnm:Cell>
+        <gnm:Cell Row="47" Col="2" ValueType="40">147577</gnm:Cell>
+        <gnm:Cell Row="47" Col="3" ExprID="1"/>
+        <gnm:Cell Row="47" Col="5" ValueType="40">1246</gnm:Cell>
+        <gnm:Cell Row="47" Col="6" ValueType="40">113525</gnm:Cell>
+        <gnm:Cell Row="47" Col="7" ExprID="1"/>
+        <gnm:Cell Row="47" Col="8" ValueType="40">493567</gnm:Cell>
+        <gnm:Cell Row="47" Col="9" ExprID="1"/>
+        <gnm:Cell Row="47" Col="10" ValueType="40">92384</gnm:Cell>
+        <gnm:Cell Row="47" Col="11" ExprID="1"/>
+        <gnm:Cell Row="47" Col="12" ValueType="40">11917</gnm:Cell>
+        <gnm:Cell Row="47" Col="13" ExprID="1"/>
+        <gnm:Cell Row="47" Col="15" ValueType="40">1124</gnm:Cell>
+        <gnm:Cell Row="48" Col="0" ValueType="40">42</gnm:Cell>
+        <gnm:Cell Row="48" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43932</gnm:Cell>
+        <gnm:Cell Row="48" Col="2" ValueType="40">152271</gnm:Cell>
+        <gnm:Cell Row="48" Col="3" ExprID="1"/>
+        <gnm:Cell Row="48" Col="5" ValueType="40">1544</gnm:Cell>
+        <gnm:Cell Row="48" Col="6" ValueType="40">117658</gnm:Cell>
+        <gnm:Cell Row="48" Col="7" ExprID="1"/>
+        <gnm:Cell Row="48" Col="8" ValueType="40">525436</gnm:Cell>
+        <gnm:Cell Row="48" Col="9" ExprID="1"/>
+        <gnm:Cell Row="48" Col="10" ValueType="40">98308</gnm:Cell>
+        <gnm:Cell Row="48" Col="11" ExprID="1"/>
+        <gnm:Cell Row="48" Col="12" ValueType="40">13584</gnm:Cell>
+        <gnm:Cell Row="48" Col="13" ExprID="1"/>
+        <gnm:Cell Row="48" Col="15" ValueType="40">1030</gnm:Cell>
+        <gnm:Cell Row="49" Col="0" ValueType="40">43</gnm:Cell>
+        <gnm:Cell Row="49" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43933</gnm:Cell>
+        <gnm:Cell Row="49" Col="2" ValueType="40">156363</gnm:Cell>
+        <gnm:Cell Row="49" Col="3" ExprID="1"/>
+        <gnm:Cell Row="49" Col="5" ValueType="40">1460</gnm:Cell>
+        <gnm:Cell Row="49" Col="6" ValueType="40">120479</gnm:Cell>
+        <gnm:Cell Row="49" Col="7" ExprID="1"/>
+        <gnm:Cell Row="49" Col="8" ValueType="40">553493</gnm:Cell>
+        <gnm:Cell Row="49" Col="9" ExprID="1"/>
+        <gnm:Cell Row="49" Col="10" ValueType="40">103208</gnm:Cell>
+        <gnm:Cell Row="49" Col="11" ExprID="1"/>
+        <gnm:Cell Row="49" Col="12" ValueType="40">15770</gnm:Cell>
+        <gnm:Cell Row="49" Col="13" ExprID="1"/>
+        <gnm:Cell Row="49" Col="15" ValueType="40">1306</gnm:Cell>
+        <gnm:Cell Row="50" Col="0" ValueType="40">44</gnm:Cell>
+        <gnm:Cell Row="50" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43934</gnm:Cell>
+        <gnm:Cell Row="50" Col="2" ValueType="40">159516</gnm:Cell>
+        <gnm:Cell Row="50" Col="3" ExprID="1"/>
+        <gnm:Cell Row="50" Col="5" ValueType="40">1262</gnm:Cell>
+        <gnm:Cell Row="50" Col="6" ValueType="40">123016</gnm:Cell>
+        <gnm:Cell Row="50" Col="7" ExprID="1"/>
+        <gnm:Cell Row="50" Col="8" ValueType="40">578178</gnm:Cell>
+        <gnm:Cell Row="50" Col="9" ExprID="1"/>
+        <gnm:Cell Row="50" Col="10" ValueType="40">106863</gnm:Cell>
+        <gnm:Cell Row="50" Col="11" ExprID="1"/>
+        <gnm:Cell Row="50" Col="12" ValueType="40">18328</gnm:Cell>
+        <gnm:Cell Row="50" Col="13" ExprID="1"/>
+        <gnm:Cell Row="50" Col="15" ValueType="40">1355</gnm:Cell>
+        <gnm:Cell Row="51" Col="0" ValueType="40">45</gnm:Cell>
+        <gnm:Cell Row="51" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43935</gnm:Cell>
+        <gnm:Cell Row="51" Col="2" ValueType="40">162488</gnm:Cell>
+        <gnm:Cell Row="51" Col="3" ExprID="1"/>
+        <gnm:Cell Row="51" Col="5" ValueType="40">1012</gnm:Cell>
+        <gnm:Cell Row="51" Col="6" ValueType="40">125098</gnm:Cell>
+        <gnm:Cell Row="51" Col="7" ExprID="1"/>
+        <gnm:Cell Row="51" Col="8" ValueType="40">604165</gnm:Cell>
+        <gnm:Cell Row="51" Col="9" ExprID="1"/>
+        <gnm:Cell Row="51" Col="10" ValueType="40">110425</gnm:Cell>
+        <gnm:Cell Row="51" Col="11" ExprID="1"/>
+        <gnm:Cell Row="51" Col="12" ValueType="40">21102</gnm:Cell>
+        <gnm:Cell Row="51" Col="13" ExprID="1"/>
+        <gnm:Cell Row="51" Col="15" ValueType="40">1489</gnm:Cell>
+        <gnm:Cell Row="52" Col="0" ValueType="40">46</gnm:Cell>
+        <gnm:Cell Row="52" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43936</gnm:Cell>
+        <gnm:Cell Row="52" Col="2" ValueType="40">165155</gnm:Cell>
+        <gnm:Cell Row="52" Col="3" ExprID="1"/>
+        <gnm:Cell Row="52" Col="5" ValueType="40">827</gnm:Cell>
+        <gnm:Cell Row="52" Col="6" ValueType="40">127584</gnm:Cell>
+        <gnm:Cell Row="52" Col="7" ExprID="1"/>
+        <gnm:Cell Row="52" Col="8" ValueType="40">633630</gnm:Cell>
+        <gnm:Cell Row="52" Col="9" ExprID="1"/>
+        <gnm:Cell Row="52" Col="10" ValueType="40">118302</gnm:Cell>
+        <gnm:Cell Row="52" Col="11" ExprID="1"/>
+        <gnm:Cell Row="52" Col="12" ValueType="40">24490</gnm:Cell>
+        <gnm:Cell Row="52" Col="13" ExprID="1"/>
+        <gnm:Cell Row="52" Col="15" ValueType="40">1774</gnm:Cell>
+        <gnm:Cell Row="53" Col="0" ValueType="40">47</gnm:Cell>
+        <gnm:Cell Row="53" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43937</gnm:Cell>
+        <gnm:Cell Row="53" Col="2" ValueType="40">168941</gnm:Cell>
+        <gnm:Cell Row="53" Col="3" ExprID="1"/>
+        <gnm:Cell Row="53" Col="5" ValueType="40">941</gnm:Cell>
+        <gnm:Cell Row="53" Col="6" ValueType="40">130450</gnm:Cell>
+        <gnm:Cell Row="53" Col="7" ExprID="1"/>
+        <gnm:Cell Row="53" Col="8" ValueType="40">665706</gnm:Cell>
+        <gnm:Cell Row="53" Col="9" ExprID="1"/>
+        <gnm:Cell Row="53" Col="10" ValueType="40">123146</gnm:Cell>
+        <gnm:Cell Row="53" Col="11" ExprID="1"/>
+        <gnm:Cell Row="53" Col="12" ValueType="40">27938</gnm:Cell>
+        <gnm:Cell Row="53" Col="13" ExprID="1"/>
+        <gnm:Cell Row="53" Col="15" ValueType="40">1370</gnm:Cell>
+        <gnm:Cell Row="54" Col="0" ValueType="40">48</gnm:Cell>
+        <gnm:Cell Row="54" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43938</gnm:Cell>
+        <gnm:Cell Row="54" Col="2" ValueType="40">172434</gnm:Cell>
+        <gnm:Cell Row="54" Col="3" ExprID="1"/>
+        <gnm:Cell Row="54" Col="5" ValueType="40">1041</gnm:Cell>
+        <gnm:Cell Row="54" Col="6" ValueType="40">133830</gnm:Cell>
+        <gnm:Cell Row="54" Col="7" ExprID="1"/>
+        <gnm:Cell Row="54" Col="8" ValueType="40">696621</gnm:Cell>
+        <gnm:Cell Row="54" Col="9" ExprID="1"/>
+        <gnm:Cell Row="54" Col="10" ValueType="40">127352</gnm:Cell>
+        <gnm:Cell Row="54" Col="11" ExprID="1"/>
+        <gnm:Cell Row="54" Col="12" ValueType="40">32008</gnm:Cell>
+        <gnm:Cell Row="54" Col="13" ExprID="1"/>
+        <gnm:Cell Row="54" Col="15" ValueType="40">1959</gnm:Cell>
+        <gnm:Cell Row="55" Col="0" ValueType="40">49</gnm:Cell>
+        <gnm:Cell Row="55" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43939</gnm:Cell>
+        <gnm:Cell Row="55" Col="2" ValueType="40">175925</gnm:Cell>
+        <gnm:Cell Row="55" Col="3" ExprID="1"/>
+        <gnm:Cell Row="55" Col="5" ValueType="40">1246</gnm:Cell>
+        <gnm:Cell Row="55" Col="6" ValueType="40">137439</gnm:Cell>
+        <gnm:Cell Row="55" Col="7" ExprID="1"/>
+        <gnm:Cell Row="55" Col="8" ValueType="40">724705</gnm:Cell>
+        <gnm:Cell Row="55" Col="9" ExprID="1"/>
+        <gnm:Cell Row="55" Col="10" ValueType="40">131263</gnm:Cell>
+        <gnm:Cell Row="55" Col="11" ExprID="1"/>
+        <gnm:Cell Row="55" Col="12" ValueType="40">36793</gnm:Cell>
+        <gnm:Cell Row="55" Col="13" ExprID="1"/>
+        <gnm:Cell Row="55" Col="15" ValueType="40">2649</gnm:Cell>
+        <gnm:Cell Row="56" Col="0" ValueType="40">50</gnm:Cell>
+        <gnm:Cell Row="56" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43940</gnm:Cell>
+        <gnm:Cell Row="56" Col="2" ValueType="40">178972</gnm:Cell>
+        <gnm:Cell Row="56" Col="3" ExprID="1"/>
+        <gnm:Cell Row="56" Col="5" ValueType="40">855</gnm:Cell>
+        <gnm:Cell Row="56" Col="6" ValueType="40">139897</gnm:Cell>
+        <gnm:Cell Row="56" Col="7" ExprID="1"/>
+        <gnm:Cell Row="56" Col="8" ValueType="40">750718</gnm:Cell>
+        <gnm:Cell Row="56" Col="9" ExprID="1"/>
+        <gnm:Cell Row="56" Col="10" ValueType="40">134436</gnm:Cell>
+        <gnm:Cell Row="56" Col="11" ExprID="1"/>
+        <gnm:Cell Row="56" Col="12" ValueType="40">42853</gnm:Cell>
+        <gnm:Cell Row="56" Col="13" ExprID="1"/>
+        <gnm:Cell Row="56" Col="15" ValueType="40">3570</gnm:Cell>
+        <gnm:Cell Row="57" Col="0" ValueType="40">51</gnm:Cell>
+        <gnm:Cell Row="57" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43941</gnm:Cell>
+        <gnm:Cell Row="57" Col="2" ValueType="40">181228</gnm:Cell>
+        <gnm:Cell Row="57" Col="3" ExprID="1"/>
+        <gnm:Cell Row="57" Col="5" ValueType="40">735</gnm:Cell>
+        <gnm:Cell Row="57" Col="6" ValueType="40">141672</gnm:Cell>
+        <gnm:Cell Row="57" Col="7" ExprID="1"/>
+        <gnm:Cell Row="57" Col="8" ValueType="40">775850</gnm:Cell>
+        <gnm:Cell Row="57" Col="9" ExprID="1"/>
+        <gnm:Cell Row="57" Col="10" ValueType="40">136806</gnm:Cell>
+        <gnm:Cell Row="57" Col="11" ExprID="1"/>
+        <gnm:Cell Row="57" Col="12" ValueType="40">47121</gnm:Cell>
+        <gnm:Cell Row="57" Col="13" ExprID="1"/>
+        <gnm:Cell Row="57" Col="15" ValueType="40">2026</gnm:Cell>
+        <gnm:Cell Row="58" Col="0" ValueType="40">52</gnm:Cell>
+        <gnm:Cell Row="58" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43942</gnm:Cell>
+        <gnm:Cell Row="58" Col="2" ValueType="40">183957</gnm:Cell>
+        <gnm:Cell Row="58" Col="3" ExprID="1"/>
+        <gnm:Cell Row="58" Col="5" ValueType="40">960</gnm:Cell>
+        <gnm:Cell Row="58" Col="6" ValueType="40">143457</gnm:Cell>
+        <gnm:Cell Row="58" Col="7" ExprID="1"/>
+        <gnm:Cell Row="58" Col="8" ValueType="40">801228</gnm:Cell>
+        <gnm:Cell Row="58" Col="9" ExprID="1"/>
+        <gnm:Cell Row="58" Col="10" ValueType="40">139385</gnm:Cell>
+        <gnm:Cell Row="58" Col="11" ExprID="1"/>
+        <gnm:Cell Row="58" Col="12" ValueType="40">52763</gnm:Cell>
+        <gnm:Cell Row="58" Col="13" ExprID="1"/>
+        <gnm:Cell Row="58" Col="15" ValueType="40">3083</gnm:Cell>
+        <gnm:Cell Row="59" Col="0" ValueType="40">53</gnm:Cell>
+        <gnm:Cell Row="59" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43943</gnm:Cell>
+        <gnm:Cell Row="59" Col="2" ValueType="40">187327</gnm:Cell>
+        <gnm:Cell Row="59" Col="3" ExprID="1"/>
+        <gnm:Cell Row="59" Col="5" ValueType="40">1161</gnm:Cell>
+        <gnm:Cell Row="59" Col="6" ValueType="40">145694</gnm:Cell>
+        <gnm:Cell Row="59" Col="7" ExprID="1"/>
+        <gnm:Cell Row="59" Col="8" ValueType="40">830274</gnm:Cell>
+        <gnm:Cell Row="59" Col="9" ExprID="1"/>
+        <gnm:Cell Row="59" Col="10" ValueType="40">142432</gnm:Cell>
+        <gnm:Cell Row="59" Col="11" ExprID="1"/>
+        <gnm:Cell Row="59" Col="12" ValueType="40">57999</gnm:Cell>
+        <gnm:Cell Row="59" Col="13" ExprID="1"/>
+        <gnm:Cell Row="59" Col="15" ValueType="40">2548</gnm:Cell>
+        <gnm:Cell Row="60" Col="0" ValueType="40">54</gnm:Cell>
+        <gnm:Cell Row="60" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43944</gnm:Cell>
+        <gnm:Cell Row="60" Col="2" ValueType="40">189973</gnm:Cell>
+        <gnm:Cell Row="60" Col="3" ExprID="1"/>
+        <gnm:Cell Row="60" Col="5" ValueType="40">1073</gnm:Cell>
+        <gnm:Cell Row="60" Col="6" ValueType="40">148046</gnm:Cell>
+        <gnm:Cell Row="60" Col="7" ExprID="1"/>
+        <gnm:Cell Row="60" Col="8" ValueType="40">862605</gnm:Cell>
+        <gnm:Cell Row="60" Col="9" ExprID="1"/>
+        <gnm:Cell Row="60" Col="10" ValueType="40">145855</gnm:Cell>
+        <gnm:Cell Row="60" Col="11" ExprID="1"/>
+        <gnm:Cell Row="60" Col="12" ValueType="40">62773</gnm:Cell>
+        <gnm:Cell Row="60" Col="13" ExprID="1"/>
+        <gnm:Cell Row="60" Col="15" ValueType="40">1959</gnm:Cell>
+        <gnm:Cell Row="61" Col="0" ValueType="40">55</gnm:Cell>
+        <gnm:Cell Row="61" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43945</gnm:Cell>
+        <gnm:Cell Row="61" Col="2" ValueType="40">192994</gnm:Cell>
+        <gnm:Cell Row="61" Col="3" ExprID="1"/>
+        <gnm:Cell Row="61" Col="5" ValueType="40">1091</gnm:Cell>
+        <gnm:Cell Row="61" Col="6" ValueType="40">150383</gnm:Cell>
+        <gnm:Cell Row="61" Col="7" ExprID="1"/>
+        <gnm:Cell Row="61" Col="8" ValueType="40">898742</gnm:Cell>
+        <gnm:Cell Row="61" Col="9" ExprID="1"/>
+        <gnm:Cell Row="61" Col="10" ValueType="40">150473</gnm:Cell>
+        <gnm:Cell Row="61" Col="11" ExprID="1"/>
+        <gnm:Cell Row="61" Col="12" ValueType="40">68622</gnm:Cell>
+        <gnm:Cell Row="61" Col="13" ExprID="1"/>
+        <gnm:Cell Row="61" Col="15" ValueType="40">2957</gnm:Cell>
+        <gnm:Cell Row="62" Col="0" ValueType="40">56</gnm:Cell>
+        <gnm:Cell Row="62" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43946</gnm:Cell>
+        <gnm:Cell Row="62" Col="2" ValueType="40">195351</gnm:Cell>
+        <gnm:Cell Row="62" Col="3" ExprID="1"/>
+        <gnm:Cell Row="62" Col="5" ValueType="40">713</gnm:Cell>
+        <gnm:Cell Row="62" Col="6" ValueType="40">152438</gnm:Cell>
+        <gnm:Cell Row="62" Col="7" ExprID="1"/>
+        <gnm:Cell Row="62" Col="8" ValueType="40">933698</gnm:Cell>
+        <gnm:Cell Row="62" Col="9" ExprID="1"/>
+        <gnm:Cell Row="62" Col="10" ValueType="40">155113</gnm:Cell>
+        <gnm:Cell Row="62" Col="11" ExprID="1"/>
+        <gnm:Cell Row="62" Col="12" ValueType="40">74588</gnm:Cell>
+        <gnm:Cell Row="62" Col="13" ExprID="1"/>
+        <gnm:Cell Row="62" Col="15" ValueType="40">2612</gnm:Cell>
+        <gnm:Cell Row="63" Col="0" ValueType="40">57</gnm:Cell>
+        <gnm:Cell Row="63" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43947</gnm:Cell>
+        <gnm:Cell Row="63" Col="2" ValueType="40">197675</gnm:Cell>
+        <gnm:Cell Row="63" Col="3" ExprID="1"/>
+        <gnm:Cell Row="63" Col="5" ValueType="40">920</gnm:Cell>
+        <gnm:Cell Row="63" Col="6" ValueType="40">154175</gnm:Cell>
+        <gnm:Cell Row="63" Col="7" ExprID="1"/>
+        <gnm:Cell Row="63" Col="8" ValueType="40">960582</gnm:Cell>
+        <gnm:Cell Row="63" Col="9" ExprID="1"/>
+        <gnm:Cell Row="63" Col="10" ValueType="40">158258</gnm:Cell>
+        <gnm:Cell Row="63" Col="11" ExprID="1"/>
+        <gnm:Cell Row="63" Col="12" ValueType="40">80949</gnm:Cell>
+        <gnm:Cell Row="63" Col="13" ExprID="1"/>
+        <gnm:Cell Row="63" Col="15" ValueType="40">2971</gnm:Cell>
+        <gnm:Cell Row="64" Col="0" ValueType="40">58</gnm:Cell>
+        <gnm:Cell Row="64" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43948</gnm:Cell>
+        <gnm:Cell Row="64" Col="2" ValueType="40">199414</gnm:Cell>
+        <gnm:Cell Row="64" Col="3" ExprID="1"/>
+        <gnm:Cell Row="64" Col="5" ValueType="40">590</gnm:Cell>
+        <gnm:Cell Row="64" Col="6" ValueType="40">155193</gnm:Cell>
+        <gnm:Cell Row="64" Col="7" ExprID="1"/>
+        <gnm:Cell Row="64" Col="8" ValueType="40">982668</gnm:Cell>
+        <gnm:Cell Row="64" Col="9" ExprID="1"/>
+        <gnm:Cell Row="64" Col="10" ValueType="40">160489</gnm:Cell>
+        <gnm:Cell Row="64" Col="11" ExprID="1"/>
+        <gnm:Cell Row="64" Col="12" ValueType="40">87147</gnm:Cell>
+        <gnm:Cell Row="64" Col="13" ExprID="1"/>
+        <gnm:Cell Row="64" Col="15" ValueType="40">2871</gnm:Cell>
+        <gnm:Cell Row="65" Col="0" ValueType="40">59</gnm:Cell>
+        <gnm:Cell Row="65" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43949</gnm:Cell>
+        <gnm:Cell Row="65" Col="2" ValueType="40">201505</gnm:Cell>
+        <gnm:Cell Row="65" Col="3" ExprID="1"/>
+        <gnm:Cell Row="65" Col="5" ValueType="40">869</gnm:Cell>
+        <gnm:Cell Row="65" Col="6" ValueType="40">156337</gnm:Cell>
+        <gnm:Cell Row="65" Col="7" ExprID="1"/>
+        <gnm:Cell Row="65" Col="8" ValueType="40">1007097</gnm:Cell>
+        <gnm:Cell Row="65" Col="9" ExprID="1"/>
+        <gnm:Cell Row="65" Col="10" ValueType="40">162338</gnm:Cell>
+        <gnm:Cell Row="65" Col="11" ExprID="1"/>
+        <gnm:Cell Row="65" Col="12" ValueType="40">93558</gnm:Cell>
+        <gnm:Cell Row="65" Col="13" ExprID="1"/>
+        <gnm:Cell Row="65" Col="15" ValueType="40">3075</gnm:Cell>
+        <gnm:Cell Row="66" Col="0" ValueType="40">60</gnm:Cell>
+        <gnm:Cell Row="66" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43950</gnm:Cell>
+        <gnm:Cell Row="66" Col="2" ValueType="40">203591</gnm:Cell>
+        <gnm:Cell Row="66" Col="3" ExprID="1"/>
+        <gnm:Cell Row="66" Col="5" ValueType="40">786</gnm:Cell>
+        <gnm:Cell Row="66" Col="6" ValueType="40">157641</gnm:Cell>
+        <gnm:Cell Row="66" Col="7" ExprID="1"/>
+        <gnm:Cell Row="66" Col="8" ValueType="40">1033010</gnm:Cell>
+        <gnm:Cell Row="66" Col="9" ExprID="1"/>
+        <gnm:Cell Row="66" Col="10" ValueType="40">164841</gnm:Cell>
+        <gnm:Cell Row="66" Col="11" ExprID="1"/>
+        <gnm:Cell Row="66" Col="12" ValueType="40">99399</gnm:Cell>
+        <gnm:Cell Row="66" Col="13" ExprID="1"/>
+        <gnm:Cell Row="66" Col="15" ValueType="40">2220</gnm:Cell>
+        <gnm:Cell Row="67" Col="0" ValueType="40">61</gnm:Cell>
+        <gnm:Cell Row="67" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43951</gnm:Cell>
+        <gnm:Cell Row="67" Col="2" ValueType="40">205463</gnm:Cell>
+        <gnm:Cell Row="67" Col="3" ExprID="1"/>
+        <gnm:Cell Row="67" Col="5" ValueType="40">598</gnm:Cell>
+        <gnm:Cell Row="67" Col="6" ValueType="40">159119</gnm:Cell>
+        <gnm:Cell Row="67" Col="7" ExprID="1"/>
+        <gnm:Cell Row="67" Col="8" ValueType="40">1062675</gnm:Cell>
+        <gnm:Cell Row="67" Col="9" ExprID="1"/>
+        <gnm:Cell Row="67" Col="10" ValueType="40">167478</gnm:Cell>
+        <gnm:Cell Row="67" Col="11" ExprID="1"/>
+        <gnm:Cell Row="67" Col="12" ValueType="40">106498</gnm:Cell>
+        <gnm:Cell Row="67" Col="13" ExprID="1"/>
+        <gnm:Cell Row="67" Col="15" ValueType="40">3093</gnm:Cell>
+        <gnm:Cell Row="68" Col="0" ValueType="40">62</gnm:Cell>
+        <gnm:Cell Row="68" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43952</gnm:Cell>
+        <gnm:Cell Row="68" Col="2" ValueType="40">207428</gnm:Cell>
+        <gnm:Cell Row="68" Col="3" ExprID="1"/>
+        <gnm:Cell Row="68" Col="5" ValueType="40">737</gnm:Cell>
+        <gnm:Cell Row="68" Col="6" ValueType="40">160758</gnm:Cell>
+        <gnm:Cell Row="68" Col="7" ExprID="1"/>
+        <gnm:Cell Row="68" Col="8" ValueType="40">1095682</gnm:Cell>
+        <gnm:Cell Row="68" Col="9" ExprID="1"/>
+        <gnm:Cell Row="68" Col="10" ValueType="40">169690</gnm:Cell>
+        <gnm:Cell Row="68" Col="11" ExprID="1"/>
+        <gnm:Cell Row="68" Col="12" ValueType="40">114431</gnm:Cell>
+        <gnm:Cell Row="68" Col="13" ExprID="1"/>
+        <gnm:Cell Row="68" Col="15" ValueType="40">3561</gnm:Cell>
+        <gnm:Cell Row="69" Col="0" ValueType="40">63</gnm:Cell>
+        <gnm:Cell Row="69" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43953</gnm:Cell>
+        <gnm:Cell Row="69" Col="2" ValueType="40">209328</gnm:Cell>
+        <gnm:Cell Row="69" Col="3" ExprID="1"/>
+        <gnm:Cell Row="69" Col="5" ValueType="40">533</gnm:Cell>
+        <gnm:Cell Row="69" Col="6" ValueType="40">161703</gnm:Cell>
+        <gnm:Cell Row="69" Col="7" ExprID="1"/>
+        <gnm:Cell Row="69" Col="8" ValueType="40">1126250</gnm:Cell>
+        <gnm:Cell Row="69" Col="9" ExprID="1"/>
+        <gnm:Cell Row="69" Col="10" ValueType="40">172354</gnm:Cell>
+        <gnm:Cell Row="69" Col="11" ExprID="1"/>
+        <gnm:Cell Row="69" Col="12" ValueType="40">124054</gnm:Cell>
+        <gnm:Cell Row="69" Col="13" ExprID="1"/>
+        <gnm:Cell Row="69" Col="15" ValueType="40">5358</gnm:Cell>
+        <gnm:Cell Row="70" Col="0" ValueType="40">64</gnm:Cell>
+        <gnm:Cell Row="70" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43954</gnm:Cell>
+        <gnm:Cell Row="70" Col="2" ValueType="40">210717</gnm:Cell>
+        <gnm:Cell Row="70" Col="3" ExprID="1"/>
+        <gnm:Cell Row="70" Col="5" ValueType="40">526</gnm:Cell>
+        <gnm:Cell Row="70" Col="6" ValueType="40">162496</gnm:Cell>
+        <gnm:Cell Row="70" Col="7" ExprID="1"/>
+        <gnm:Cell Row="70" Col="8" ValueType="40">1151643</gnm:Cell>
+        <gnm:Cell Row="70" Col="9" ExprID="1"/>
+        <gnm:Cell Row="70" Col="10" ValueType="40">174331</gnm:Cell>
+        <gnm:Cell Row="70" Col="11" ExprID="1"/>
+        <gnm:Cell Row="70" Col="12" ValueType="40">134686</gnm:Cell>
+        <gnm:Cell Row="70" Col="13" ExprID="1"/>
+        <gnm:Cell Row="70" Col="15" ValueType="40">5948</gnm:Cell>
+        <gnm:Cell Row="71" Col="0" ValueType="40">65</gnm:Cell>
+        <gnm:Cell Row="71" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43955</gnm:Cell>
+        <gnm:Cell Row="71" Col="2" ValueType="40">211938</gnm:Cell>
+        <gnm:Cell Row="71" Col="3" ExprID="1"/>
+        <gnm:Cell Row="71" Col="5" ValueType="40">577</gnm:Cell>
+        <gnm:Cell Row="71" Col="6" ValueType="40">163175</gnm:Cell>
+        <gnm:Cell Row="71" Col="7" ExprID="1"/>
+        <gnm:Cell Row="71" Col="8" ValueType="40">1172921</gnm:Cell>
+        <gnm:Cell Row="71" Col="9" ExprID="1"/>
+        <gnm:Cell Row="71" Col="10" ValueType="40">175651</gnm:Cell>
+        <gnm:Cell Row="71" Col="11" ExprID="1"/>
+        <gnm:Cell Row="71" Col="12" ValueType="40">145268</gnm:Cell>
+        <gnm:Cell Row="71" Col="13" ExprID="1"/>
+        <gnm:Cell Row="71" Col="15" ValueType="40">5795</gnm:Cell>
+        <gnm:Cell Row="72" Col="0" ValueType="40">66</gnm:Cell>
+        <gnm:Cell Row="72" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43956</gnm:Cell>
+        <gnm:Cell Row="72" Col="2" ValueType="40">213013</gnm:Cell>
+        <gnm:Cell Row="72" Col="3" ExprID="1"/>
+        <gnm:Cell Row="72" Col="5" ValueType="40">500</gnm:Cell>
+        <gnm:Cell Row="72" Col="6" ValueType="40">163860</gnm:Cell>
+        <gnm:Cell Row="72" Col="7" ExprID="1"/>
+        <gnm:Cell Row="72" Col="8" ValueType="40">1195325</gnm:Cell>
+        <gnm:Cell Row="72" Col="9" ExprID="1"/>
+        <gnm:Cell Row="72" Col="10" ValueType="40">176874</gnm:Cell>
+        <gnm:Cell Row="72" Col="11" ExprID="1"/>
+        <gnm:Cell Row="72" Col="12" ValueType="40">155370</gnm:Cell>
+        <gnm:Cell Row="72" Col="13" ExprID="1"/>
+        <gnm:Cell Row="72" Col="15" ValueType="40">5714</gnm:Cell>
+        <gnm:Cell Row="73" Col="0" ValueType="40">67</gnm:Cell>
+        <gnm:Cell Row="73" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43957</gnm:Cell>
+        <gnm:Cell Row="73" Col="2" ValueType="40">214457</gnm:Cell>
+        <gnm:Cell Row="73" Col="3" ExprID="1"/>
+        <gnm:Cell Row="73" Col="5" ValueType="40">764</gnm:Cell>
+        <gnm:Cell Row="73" Col="6" ValueType="40">164807</gnm:Cell>
+        <gnm:Cell Row="73" Col="7" ExprID="1"/>
+        <gnm:Cell Row="73" Col="12" ValueType="40">165929</gnm:Cell>
+        <gnm:Cell Row="73" Col="13" ExprID="1"/>
+        <gnm:Cell Row="73" Col="15" ValueType="40">5858</gnm:Cell>
+        <gnm:Cell Row="74" Col="0" ValueType="40">68</gnm:Cell>
+        <gnm:Cell Row="74" Col="1" ValueType="40" ValueFormat="m/d/yyyy">43958</gnm:Cell>
+      </gnm:Cells>
+      <gnm:SheetLayout TopLeft="C45">
+        <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="C2"/>
+      </gnm:SheetLayout>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="1" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Graph_T</gnm:Name>
+      <gnm:MaxCol>0</gnm:MaxCol>
+      <gnm:MaxRow>0</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>landscape</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Objects>
+        <gnm:SheetObjectGraph ObjectBound="A1" AnchorMode="GNM_SO_ANCHOR_ONE_CELL" ObjectOffset="0 0 0 0" Direction="17" Print="1">
+          <GogObject type="GogGraph">
+            <property name="height-pts">371.99998269869593</property>
+            <property name="width-pts">647.9999826986959</property>
+            <property name="theme-name">Default</property>
+            <property name="padding-pts">7.086614173228346</property>
+            <property name="style" type="GogStyle">
+              <outline auto-dash="1" auto-width="1" auto-color="1"/>
+              <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+            </property>
+            <property name="anchor">top-left</property>
+            <property name="alignment">fill</property>
+            <GogObject role="Title">
+              <property name="padding-pts">7.086614173228346</property>
+              <property name="style" type="GogStyle">
+                <outline auto-dash="1" auto-width="1" auto-color="1"/>
+                <fill type="pattern" auto-type="0" is-auto="1" auto-fore="1">
+                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                </fill>
+                <font auto-color="1" auto-font="1" auto-scale="1"/>
+                <text_layout/>
+              </property>
+              <property name="is-position-manual">TRUE</property>
+              <property name="position">0.070000000000000007 0.050000000000000003 1 1</property>
+              <property name="id">1</property>
+              <data>
+                <dimension id="0" type="GnmGODataScalar">&quot;Covid-19 infection totals / cumulative cases&quot;</dimension>
+              </data>
+            </GogObject>
+            <GogObject role="Chart">
+              <property name="ypos">0</property>
+              <property name="padding-pts">7.086614173228346</property>
+              <property name="style" type="GogStyle">
+                <outline auto-dash="1" auto-width="1" auto-color="1"/>
+                <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
+                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                </fill>
+              </property>
+              <property name="id">1</property>
+              <GogObject role="Grid">
+                <property name="style" type="GogStyle">
+                  <outline auto-dash="1" auto-width="1" auto-color="1"/>
+                  <fill type="none" auto-type="0" is-auto="1" auto-fore="1"/>
+                </property>
+                <property name="id">1</property>
+              </GogObject>
+              <GogObject role="X-Axis">
+                <property name="metrics-unit">none</property>
+                <property name="assigned-format-string-XL">m/d</property>
+                <property name="pos-str">low</property>
+                <property name="style" type="GogStyle">
+                  <line auto-dash="1" auto-width="1" auto-color="1"/>
+                  <font auto-color="1" auto-font="1" auto-scale="1"/>
+                  <text_layout/>
+                </property>
+                <property name="id">1</property>
+                <data>
+                  <dimension id="0" type="GnmGODataScalar">43891</dimension>
+                  <dimension id="1" type="GnmGODataScalar">43961</dimension>
+                  <dimension id="2" type="GnmGODataScalar">7</dimension>
+                  <dimension id="3" type="GnmGODataScalar">1</dimension>
+                </data>
+                <GogObject role="MajorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+                <GogObject role="MinorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Y-Axis">
+                <property name="metrics-unit">none</property>
+                <property name="assigned-format-string-XL">#,##0</property>
+                <property name="map-name">Log</property>
+                <property name="pos-str">low</property>
+                <property name="style" type="GogStyle">
+                  <line auto-dash="1" auto-width="0" width="0.5" auto-color="1"/>
+                  <font auto-color="1" auto-font="1" auto-scale="1"/>
+                  <text_layout/>
+                </property>
+                <property name="id">1</property>
+                <data>
+                  <dimension id="0" type="GnmGODataScalar">100</dimension>
+                  <dimension id="1" type="GODataScalarVal">1000000</dimension>
+                </data>
+                <GogObject role="MajorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+                <GogObject role="MinorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Plot" type="GogXYPlot">
+                <property name="default-style-has-fill">FALSE</property>
+                <property name="default-style-has-lines">FALSE</property>
+                <property name="y-axis">1</property>
+                <property name="x-axis">1</property>
+                <property name="vary-style-by-element">FALSE</property>
+                <property name="id">1</property>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="triangle-up" auto-outline="0" outline-color="33:99:66:FF" auto-fill="0" fill-color="33:99:66:FF" size="5"/>
+                  </property>
+                  <property name="id">4</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_IT&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$C$1:$C$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:99:66:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_IT&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="diamond" auto-outline="0" outline-color="0:0:0:FF" auto-fill="0" fill-color="FF:FF:99:FF" size="5"/>
+                  </property>
+                  <property name="id">7</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_DE&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$G$1:$G$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:33:0:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_DE&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="0" color="0:0:FF:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="circle" auto-outline="0" outline-color="0:0:FF:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
+                  </property>
+                  <property name="id">5</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_US&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$I$1:$I$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="0:0:FF:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_US&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="0" color="FF:0:0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="square" auto-outline="0" outline-color="FF:0:0:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
+                  </property>
+                  <property name="id">8</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_RU&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$M$1:$M$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="FF:0:0:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_RU&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Legend">
+                <property name="swatch-padding-pts">5.669291338582677</property>
+                <property name="swatch-size-pts">7.086614173228346</property>
+                <property name="padding-pts">7.086614173228346</property>
+                <property name="style" type="GogStyle">
+                  <outline auto-dash="0" dash="none" auto-width="1" auto-color="1"/>
+                  <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
+                    <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                  </fill>
+                  <font auto-color="1" auto-font="0" font="Droid Sans Mono 8" auto-scale="1"/>
+                </property>
+                <property name="anchor">bottom-right</property>
+                <property name="is-position-manual">TRUE</property>
+                <property name="position">0.93000000000000005 0.94999999999999996 1 1</property>
+                <property name="id">1</property>
+              </GogObject>
+            </GogObject>
+          </GogObject>
+        </gnm:SheetObjectGraph>
+      </gnm:Objects>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="1" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
+      <gnm:Name>Graph_R</gnm:Name>
+      <gnm:MaxCol>0</gnm:MaxCol>
+      <gnm:MaxRow>0</gnm:MaxRow>
+      <gnm:Zoom>1</gnm:Zoom>
+      <gnm:PrintInformation>
+        <gnm:Margins>
+          <gnm:top Points="120" PrefUnit="mm"/>
+          <gnm:bottom Points="120" PrefUnit="mm"/>
+          <gnm:left Points="72" PrefUnit="mm"/>
+          <gnm:right Points="72" PrefUnit="mm"/>
+          <gnm:header Points="72" PrefUnit="mm"/>
+          <gnm:footer Points="72" PrefUnit="mm"/>
+        </gnm:Margins>
+        <gnm:Scale type="percentage" percentage="100"/>
+        <gnm:vcenter value="0"/>
+        <gnm:hcenter value="0"/>
+        <gnm:grid value="0"/>
+        <gnm:even_if_only_styles value="0"/>
+        <gnm:monochrome value="0"/>
+        <gnm:draft value="0"/>
+        <gnm:titles value="0"/>
+        <gnm:do_not_print value="0"/>
+        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
+        <gnm:order>d_then_r</gnm:order>
+        <gnm:orientation>landscape</gnm:orientation>
+        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
+        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
+        <gnm:paper>na_letter</gnm:paper>
+        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
+        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
+      </gnm:PrintInformation>
+      <gnm:Styles>
+        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
+          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
+            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
+          </gnm:Style>
+        </gnm:StyleRegion>
+      </gnm:Styles>
+      <gnm:Cols DefaultSizePts="48"/>
+      <gnm:Rows DefaultSizePts="12.75"/>
+      <gnm:Selections CursorCol="0" CursorRow="0">
+        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
+      </gnm:Selections>
+      <gnm:Objects>
+        <gnm:SheetObjectGraph ObjectBound="A1" AnchorMode="GNM_SO_ANCHOR_ONE_CELL" ObjectOffset="0 0 0 0" Direction="17" Print="1">
+          <GogObject type="GogGraph">
+            <property name="height-pts">371.99998269869593</property>
+            <property name="width-pts">647.9999826986959</property>
+            <property name="theme-name">Default</property>
+            <property name="padding-pts">7.086614173228346</property>
+            <property name="style" type="GogStyle">
+              <outline auto-dash="1" auto-width="1" auto-color="1"/>
+              <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+            </property>
+            <property name="anchor">top-left</property>
+            <property name="alignment">fill</property>
+            <GogObject role="Title">
+              <property name="padding-pts">7.086614173228346</property>
+              <property name="style" type="GogStyle">
+                <outline auto-dash="1" auto-width="1" auto-color="1"/>
+                <fill type="pattern" auto-type="0" is-auto="1" auto-fore="1">
+                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                </fill>
+                <font auto-color="1" auto-font="1" auto-scale="1"/>
+                <text_layout/>
+              </property>
+              <property name="is-position-manual">TRUE</property>
+              <property name="position">0.070000000000000007 0.050000000000000003 1 1</property>
+              <property name="id">1</property>
+              <data>
+                <dimension id="0" type="GnmGODataScalar">&quot;Covid-19 infection rate / daily cases&quot;</dimension>
+              </data>
+            </GogObject>
+            <GogObject role="Chart">
+              <property name="ypos">0</property>
+              <property name="padding-pts">7.086614173228346</property>
+              <property name="style" type="GogStyle">
+                <outline auto-dash="1" auto-width="1" auto-color="1"/>
+                <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
+                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                </fill>
+              </property>
+              <property name="id">1</property>
+              <GogObject role="Grid">
+                <property name="style" type="GogStyle">
+                  <outline auto-dash="1" auto-width="1" auto-color="0" color="FF:FF:FF:FF"/>
+                  <fill type="none" auto-type="0" is-auto="1" auto-fore="1"/>
+                </property>
+                <property name="id">1</property>
+              </GogObject>
+              <GogObject role="X-Axis">
+                <property name="metrics-unit">none</property>
+                <property name="assigned-format-string-XL">m/d</property>
+                <property name="pos-str">low</property>
+                <property name="style" type="GogStyle">
+                  <line auto-dash="1" auto-width="1" auto-color="1"/>
+                  <font auto-color="1" auto-font="1" auto-scale="1"/>
+                  <text_layout/>
+                </property>
+                <property name="id">1</property>
+                <data>
+                  <dimension id="0" type="GnmGODataScalar">43891</dimension>
+                  <dimension id="1" type="GnmGODataScalar">43961</dimension>
+                  <dimension id="2" type="GnmGODataScalar">7</dimension>
+                  <dimension id="3" type="GnmGODataScalar">1</dimension>
+                </data>
+                <GogObject role="MajorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+                <GogObject role="MinorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Y-Axis">
+                <property name="metrics-unit">none</property>
+                <property name="assigned-format-string-XL">#,##0</property>
+                <property name="map-name">Log</property>
+                <property name="pos-str">low</property>
+                <property name="style" type="GogStyle">
+                  <line auto-dash="1" auto-width="1" auto-color="1"/>
+                  <font auto-color="1" auto-font="1" auto-scale="1"/>
+                  <text_layout/>
+                </property>
+                <property name="id">1</property>
+                <data>
+                  <dimension id="0" type="GnmGODataScalar">10</dimension>
+                  <dimension id="1" type="GODataScalarVal">100000</dimension>
+                </data>
+                <GogObject role="MajorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+                <GogObject role="MinorGrid">
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                  </property>
+                  <property name="id">1</property>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Plot" type="GogXYPlot">
+                <property name="default-style-has-fill">FALSE</property>
+                <property name="default-style-has-lines">FALSE</property>
+                <property name="y-axis">1</property>
+                <property name="x-axis">1</property>
+                <property name="vary-style-by-element">FALSE</property>
+                <property name="id">1</property>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="none" auto-width="0" width="0.5" auto-color="0" color="33:99:66:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="triangle-up" auto-outline="0" outline-color="33:99:66:FF" auto-fill="0" fill-color="33:99:66:FF" size="5"/>
+                  </property>
+                  <property name="id">1</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_IT&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$D$1:$D$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:99:66:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_IT&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="asterisk" auto-outline="0" outline-color="33:99:66:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="3"/>
+                  </property>
+                  <property name="id">7</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_it.lom&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$F$1:$F$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="0" dash="s-dash-dot" auto-width="0" width="0.5" auto-color="0" color="33:99:66:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_it.lom&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="0" dash="none" auto-width="0" width="0.5" auto-color="0" color="0:0:0:FF"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="diamond" auto-outline="0" outline-color="0:0:0:FF" auto-fill="0" fill-color="FF:FF:99:FF" size="5"/>
+                  </property>
+                  <property name="id">2</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_DE&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$H$1:$H$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:33:0:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_DE&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="circle" auto-outline="0" outline-color="0:0:FF:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
+                  </property>
+                  <property name="id">3</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_US&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$J$1:$J$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="0:0:FF:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_US&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="cross" auto-outline="0" outline-color="0:0:FF:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="3"/>
+                  </property>
+                  <property name="id">5</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_us.nyc&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$L$1:$L$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="0" dash="s-dash-dot" auto-width="0" width="0.5" auto-color="0" color="0:0:FF:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_us.nyc&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="square" auto-outline="0" outline-color="FF:0:0:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
+                  </property>
+                  <property name="id">4</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_RU&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$N$1:$N$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="FF:0:0:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_RU&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+                <GogObject role="Series">
+                  <property name="fill-type">y-origin</property>
+                  <property name="interpolation">linear</property>
+                  <property name="style" type="GogStyle">
+                    <line auto-dash="1" auto-width="1" auto-color="1"/>
+                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
+                    <marker auto-shape="0" shape="x" auto-outline="0" outline-color="FF:0:0:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="3"/>
+                  </property>
+                  <property name="id">6</property>
+                  <data>
+                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_ru.mos&quot;</dimension>
+                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
+                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$P$1:$P$65536</dimension>
+                  </data>
+                  <GogObject role="Trend line" type="GogMovingAvg">
+                    <property name="span">5</property>
+                    <property name="style" type="GogStyle">
+                      <line auto-dash="0" dash="s-dash-dot" auto-width="0" width="0.5" auto-color="0" color="FF:0:0:FF"/>
+                    </property>
+                    <property name="id">1</property>
+                    <data>
+                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_ru.mos&quot;</dimension>
+                    </data>
+                  </GogObject>
+                </GogObject>
+              </GogObject>
+              <GogObject role="Legend">
+                <property name="swatch-padding-pts">5.669291338582677</property>
+                <property name="swatch-size-pts">7.086614173228346</property>
+                <property name="padding-pts">7.086614173228346</property>
+                <property name="style" type="GogStyle">
+                  <outline auto-dash="0" dash="none" auto-width="1" auto-color="1"/>
+                  <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
+                    <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
+                  </fill>
+                  <font auto-color="1" auto-font="0" font="Droid Sans Mono 8" auto-scale="1"/>
+                </property>
+                <property name="anchor">bottom-right</property>
+                <property name="is-position-manual">TRUE</property>
+                <property name="position">0.75 0.94999999999999996 1 1</property>
+                <property name="id">1</property>
+              </GogObject>
+            </GogObject>
+          </GogObject>
+        </gnm:SheetObjectGraph>
+      </gnm:Objects>
+      <gnm:Cells/>
+      <gnm:SheetLayout TopLeft="A1"/>
+      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
+    </gnm:Sheet>
+  </gnm:Sheets>
+  <gnm:UIData SelectedTab="2"/>
+</gnm:Workbook>
