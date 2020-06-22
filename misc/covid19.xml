@@ -25,23 +25,22 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2020-06-18T16:54:56Z</dc:date>
+      <dc:date>2020-06-22T10:34:55Z</dc:date>
       <meta:creation-date>2020-03-26T08:10:01Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
   <gnm:Calculation ManualRecalc="0" EnableIteration="1" MaxIterations="100" IterationTolerance="0.001" FloatRadix="2" FloatDigits="53"/>
   <gnm:SheetNameIndex>
     <gnm:SheetName gnm:Cols="256" gnm:Rows="65536">Sheet_Data</gnm:SheetName>
-    <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_T</gnm:SheetName>
     <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_R1</gnm:SheetName>
     <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_R2</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="1440" Height="848"/>
+  <gnm:Geometry Width="1445" Height="834"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet_Data</gnm:Name>
       <gnm:MaxCol>19</gnm:MaxCol>
-      <gnm:MaxRow>119</gnm:MaxRow>
+      <gnm:MaxRow>124</gnm:MaxRow>
       <gnm:Zoom>1</gnm:Zoom>
       <gnm:Names>
         <gnm:Name>
@@ -312,10 +311,10 @@
       </gnm:Cols>
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="17.25"/>
-        <gnm:RowInfo No="1" Unit="14.25" Count="116"/>
+        <gnm:RowInfo No="1" Unit="14.25" Count="120"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="10" CursorRow="115">
-        <gnm:Selection startCol="10" startRow="115" endCol="10" endRow="115"/>
+      <gnm:Selections CursorCol="14" CursorRow="120">
+        <gnm:Selection startCol="14" startRow="120" endCol="14" endRow="120"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">N</gnm:Cell>
@@ -2298,6 +2297,8 @@
         <gnm:Cell Row="115" Col="7" ExprID="1"/>
         <gnm:Cell Row="115" Col="8" ValueType="40">2124026</gnm:Cell>
         <gnm:Cell Row="115" Col="9" ExprID="1"/>
+        <gnm:Cell Row="115" Col="10" ValueType="40">211260</gnm:Cell>
+        <gnm:Cell Row="115" Col="11" ExprID="1"/>
         <gnm:Cell Row="115" Col="12" ValueType="40">553301</gnm:Cell>
         <gnm:Cell Row="115" Col="13" ExprID="1"/>
         <gnm:Cell Row="115" Col="15" ValueType="40">1065</gnm:Cell>
@@ -2312,330 +2313,86 @@
         <gnm:Cell Row="116" Col="5" ValueType="40">216</gnm:Cell>
         <gnm:Cell Row="116" Col="6" ValueType="40">187764</gnm:Cell>
         <gnm:Cell Row="116" Col="7" ExprID="1"/>
+        <gnm:Cell Row="116" Col="8" ValueType="40">2151108</gnm:Cell>
+        <gnm:Cell Row="116" Col="9" ExprID="1"/>
+        <gnm:Cell Row="116" Col="10" ValueType="40">211670</gnm:Cell>
+        <gnm:Cell Row="116" Col="11" ExprID="1"/>
         <gnm:Cell Row="116" Col="12" ValueType="40">561091</gnm:Cell>
         <gnm:Cell Row="116" Col="13" ExprID="1"/>
         <gnm:Cell Row="116" Col="15" ValueType="40">1040</gnm:Cell>
+        <gnm:Cell Row="116" Col="16" ValueType="40">300469</gnm:Cell>
+        <gnm:Cell Row="116" Col="17" ExprID="1"/>
         <gnm:Cell Row="116" Col="18" ValueType="40">27371</gnm:Cell>
         <gnm:Cell Row="116" Col="19" ExprID="1"/>
         <gnm:Cell Row="117" Col="0" ValueType="40">111</gnm:Cell>
         <gnm:Cell Row="117" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44001</gnm:Cell>
+        <gnm:Cell Row="117" Col="2" ValueType="40">238011</gnm:Cell>
+        <gnm:Cell Row="117" Col="3" ExprID="1"/>
+        <gnm:Cell Row="117" Col="5" ValueType="40">157</gnm:Cell>
+        <gnm:Cell Row="117" Col="6" ValueType="40">188534</gnm:Cell>
+        <gnm:Cell Row="117" Col="7" ExprID="1"/>
+        <gnm:Cell Row="117" Col="8" ValueType="40">2182035</gnm:Cell>
+        <gnm:Cell Row="117" Col="9" ExprID="1"/>
+        <gnm:Cell Row="117" Col="10" ValueType="40">212061</gnm:Cell>
+        <gnm:Cell Row="117" Col="11" ExprID="1"/>
+        <gnm:Cell Row="117" Col="12" ValueType="40">569063</gnm:Cell>
+        <gnm:Cell Row="117" Col="13" ExprID="1"/>
+        <gnm:Cell Row="117" Col="15" ValueType="40">1136</gnm:Cell>
+        <gnm:Cell Row="117" Col="16" ValueType="40">301815</gnm:Cell>
+        <gnm:Cell Row="117" Col="17" ExprID="1"/>
+        <gnm:Cell Row="117" Col="18" ValueType="40">27387</gnm:Cell>
+        <gnm:Cell Row="117" Col="19" ExprID="1"/>
         <gnm:Cell Row="118" Col="0" ValueType="40">112</gnm:Cell>
         <gnm:Cell Row="118" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44002</gnm:Cell>
+        <gnm:Cell Row="118" Col="2" ValueType="40">238275</gnm:Cell>
+        <gnm:Cell Row="118" Col="3" ExprID="1"/>
+        <gnm:Cell Row="118" Col="5" ValueType="40">165</gnm:Cell>
+        <gnm:Cell Row="118" Col="6" ValueType="40">189135</gnm:Cell>
+        <gnm:Cell Row="118" Col="7" ExprID="1"/>
+        <gnm:Cell Row="118" Col="8" ValueType="40">2213998</gnm:Cell>
+        <gnm:Cell Row="118" Col="9" ExprID="1"/>
+        <gnm:Cell Row="118" Col="10" ValueType="40">212446</gnm:Cell>
+        <gnm:Cell Row="118" Col="11" ExprID="1"/>
+        <gnm:Cell Row="118" Col="12" ValueType="40">576952</gnm:Cell>
+        <gnm:Cell Row="118" Col="13" ExprID="1"/>
+        <gnm:Cell Row="118" Col="15" ValueType="40">1057</gnm:Cell>
+        <gnm:Cell Row="118" Col="16" ValueType="40">303110</gnm:Cell>
+        <gnm:Cell Row="118" Col="17" ExprID="1"/>
+        <gnm:Cell Row="118" Col="18" ValueType="40">27416</gnm:Cell>
+        <gnm:Cell Row="118" Col="19" ExprID="1"/>
         <gnm:Cell Row="119" Col="0" ValueType="40">113</gnm:Cell>
         <gnm:Cell Row="119" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44003</gnm:Cell>
+        <gnm:Cell Row="119" Col="2" ValueType="40">238499</gnm:Cell>
+        <gnm:Cell Row="119" Col="3" ExprID="1"/>
+        <gnm:Cell Row="119" Col="5" ValueType="40">128</gnm:Cell>
+        <gnm:Cell Row="119" Col="6" ValueType="40">189822</gnm:Cell>
+        <gnm:Cell Row="119" Col="7" ExprID="1"/>
+        <gnm:Cell Row="119" Col="8" ValueType="40">2242093</gnm:Cell>
+        <gnm:Cell Row="119" Col="9" ExprID="1"/>
+        <gnm:Cell Row="119" Col="12" ValueType="40">584680</gnm:Cell>
+        <gnm:Cell Row="119" Col="13" ExprID="1"/>
+        <gnm:Cell Row="119" Col="15" ValueType="40">968</gnm:Cell>
+        <gnm:Cell Row="119" Col="16" ValueType="40">304331</gnm:Cell>
+        <gnm:Cell Row="119" Col="17" ExprID="1"/>
+        <gnm:Cell Row="120" Col="0" ValueType="40">114</gnm:Cell>
+        <gnm:Cell Row="120" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44004</gnm:Cell>
+        <gnm:Cell Row="120" Col="6" ValueType="40">190359</gnm:Cell>
+        <gnm:Cell Row="120" Col="7" ExprID="1"/>
+        <gnm:Cell Row="120" Col="12" ValueType="40">592280</gnm:Cell>
+        <gnm:Cell Row="120" Col="13" ExprID="1"/>
+        <gnm:Cell Row="120" Col="15" ValueType="40">1068</gnm:Cell>
+        <gnm:Cell Row="121" Col="0" ValueType="40">115</gnm:Cell>
+        <gnm:Cell Row="121" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44005</gnm:Cell>
+        <gnm:Cell Row="122" Col="0" ValueType="40">116</gnm:Cell>
+        <gnm:Cell Row="122" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44006</gnm:Cell>
+        <gnm:Cell Row="123" Col="0" ValueType="40">117</gnm:Cell>
+        <gnm:Cell Row="123" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44007</gnm:Cell>
+        <gnm:Cell Row="124" Col="0" ValueType="40">118</gnm:Cell>
+        <gnm:Cell Row="124" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44008</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="C89">
+      <gnm:SheetLayout TopLeft="C97">
         <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="C2"/>
       </gnm:SheetLayout>
-      <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
-    </gnm:Sheet>
-    <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="1" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
-      <gnm:Name>Graph_T</gnm:Name>
-      <gnm:MaxCol>0</gnm:MaxCol>
-      <gnm:MaxRow>0</gnm:MaxRow>
-      <gnm:Zoom>1</gnm:Zoom>
-      <gnm:PrintInformation>
-        <gnm:Margins>
-          <gnm:top Points="120" PrefUnit="mm"/>
-          <gnm:bottom Points="120" PrefUnit="mm"/>
-          <gnm:left Points="72" PrefUnit="mm"/>
-          <gnm:right Points="72" PrefUnit="mm"/>
-          <gnm:header Points="72" PrefUnit="mm"/>
-          <gnm:footer Points="72" PrefUnit="mm"/>
-        </gnm:Margins>
-        <gnm:Scale type="percentage" percentage="100"/>
-        <gnm:vcenter value="0"/>
-        <gnm:hcenter value="0"/>
-        <gnm:grid value="0"/>
-        <gnm:even_if_only_styles value="0"/>
-        <gnm:monochrome value="0"/>
-        <gnm:draft value="0"/>
-        <gnm:titles value="0"/>
-        <gnm:do_not_print value="0"/>
-        <gnm:print_range value="GNM_PRINT_ACTIVE_SHEET"/>
-        <gnm:order>d_then_r</gnm:order>
-        <gnm:orientation>landscape</gnm:orientation>
-        <gnm:Header Left="" Middle="&amp;[TAB]" Right=""/>
-        <gnm:Footer Left="" Middle="Page &amp;[PAGE]" Right=""/>
-        <gnm:paper>na_letter</gnm:paper>
-        <gnm:comments placement="GNM_PRINT_COMMENTS_IN_PLACE"/>
-        <gnm:errors PrintErrorsAs="GNM_PRINT_ERRORS_AS_DISPLAYED"/>
-      </gnm:PrintInformation>
-      <gnm:Styles>
-        <gnm:StyleRegion startCol="0" startRow="0" endCol="255" endRow="65535">
-          <gnm:Style HAlign="GNM_HALIGN_GENERAL" VAlign="GNM_VALIGN_BOTTOM" WrapText="0" ShrinkToFit="0" Rotation="0" Shade="0" Indent="0" Locked="1" Hidden="0" Fore="0:0:0" Back="FFFF:FFFF:FFFF" PatternColor="0:0:0" Format="General">
-            <gnm:Font Unit="10" Bold="0" Italic="0" Underline="0" StrikeThrough="0" Script="0">Sans</gnm:Font>
-          </gnm:Style>
-        </gnm:StyleRegion>
-      </gnm:Styles>
-      <gnm:Cols DefaultSizePts="48"/>
-      <gnm:Rows DefaultSizePts="12.75"/>
-      <gnm:Selections CursorCol="0" CursorRow="0">
-        <gnm:Selection startCol="0" startRow="0" endCol="0" endRow="0"/>
-      </gnm:Selections>
-      <gnm:Objects>
-        <gnm:SheetObjectGraph ObjectBound="A1" AnchorMode="GNM_SO_ANCHOR_ONE_CELL" ObjectOffset="0 0 0 0" Direction="17" Print="1">
-          <GogObject type="GogGraph">
-            <property name="height-pts">371.99998269869593</property>
-            <property name="width-pts">647.9999826986959</property>
-            <property name="theme-name">Default</property>
-            <property name="padding-pts">7.086614173228346</property>
-            <property name="style" type="GogStyle">
-              <outline auto-dash="1" auto-width="1" auto-color="1"/>
-              <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-            </property>
-            <property name="anchor">top-left</property>
-            <property name="alignment">fill</property>
-            <GogObject role="Title">
-              <property name="padding-pts">7.086614173228346</property>
-              <property name="style" type="GogStyle">
-                <outline auto-dash="1" auto-width="1" auto-color="1"/>
-                <fill type="pattern" auto-type="0" is-auto="1" auto-fore="1">
-                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
-                </fill>
-                <font auto-color="1" auto-font="1" auto-scale="1"/>
-                <text_layout/>
-              </property>
-              <property name="is-position-manual">TRUE</property>
-              <property name="position">0.070000000000000007 0.050000000000000003 1 1</property>
-              <property name="id">1</property>
-              <data>
-                <dimension id="0" type="GnmGODataScalar">&quot;Covid-19 infection totals / cumulative cases&quot;</dimension>
-              </data>
-            </GogObject>
-            <GogObject role="Chart">
-              <property name="ypos">0</property>
-              <property name="padding-pts">7.086614173228346</property>
-              <property name="style" type="GogStyle">
-                <outline auto-dash="1" auto-width="1" auto-color="1"/>
-                <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
-                  <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
-                </fill>
-              </property>
-              <property name="id">1</property>
-              <GogObject role="Grid">
-                <property name="style" type="GogStyle">
-                  <outline auto-dash="1" auto-width="1" auto-color="1"/>
-                  <fill type="none" auto-type="0" is-auto="1" auto-fore="1"/>
-                </property>
-                <property name="id">1</property>
-              </GogObject>
-              <GogObject role="X-Axis">
-                <property name="metrics-unit">none</property>
-                <property name="assigned-format-string-XL">m/d</property>
-                <property name="pos-str">low</property>
-                <property name="style" type="GogStyle">
-                  <line auto-dash="1" auto-width="1" auto-color="1"/>
-                  <font auto-color="1" auto-font="1" auto-scale="1"/>
-                  <text_layout/>
-                </property>
-                <property name="id">1</property>
-                <data>
-                  <dimension id="0" type="GnmGODataScalar">43891</dimension>
-                  <dimension id="1" type="GnmGODataScalar">43996</dimension>
-                  <dimension id="2" type="GnmGODataScalar">7</dimension>
-                  <dimension id="3" type="GnmGODataScalar">1</dimension>
-                </data>
-                <GogObject role="MajorGrid">
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                  </property>
-                  <property name="id">1</property>
-                </GogObject>
-                <GogObject role="MinorGrid">
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                  </property>
-                  <property name="id">1</property>
-                </GogObject>
-              </GogObject>
-              <GogObject role="Y-Axis">
-                <property name="metrics-unit">none</property>
-                <property name="assigned-format-string-XL">#,##0</property>
-                <property name="map-name">Log</property>
-                <property name="pos-str">low</property>
-                <property name="style" type="GogStyle">
-                  <line auto-dash="1" auto-width="0" width="0.5" auto-color="1"/>
-                  <font auto-color="1" auto-font="1" auto-scale="1"/>
-                  <text_layout/>
-                </property>
-                <property name="id">1</property>
-                <data>
-                  <dimension id="0" type="GnmGODataScalar">100</dimension>
-                  <dimension id="1" type="GODataScalarVal">1000000</dimension>
-                </data>
-                <GogObject role="MajorGrid">
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="0" width="0.5" auto-color="0" color="96:96:96:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                  </property>
-                  <property name="id">1</property>
-                </GogObject>
-                <GogObject role="MinorGrid">
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="0" dash="s-dot" auto-width="0" width="1" auto-color="0" color="C0:C0:C0:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                  </property>
-                  <property name="id">1</property>
-                </GogObject>
-              </GogObject>
-              <GogObject role="Plot" type="GogXYPlot">
-                <property name="default-style-has-fill">FALSE</property>
-                <property name="default-style-has-lines">FALSE</property>
-                <property name="y-axis">1</property>
-                <property name="x-axis">1</property>
-                <property name="vary-style-by-element">FALSE</property>
-                <property name="id">1</property>
-                <GogObject role="Series">
-                  <property name="fill-type">y-origin</property>
-                  <property name="interpolation">linear</property>
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="1" auto-color="1"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                    <marker auto-shape="0" shape="triangle-up" auto-outline="0" outline-color="33:99:66:FF" auto-fill="0" fill-color="33:99:66:FF" size="5"/>
-                  </property>
-                  <property name="id">4</property>
-                  <data>
-                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_IT&quot;</dimension>
-                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
-                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$C$1:$C$65536</dimension>
-                  </data>
-                  <GogObject role="Trend line" type="GogMovingAvg">
-                    <property name="span">5</property>
-                    <property name="style" type="GogStyle">
-                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:99:66:FF"/>
-                    </property>
-                    <property name="id">1</property>
-                    <data>
-                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_IT&quot;</dimension>
-                    </data>
-                  </GogObject>
-                </GogObject>
-                <GogObject role="Series">
-                  <property name="fill-type">y-origin</property>
-                  <property name="interpolation">linear</property>
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="1" auto-color="1"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                    <marker auto-shape="0" shape="diamond" auto-outline="0" outline-color="0:0:0:FF" auto-fill="0" fill-color="FF:FF:99:FF" size="5"/>
-                  </property>
-                  <property name="id">7</property>
-                  <data>
-                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_DE&quot;</dimension>
-                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
-                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$G$1:$G$65536</dimension>
-                  </data>
-                  <GogObject role="Trend line" type="GogMovingAvg">
-                    <property name="span">5</property>
-                    <property name="style" type="GogStyle">
-                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="33:33:0:FF"/>
-                    </property>
-                    <property name="id">1</property>
-                    <data>
-                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_DE&quot;</dimension>
-                    </data>
-                  </GogObject>
-                </GogObject>
-                <GogObject role="Series">
-                  <property name="fill-type">y-origin</property>
-                  <property name="interpolation">linear</property>
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="1" auto-color="0" color="0:0:FF:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                    <marker auto-shape="0" shape="circle" auto-outline="0" outline-color="0:0:FF:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
-                  </property>
-                  <property name="id">5</property>
-                  <data>
-                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_US&quot;</dimension>
-                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
-                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$I$1:$I$65536</dimension>
-                  </data>
-                  <GogObject role="Trend line" type="GogMovingAvg">
-                    <property name="span">5</property>
-                    <property name="style" type="GogStyle">
-                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="0:0:FF:FF"/>
-                    </property>
-                    <property name="id">1</property>
-                    <data>
-                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_US&quot;</dimension>
-                    </data>
-                  </GogObject>
-                </GogObject>
-                <GogObject role="Series">
-                  <property name="fill-type">y-origin</property>
-                  <property name="interpolation">linear</property>
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="1" auto-color="0" color="FF:0:0:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                    <marker auto-shape="0" shape="square" auto-outline="0" outline-color="FF:0:0:FF" auto-fill="0" fill-color="FF:FF:FF:FF" size="5"/>
-                  </property>
-                  <property name="id">8</property>
-                  <data>
-                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_RU&quot;</dimension>
-                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
-                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$M$1:$M$65536</dimension>
-                  </data>
-                  <GogObject role="Trend line" type="GogMovingAvg">
-                    <property name="span">5</property>
-                    <property name="style" type="GogStyle">
-                      <line auto-dash="1" auto-width="0" width="1" auto-color="0" color="FF:0:0:FF"/>
-                    </property>
-                    <property name="id">1</property>
-                    <data>
-                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_RU&quot;</dimension>
-                    </data>
-                  </GogObject>
-                </GogObject>
-                <GogObject role="Series">
-                  <property name="fill-type">y-origin</property>
-                  <property name="interpolation">linear</property>
-                  <property name="style" type="GogStyle">
-                    <line auto-dash="1" auto-width="1" auto-color="0" color="FF:0:FF:FF"/>
-                    <fill type="none" auto-type="1" is-auto="1" auto-fore="1"/>
-                    <marker auto-shape="0" shape="triangle-down" auto-outline="0" outline-color="FF:0:FF:FF" auto-fill="0" fill-color="FF:99:CC:FF" size="5"/>
-                  </property>
-                  <property name="id">9</property>
-                  <data>
-                    <dimension id="-1" type="GnmGODataScalar">&quot;Series_UK&quot;</dimension>
-                    <dimension id="0" type="GnmGODataVector">Sheet_Data!$B$1:$B$65536</dimension>
-                    <dimension id="1" type="GnmGODataVector">Sheet_Data!$Q$1:$Q$65536</dimension>
-                  </data>
-                  <GogObject role="Trend line" type="GogMovingAvg">
-                    <property name="span">5</property>
-                    <property name="style" type="GogStyle">
-                      <line auto-dash="1" auto-width="1" auto-color="0" color="FF:99:CC:FF"/>
-                    </property>
-                    <property name="id">1</property>
-                    <data>
-                      <dimension id="-1" type="GnmGODataScalar">&quot;Average_UK&quot;</dimension>
-                    </data>
-                  </GogObject>
-                </GogObject>
-              </GogObject>
-              <GogObject role="Legend">
-                <property name="swatch-padding-pts">5.669291338582677</property>
-                <property name="swatch-size-pts">7.086614173228346</property>
-                <property name="padding-pts">7.086614173228346</property>
-                <property name="style" type="GogStyle">
-                  <outline auto-dash="0" dash="none" auto-width="1" auto-color="1"/>
-                  <fill type="pattern" auto-type="1" is-auto="1" auto-fore="1">
-                    <pattern type="solid" fore="0:0:0:FF" back="FF:FF:FF:FF"/>
-                  </fill>
-                  <font auto-color="1" auto-font="0" font="Droid Sans Mono 8" auto-scale="1"/>
-                </property>
-                <property name="anchor">bottom-right</property>
-                <property name="is-position-manual">TRUE</property>
-                <property name="position">0.69999999999999996 0.94999999999999996 1 1</property>
-                <property name="id">1</property>
-              </GogObject>
-            </GogObject>
-          </GogObject>
-        </gnm:SheetObjectGraph>
-      </gnm:Objects>
-      <gnm:Cells/>
-      <gnm:SheetLayout TopLeft="A1"/>
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
     </gnm:Sheet>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="1" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
@@ -2741,7 +2498,7 @@
                 <property name="id">1</property>
                 <data>
                   <dimension id="0" type="GnmGODataScalar">43891</dimension>
-                  <dimension id="1" type="GnmGODataScalar">43996</dimension>
+                  <dimension id="1" type="GnmGODataScalar">44017</dimension>
                   <dimension id="2" type="GnmGODataScalar">7</dimension>
                   <dimension id="3" type="GnmGODataScalar">1</dimension>
                 </data>
@@ -2986,7 +2743,7 @@
                 </property>
                 <property name="anchor">bottom-right</property>
                 <property name="is-position-manual">TRUE</property>
-                <property name="position">0.59999999999999998 0.94999999999999996 1 1</property>
+                <property name="position">0.5 0.94999999999999996 1 1</property>
                 <property name="id">1</property>
               </GogObject>
             </GogObject>
@@ -3100,7 +2857,7 @@
                 <property name="id">1</property>
                 <data>
                   <dimension id="0" type="GnmGODataScalar">43891</dimension>
-                  <dimension id="1" type="GnmGODataScalar">43996</dimension>
+                  <dimension id="1" type="GnmGODataScalar">44017</dimension>
                   <dimension id="2" type="GnmGODataScalar">7</dimension>
                   <dimension id="3" type="GnmGODataScalar">1</dimension>
                 </data>
@@ -3295,7 +3052,7 @@
                 </property>
                 <property name="anchor">bottom-right</property>
                 <property name="is-position-manual">TRUE</property>
-                <property name="position">0.5 0.94999999999999996 1 1</property>
+                <property name="position">0.45000000000000001 0.94999999999999996 1 1</property>
                 <property name="id">1</property>
               </GogObject>
             </GogObject>
@@ -3307,5 +3064,5 @@
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
     </gnm:Sheet>
   </gnm:Sheets>
-  <gnm:UIData SelectedTab="2"/>
+  <gnm:UIData SelectedTab="1"/>
 </gnm:Workbook>
