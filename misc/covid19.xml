@@ -25,7 +25,7 @@
   </gnm:Attributes>
   <office:document-meta xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:ooo="http://openoffice.org/2004/office" office:version="1.2">
     <office:meta>
-      <dc:date>2020-06-28T09:02:13Z</dc:date>
+      <dc:date>2020-07-03T09:02:19Z</dc:date>
       <meta:creation-date>2020-03-26T08:10:01Z</meta:creation-date>
     </office:meta>
   </office:document-meta>
@@ -35,12 +35,12 @@
     <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_R1</gnm:SheetName>
     <gnm:SheetName gnm:SheetType="object" gnm:Cols="256" gnm:Rows="65536">Graph_R2</gnm:SheetName>
   </gnm:SheetNameIndex>
-  <gnm:Geometry Width="1440" Height="838"/>
+  <gnm:Geometry Width="1460" Height="848"/>
   <gnm:Sheets>
     <gnm:Sheet DisplayFormulas="0" HideZero="0" HideGrid="0" HideColHeader="0" HideRowHeader="0" DisplayOutlines="1" OutlineSymbolsBelow="1" OutlineSymbolsRight="1" Visibility="GNM_SHEET_VISIBILITY_VISIBLE" GridColor="0:0:0">
       <gnm:Name>Sheet_Data</gnm:Name>
       <gnm:MaxCol>21</gnm:MaxCol>
-      <gnm:MaxRow>129</gnm:MaxRow>
+      <gnm:MaxRow>135</gnm:MaxRow>
       <gnm:Zoom>1</gnm:Zoom>
       <gnm:Names>
         <gnm:Name>
@@ -338,10 +338,10 @@
       </gnm:Cols>
       <gnm:Rows DefaultSizePts="12.75">
         <gnm:RowInfo No="0" Unit="17.25"/>
-        <gnm:RowInfo No="1" Unit="14.25" Count="126"/>
+        <gnm:RowInfo No="1" Unit="14.25" Count="131"/>
       </gnm:Rows>
-      <gnm:Selections CursorCol="19" CursorRow="126">
-        <gnm:Selection startCol="19" startRow="126" endCol="19" endRow="126"/>
+      <gnm:Selections CursorCol="2" CursorRow="131">
+        <gnm:Selection startCol="2" startRow="131" endCol="2" endRow="131"/>
       </gnm:Selections>
       <gnm:Cells>
         <gnm:Cell Row="0" Col="0" ValueType="60">N</gnm:Cell>
@@ -2739,6 +2739,8 @@
         <gnm:Cell Row="125" Col="7" ExprID="1"/>
         <gnm:Cell Row="125" Col="8" ValueType="40">2467071</gnm:Cell>
         <gnm:Cell Row="125" Col="9" ExprID="1"/>
+        <gnm:Cell Row="125" Col="10" ValueType="40">214750</gnm:Cell>
+        <gnm:Cell Row="125" Col="11" ExprID="1"/>
         <gnm:Cell Row="125" Col="12" ValueType="40">627646</gnm:Cell>
         <gnm:Cell Row="125" Col="13" ExprID="1"/>
         <gnm:Cell Row="125" Col="15" ValueType="40">750</gnm:Cell>
@@ -2750,18 +2752,118 @@
         <gnm:Cell Row="125" Col="21" ExprID="1"/>
         <gnm:Cell Row="126" Col="0" ValueType="40">120</gnm:Cell>
         <gnm:Cell Row="126" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44010</gnm:Cell>
+        <gnm:Cell Row="126" Col="2" ValueType="40">240310</gnm:Cell>
+        <gnm:Cell Row="126" Col="3" ExprID="1"/>
+        <gnm:Cell Row="126" Col="5" ValueType="40">97</gnm:Cell>
         <gnm:Cell Row="126" Col="6" ValueType="40">193499</gnm:Cell>
         <gnm:Cell Row="126" Col="7" ExprID="1"/>
+        <gnm:Cell Row="126" Col="8" ValueType="40">2507762</gnm:Cell>
+        <gnm:Cell Row="126" Col="9" ExprID="1"/>
+        <gnm:Cell Row="126" Col="10" ValueType="40">214939</gnm:Cell>
+        <gnm:Cell Row="126" Col="11" ExprID="1"/>
+        <gnm:Cell Row="126" Col="12" ValueType="40">634437</gnm:Cell>
+        <gnm:Cell Row="126" Col="13" ExprID="1"/>
+        <gnm:Cell Row="126" Col="15" ValueType="40">717</gnm:Cell>
+        <gnm:Cell Row="126" Col="16" ValueType="40">311151</gnm:Cell>
+        <gnm:Cell Row="126" Col="17" ExprID="1"/>
+        <gnm:Cell Row="126" Col="18" ValueType="40">27642</gnm:Cell>
+        <gnm:Cell Row="126" Col="19" ExprID="1"/>
         <gnm:Cell Row="126" Col="20" ValueType="40">528859</gnm:Cell>
         <gnm:Cell Row="126" Col="21" ExprID="1"/>
         <gnm:Cell Row="127" Col="0" ValueType="40">121</gnm:Cell>
         <gnm:Cell Row="127" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44011</gnm:Cell>
+        <gnm:Cell Row="127" Col="2" ValueType="40">240436</gnm:Cell>
+        <gnm:Cell Row="127" Col="3" ExprID="1"/>
+        <gnm:Cell Row="127" Col="5" ValueType="40">78</gnm:Cell>
+        <gnm:Cell Row="127" Col="6" ValueType="40">193761</gnm:Cell>
+        <gnm:Cell Row="127" Col="7" ExprID="1"/>
+        <gnm:Cell Row="127" Col="8" ValueType="40">2544152</gnm:Cell>
+        <gnm:Cell Row="127" Col="9" ExprID="1"/>
+        <gnm:Cell Row="127" Col="10" ValueType="40">215179</gnm:Cell>
+        <gnm:Cell Row="127" Col="11" ExprID="1"/>
+        <gnm:Cell Row="127" Col="12" ValueType="40">641156</gnm:Cell>
+        <gnm:Cell Row="127" Col="13" ExprID="1"/>
+        <gnm:Cell Row="127" Col="15" ValueType="40">782</gnm:Cell>
+        <gnm:Cell Row="127" Col="16" ValueType="40">311965</gnm:Cell>
+        <gnm:Cell Row="127" Col="17" ExprID="1"/>
+        <gnm:Cell Row="127" Col="18" ValueType="40">27651</gnm:Cell>
+        <gnm:Cell Row="127" Col="19" ExprID="1"/>
+        <gnm:Cell Row="127" Col="20" ValueType="40">548318</gnm:Cell>
+        <gnm:Cell Row="127" Col="21" ExprID="1"/>
         <gnm:Cell Row="128" Col="0" ValueType="40">122</gnm:Cell>
         <gnm:Cell Row="128" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44012</gnm:Cell>
+        <gnm:Cell Row="128" Col="2" ValueType="40">240578</gnm:Cell>
+        <gnm:Cell Row="128" Col="3" ExprID="1"/>
+        <gnm:Cell Row="128" Col="5" ValueType="40">62</gnm:Cell>
+        <gnm:Cell Row="128" Col="6" ValueType="40">194259</gnm:Cell>
+        <gnm:Cell Row="128" Col="7" ExprID="1"/>
+        <gnm:Cell Row="128" Col="8" ValueType="40">2588017</gnm:Cell>
+        <gnm:Cell Row="128" Col="9" ExprID="1"/>
+        <gnm:Cell Row="128" Col="10" ValueType="40">215475</gnm:Cell>
+        <gnm:Cell Row="128" Col="11" ExprID="1"/>
+        <gnm:Cell Row="128" Col="12" ValueType="40">647849</gnm:Cell>
+        <gnm:Cell Row="128" Col="13" ExprID="1"/>
+        <gnm:Cell Row="128" Col="15" ValueType="40">745</gnm:Cell>
+        <gnm:Cell Row="128" Col="16" ValueType="40">312654</gnm:Cell>
+        <gnm:Cell Row="128" Col="17" ExprID="1"/>
+        <gnm:Cell Row="128" Col="18" ValueType="40">27670</gnm:Cell>
+        <gnm:Cell Row="128" Col="19" ExprID="1"/>
+        <gnm:Cell Row="128" Col="20" ValueType="40">566840</gnm:Cell>
+        <gnm:Cell Row="128" Col="21" ExprID="1"/>
         <gnm:Cell Row="129" Col="0" ValueType="40">123</gnm:Cell>
         <gnm:Cell Row="129" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44013</gnm:Cell>
+        <gnm:Cell Row="129" Col="2" ValueType="40">240760</gnm:Cell>
+        <gnm:Cell Row="129" Col="3" ExprID="1"/>
+        <gnm:Cell Row="129" Col="5" ValueType="40">109</gnm:Cell>
+        <gnm:Cell Row="129" Col="6" ValueType="40">194725</gnm:Cell>
+        <gnm:Cell Row="129" Col="7" ExprID="1"/>
+        <gnm:Cell Row="129" Col="8" ValueType="40">2640626</gnm:Cell>
+        <gnm:Cell Row="129" Col="9" ExprID="1"/>
+        <gnm:Cell Row="129" Col="12" ValueType="40">654405</gnm:Cell>
+        <gnm:Cell Row="129" Col="13" ExprID="1"/>
+        <gnm:Cell Row="129" Col="15" ValueType="40">611</gnm:Cell>
+        <gnm:Cell Row="129" Col="16" ValueType="40">313483</gnm:Cell>
+        <gnm:Cell Row="129" Col="17" ExprID="1"/>
+        <gnm:Cell Row="129" Col="18" ValueType="40">27680</gnm:Cell>
+        <gnm:Cell Row="129" Col="19" ExprID="1"/>
+        <gnm:Cell Row="129" Col="20" ValueType="40">585493</gnm:Cell>
+        <gnm:Cell Row="129" Col="21" ExprID="1"/>
+        <gnm:Cell Row="130" Col="0" ValueType="40">124</gnm:Cell>
+        <gnm:Cell Row="130" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44014</gnm:Cell>
+        <gnm:Cell Row="130" Col="2" ValueType="40">240961</gnm:Cell>
+        <gnm:Cell Row="130" Col="3" ExprID="1"/>
+        <gnm:Cell Row="130" Col="5" ValueType="40">98</gnm:Cell>
+        <gnm:Cell Row="130" Col="6" ValueType="40">195228</gnm:Cell>
+        <gnm:Cell Row="130" Col="7" ExprID="1"/>
+        <gnm:Cell Row="130" Col="8" ValueType="40">2695495</gnm:Cell>
+        <gnm:Cell Row="130" Col="9" ExprID="1"/>
+        <gnm:Cell Row="130" Col="12" ValueType="40">661165</gnm:Cell>
+        <gnm:Cell Row="130" Col="13" ExprID="1"/>
+        <gnm:Cell Row="130" Col="15" ValueType="40">662</gnm:Cell>
+        <gnm:Cell Row="130" Col="16" ValueType="40">283757</gnm:Cell>
+        <gnm:Cell Row="130" Col="17" ExprID="1"/>
+        <gnm:Cell Row="130" Col="18" ValueType="40">27729</gnm:Cell>
+        <gnm:Cell Row="130" Col="19" ExprID="1"/>
+        <gnm:Cell Row="130" Col="20" ValueType="40">604641</gnm:Cell>
+        <gnm:Cell Row="130" Col="21" ExprID="1"/>
+        <gnm:Cell Row="131" Col="0" ValueType="40">125</gnm:Cell>
+        <gnm:Cell Row="131" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44015</gnm:Cell>
+        <gnm:Cell Row="131" Col="6" ValueType="40">195674</gnm:Cell>
+        <gnm:Cell Row="131" Col="7" ExprID="1"/>
+        <gnm:Cell Row="131" Col="12" ValueType="40">667887</gnm:Cell>
+        <gnm:Cell Row="131" Col="13" ExprID="1"/>
+        <gnm:Cell Row="131" Col="20" ValueType="40">625544</gnm:Cell>
+        <gnm:Cell Row="131" Col="21" ExprID="1"/>
+        <gnm:Cell Row="132" Col="0" ValueType="40">126</gnm:Cell>
+        <gnm:Cell Row="132" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44016</gnm:Cell>
+        <gnm:Cell Row="133" Col="0" ValueType="40">127</gnm:Cell>
+        <gnm:Cell Row="133" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44017</gnm:Cell>
+        <gnm:Cell Row="134" Col="0" ValueType="40">128</gnm:Cell>
+        <gnm:Cell Row="134" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44018</gnm:Cell>
+        <gnm:Cell Row="135" Col="0" ValueType="40">129</gnm:Cell>
+        <gnm:Cell Row="135" Col="1" ValueType="40" ValueFormat="m/d/yyyy">44019</gnm:Cell>
       </gnm:Cells>
-      <gnm:SheetLayout TopLeft="P112">
+      <gnm:SheetLayout TopLeft="C112">
         <gnm:FreezePanes FrozenTopLeft="A1" UnfrozenTopLeft="C2"/>
       </gnm:SheetLayout>
       <gnm:Solver ModelType="0" ProblemType="0" MaxTime="60" MaxIter="1000" NonNeg="1" Discr="0" AutoScale="0" ProgramR="0"/>
