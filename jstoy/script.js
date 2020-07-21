@@ -14,23 +14,31 @@ void function ($form, $out) {
             $line.innerHTML = Array.prototype.slice.call(arguments).join(' ');
             document.getElementById('print').appendChild($line);
         };
-        var load = function(fname, callback) {
-            var $script = document.createElement('script');
-            $script.addEventListener('load', function () {
-                this.parentNode.removeChild(this);
-                try {
-                    $out.innerHTML = callback();
-                } catch(exception) {
-                    print(fname + ': ', exception);
-                    typeof(exception.stack) === 'string' && print(exception.stack);
-                }
-            });
-            $script.addEventListener('error', function () {
-                this.parentNode.removeChild(this);
-                print(fname, ': failed to load');
-            });
-            $script.src = fname;
-            document.querySelector('head').appendChild($script);
+        var load = function (fname, callback) {
+            if(Array.isArray(fname)) {
+                (fname.length > 1)?
+                    load(fname.shift(), function () {
+                        load(fname, callback)
+                    }):
+                    load(fname.shift(), callback);
+            } else {
+                var $script = document.createElement('script');
+                $script.addEventListener('load', function () {
+                    this.parentNode.removeChild(this);
+                    try {
+                        $out.innerHTML = callback();
+                    } catch(exception) {
+                        print(fname + ': ', exception);
+                        typeof(exception.stack) === 'string' && print(exception.stack);
+                    }
+                });
+                $script.addEventListener('error', function () {
+                    this.parentNode.removeChild(this);
+                    print(fname, ': failed to load');
+                });
+                $script.src = fname;
+                document.head.appendChild($script);
+            }
         };
         document.getElementById('print').innerHTML = '';
         try {
