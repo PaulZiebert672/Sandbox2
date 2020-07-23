@@ -40,6 +40,19 @@ void function ($form, $out) {
                 document.head.appendChild($script);
             }
         };
+        var link = function(href) {
+            var $link = Array.prototype.slice.call(document.head.querySelectorAll('link'))
+                .filter(function (el) {
+                    return el.href.split('/').slice(-1)[0] == href.split('/').slice(-1)[0];
+                })[0];
+            if(!$link) {
+                $link = document.createElement('link');
+                $link.rel = 'stylesheet';
+                $link.type = 'text/css';
+                $link.href = href;
+                document.head.append($link);
+            }
+        }
         document.getElementById('print').innerHTML = '';
         try {
             $out.innerHTML = eval($form.elements['code'].value);
