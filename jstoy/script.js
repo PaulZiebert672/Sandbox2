@@ -21,7 +21,7 @@ void function ($form, $out) {
                     $out.innerHTML = callback();
                 } catch(exception) {
                     print(src + ': ', exception);
-                    typeof(exception.stack) === 'string' && print(exception.stack);
+                    typeof exception.stack === 'string' && print(exception.stack);
                 }
             });
             $script.addEventListener('error', function () {
@@ -33,9 +33,10 @@ void function ($form, $out) {
         }
     };
     var link = function(href) {
+        var basename = href.split('/').slice(-1)[0];
         var $link = Array.prototype.slice.call(document.head.querySelectorAll('link'))
             .filter(function (el) {
-                return el.href.split('/').slice(-1)[0] == href.split('/').slice(-1)[0];
+                return el.href.split('/').slice(-1)[0] === basename;
             })[0];
         if(!$link) {
             $link = document.createElement('link');
@@ -44,6 +45,16 @@ void function ($form, $out) {
             $link.href = href;
             document.head.append($link);
         }
+    };
+    var escapeHtml = function (html) {
+        var inventory = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" };
+        for(var sym in inventory) {
+            html = html.replace(RegExp(sym, "g"), inventory[sym]);
+        }
+        return html;
+    };
+    var heredoc = function (fn) {
+        return fn.toString().split('\n').slice(1, -1).join('\n');
     };
 
     if(typeof localStorage === 'object') {
@@ -59,7 +70,7 @@ void function ($form, $out) {
             $out.innerHTML = eval($form.elements['code'].value);
         } catch(exception) {
             $out.innerHTML = exception;
-            typeof(exception.stack) === 'string' && print(exception.stack);
+            typeof exception.stack === 'string' && print(exception.stack);
         }
     }.bind(undefined));
     $form.elements['save'].addEventListener('click', function (event) {
