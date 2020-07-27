@@ -9,26 +9,32 @@ h1 {
     color: gray;
 }
 
-#toy-in textarea {
+.src-space > textarea {
     width: 100%;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 14px;
+    color: darkblue;
 }
 
-.btnspace {
-    margin-right: 24px;
+.btn-space > input {
+    margin-top: 0.3em;
+    margin-left: 0em;
+    margin-right: 1.5em;
+    border-radius: 0.5em;
+    width: 8em;
+    height: 2.5em;
 }
 
 #result {
-    margin: 6px;
+    margin: 4px 0px;
+    padding-left: 6px;
     color: darkslategray;
     background-color: ghostwhite;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
 .printline {
     padding-left: 6px;
-    color: teal;
     font-family: monospace;
-    font-size: 15px;
+    font-size: 14px;
 }
