@@ -32,7 +32,7 @@ void function ($form, $out) {
             document.head.appendChild($script);
         }
     };
-    var link = function(href) {
+    var link = function (href) {
         var basename = href.split('/').slice(-1)[0];
         var $link = Array.prototype.slice.call(document.head.querySelectorAll('link'))
             .filter(function (el) {
@@ -43,7 +43,7 @@ void function ($form, $out) {
             $link.rel = 'stylesheet';
             $link.type = 'text/css';
             $link.href = href;
-            document.head.append($link);
+            document.head.appendChild($link);
         }
     };
     var escapeHtml = function (html) {

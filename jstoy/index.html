@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="paul">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="shortcut icon" href="data:image/png;base64,
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xh
@@ -18,7 +19,7 @@
   </head>
   <body>
     <h1>JSToy</h1>
-    <div id="toy-in">
+    <div id="toy-input">
       <div id="info">
         <span>use `print()` for raw output, </span>
         <span>use `load(src, callback)` for loading script files, </span>
@@ -27,27 +28,26 @@
       <div>
         <form name="edit" id="input" type="post" action="">
           <div>
-            <span class="txtspace">
+            <span class="src-space">
               <textarea name="code" form="input" rows="24" cols="80"
                   spellcheck="false" autocorrect="off"></textarea>
             </span>
           </div>
           <div>
-            <span class="btnspace">
+            <span class="btn-space">
               <input name="submit" type="submit" value="eval()">
             </span>
-            <span class="btnspace">
+            <span class="btn-space">
               <input name="save" type="button" value="save">
             </span>
           </div>
         </form>
       </div>
     </div>
-    <div id="toy-out">
+    <div id="toy-output">
       <div id="result"></div>
       <span id="print"></span>
     </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
-
