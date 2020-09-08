@@ -24,110 +24,110 @@ Calc.std.log = function (x) { return (x - 1)/Calc.iter((x + 1)/2, Math.sqrt(x));
 Calc.std.atan = function (x) { return x/Calc.iter(1, Math.sqrt(1 + x*x)); };
 
 Calc.root = function root(x, p) {
-    var bigA = BigInt.def(x);
+    var bigA = UInt.def(x);
     var x0 = function (n) {
         var k = n >> 1;
         var m = (2*p - x.length()) >> 2;
-        if(k > BigInt.size) {
+        if(k > UInt.size) {
             return Calc.root(x.exp(2*(k - n + m)), k).exp(n - k - m);
         }
-        return BigInt.ONE.exp(n);
+        return UInt.ONE.exp(n);
     }(p);
     var x1;
     do {
-        x1 = BigInt.def(x0);
-        x0.add(BigInt.quot(bigA, x0)).halve();
-    } while(BigInt.cmp(BigInt.diff(x0, x1), BigInt.ONE.exp(p >> 1)) > 0);
+        x1 = UInt.def(x0);
+        x0.add(UInt.quot(bigA, x0)).halve();
+    } while(UInt.cmp(UInt.diff(x0, x1), UInt.ONE.exp(p >> 1)) > 0);
     return x0;
 };
 
-Calc.inv = function (x, p) { return BigInt.quot(BigInt.ONE.exp(2*p), x); };
+Calc.inv = function (x, p) { return UInt.quot(UInt.ONE.exp(2*p), x); };
 
 Calc.inv.exp = function exp(callback, x, p) {
-    var bigA = BigInt.def(x);
+    var bigA = UInt.def(x);
     var x0 = function (n) {
         var k = n >> 1;
-        if(k > BigInt.size) {
+        if(k > UInt.size) {
             return exp(callback, x.exp(k - n), k).exp(n - k);
         }
-        return BigInt.ONE.exp(n);
+        return UInt.ONE.exp(n);
     }(p);
     var x1;
     do {
-        x1 = BigInt.def(x0);
-        x0.mult(BigInt.sum(BigInt.ONE.exp(p), bigA).sub(callback(x0, p))).exp(-p);
-    } while(BigInt.cmp(BigInt.diff(x0, x1), BigInt.ONE.exp((p >> 1) + 2)) > 0);
+        x1 = UInt.def(x0);
+        x0.mult(UInt.sum(UInt.ONE.exp(p), bigA).sub(callback(x0, p))).exp(-p);
+    } while(UInt.cmp(UInt.diff(x0, x1), UInt.ONE.exp((p >> 1) + 2)) > 0);
     return x0;
 };
 
 Calc.inv.tan = function tan(callback, x, p) {
-    var bigA = BigInt.def(x);
+    var bigA = UInt.def(x);
     var x0 = function (n) {
         var k = n >> 1;
-        if(k > BigInt.size) {
-            return tan(callback, BigInt.def(x).exp(k - n), k).exp(n - k);
+        if(k > UInt.size) {
+            return tan(callback, UInt.def(x).exp(k - n), k).exp(n - k);
         }
-        return BigInt.def(x);
+        return UInt.def(x);
     }(p);
     var x1, bigV, bigProd;
     do {
-        x1 = BigInt.def(x0);
+        x1 = UInt.def(x0);
         bigV = callback(x0, p);
-        bigProd = BigInt.prod(
-            BigInt.sum(BigInt.ONE.exp(p), BigInt.prod(x0, x0).exp(-p)),
-            BigInt.diff(bigA, bigV)
+        bigProd = UInt.prod(
+            UInt.sum(UInt.ONE.exp(p), UInt.prod(x0, x0).exp(-p)),
+            UInt.diff(bigA, bigV)
         ).exp(-p);
-        (BigInt.cmp(bigA, bigV) < 0)? x0.sub(bigProd): x0.add(bigProd);
-    } while(BigInt.cmp(BigInt.diff(x0, x1), BigInt.ONE.exp(p >> 1)) > 0);
+        (UInt.cmp(bigA, bigV) < 0)? x0.sub(bigProd): x0.add(bigProd);
+    } while(UInt.cmp(UInt.diff(x0, x1), UInt.ONE.exp(p >> 1)) > 0);
     return x0;
 };
 
 Calc.Archimede = Calc.Archimede || {};
 
 Calc.Archimede.iter = function (a0, g0, p) {
-    var a = BigInt.def(a0), g = BigInt.def(g0), d = [[BigInt.def(a0)]], n = 0;
+    var a = UInt.def(a0), g = UInt.def(g0), d = [[UInt.def(a0)]], n = 0;
     do {
-        a = BigInt.sum(a, g).halve();
-        g = Calc.root(BigInt.prod(a, g), p);
-        d.unshift([BigInt.def(a)]);
+        a = UInt.sum(a, g).halve();
+        g = Calc.root(UInt.prod(a, g), p);
+        d.unshift([UInt.def(a)]);
         n++; /* accelerate convergence */
-        for(var fact = BigInt.parse('1'), k = 1; k <= n; k++) {
+        for(var fact = UInt.parse('1'), k = 1; k <= n; k++) {
             fact.scale(4);
-            d[0][k] = BigInt.quot(
-                BigInt.prod(d[0][k - 1], fact).sub(d[1][k - 1]),
-                BigInt.diff(fact, BigInt.ONE)
+            d[0][k] = UInt.quot(
+                UInt.prod(d[0][k - 1], fact).sub(d[1][k - 1]),
+                UInt.diff(fact, UInt.ONE)
             );
         }
-    } while(BigInt.cmp(BigInt.diff(d[1][n - 1], d[0][n]), BigInt.ONE.exp(2)) > 0);
+    } while(UInt.cmp(UInt.diff(d[1][n - 1], d[0][n]), UInt.ONE.exp(2)) > 0);
     return d[0][n];
 };
 
 Calc.Archimede.PI = function (p) {
-    var big3 = BigInt.parse('3').exp(p);
+    var big3 = UInt.parse('3').exp(p);
     return Calc.inv(Calc.Archimede.iter(
-        Calc.inv(Calc.root(BigInt.def(big3).exp(p), p).scale(2), p),
+        Calc.inv(Calc.root(UInt.def(big3).exp(p), p).scale(2), p),
         Calc.inv(big3, p),
         p
     ), p);
 };
 
 Calc.Archimede.log = function (x, p) {
-    return BigInt.quot(
-        BigInt.diff(x, BigInt.ONE.exp(p)).exp(p),
+    return UInt.quot(
+        UInt.diff(x, UInt.ONE.exp(p)).exp(p),
         Calc.Archimede.iter(
-            BigInt.sum(x, BigInt.ONE.exp(p)).halve(),
-            Calc.root(BigInt.def(x).exp(p), p),
+            UInt.sum(x, UInt.ONE.exp(p)).halve(),
+            Calc.root(UInt.def(x).exp(p), p),
             p
         )
     );
 };
 
 Calc.Archimede.atan = function (x, p) {
-    return BigInt.quot(
-        BigInt.def(x).exp(p),
+    return UInt.quot(
+        UInt.def(x).exp(p),
         Calc.Archimede.iter(
-            BigInt.ONE.exp(p),
-            Calc.root(BigInt.sum(BigInt.ONE.exp(2*p), BigInt.prod(x, x)), p),
+            UInt.ONE.exp(p),
+            Calc.root(UInt.sum(UInt.ONE.exp(2*p), UInt.prod(x, x)), p),
             p
         )
     );
@@ -139,30 +139,30 @@ Calc.Archimede.tan = function (x, p) { return Calc.inv.tan(Calc.Archimede.atan, 
 Calc.AGM = function (a0, g0, p) {
     var a = [a0], g = [g0];
     do {
-        a.unshift(BigInt.sum(a[0], g[0]).halve());
-        g.unshift(Calc.root(BigInt.prod(a[1], g[0]), p));
-    } while(BigInt.cmp(BigInt.diff(a[0], a[1]), BigInt.ONE.exp(p >> 2)) >= 0);
+        a.unshift(UInt.sum(a[0], g[0]).halve());
+        g.unshift(Calc.root(UInt.prod(a[1], g[0]), p));
+    } while(UInt.cmp(UInt.diff(a[0], a[1]), UInt.ONE.exp(p >> 2)) >= 0);
     return a[0];
 };
 
 Calc.AGM.PI = function (p) {
-    var a = [Calc.root(BigInt.TWO.exp(2*p), p)], g = [BigInt.ONE.exp(p)];
-    var s = BigInt.ONE.exp(2*p), fact = BigInt.parse('1');
+    var a = [Calc.root(UInt.TWO.exp(2*p), p)], g = [UInt.ONE.exp(p)];
+    var s = UInt.ONE.exp(2*p), fact = UInt.parse('1');
     do {
-        a.unshift(BigInt.sum(a[0], g[0]).halve());
-        g.unshift(Calc.root(BigInt.prod(a[1], g[0]), p));
-        s.sub(BigInt.diff(a[0], g[0]).mult(BigInt.sum(a[0], g[0])).mult(fact.scale(2)));
-    } while (BigInt.cmp(BigInt.diff(a[0], a[1]), BigInt.ONE.exp(p >> 1)) > 0);
-    return BigInt.quot(BigInt.prod(a[0], a[0]), s.exp(-p)).scale(2);
+        a.unshift(UInt.sum(a[0], g[0]).halve());
+        g.unshift(Calc.root(UInt.prod(a[1], g[0]), p));
+        s.sub(UInt.diff(a[0], g[0]).mult(UInt.sum(a[0], g[0])).mult(fact.scale(2)));
+    } while (UInt.cmp(UInt.diff(a[0], a[1]), UInt.ONE.exp(p >> 1)) > 0);
+    return UInt.quot(UInt.prod(a[0], a[0]), s.exp(-p)).scale(2);
 };
 
 Calc.AGM.LN2 = function (p) {
     var q = 3*p >> 1, n = (p/(2*Math.LN2*Math.LOG10E) + 1) | 0;
-    return BigInt.quot(
+    return UInt.quot(
         Calc.AGM.PI(p).exp(q),
         Calc.AGM(
-            BigInt.ONE.exp(q),
-            BigInt.quot(BigInt.parse('4').exp(q), BigInt.pow(BigInt.TWO, n)),
+            UInt.ONE.exp(q),
+            UInt.quot(UInt.parse('4').exp(q), UInt.pow(UInt.TWO, n)),
             q
         ).scale(2*n)
     );
