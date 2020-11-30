@@ -1,5 +1,6 @@
 'use strict';
 void function ($form, $out) {
+    /* DOM manipulation helpers */
     var print = function () {
         var $line = document.createElement('div');
         $line.className = 'printline';
@@ -21,7 +22,9 @@ void function ($form, $out) {
                     $out.innerHTML = callback();
                 } catch(exception) {
                     print(src + ': ', exception);
-                    typeof exception.stack === 'string' && print(exception.stack);
+                    if(typeof exception.stack === 'string') {
+                        print('<pre>' + exception.stack + '</pre>');
+                    }
                 }
             });
             $script.addEventListener('error', function () {
@@ -46,6 +49,7 @@ void function ($form, $out) {
             document.head.appendChild($link);
         }
     };
+    /* ES5 compatibility helpers */
     var escapeHtml = function (html) {
         var inventory = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&apos;" };
         for(var sym in inventory) {
@@ -56,7 +60,21 @@ void function ($form, $out) {
     var heredoc = function (fn) {
         return fn.toString().split('\n').slice(1, -1).join('\n');
     };
+    var template = function (text) {
+        var config = {
+            interpolate: /<%=(.+?)%>/g,
+            evaluate: /<%(.+?)%>/g
+        };
+        return new Function("data",
+            "var output = " +
+            JSON.stringify(text)
+                .replace(config.interpolate, '" + (data.$1) + "')
+                .replace(config.evaluate, '"; $1 output += "') +
+            "; return output;"
+        );
+    };
 
+    /* Entry point */
     if(typeof localStorage === 'object') {
         $form.elements['code'].value = localStorage.getItem('code');
         $form.elements['save'].disabled = true;
@@ -70,7 +88,9 @@ void function ($form, $out) {
             $out.innerHTML = eval($form.elements['code'].value);
         } catch(exception) {
             $out.innerHTML = exception;
-            typeof exception.stack === 'string' && print(exception.stack);
+            if(typeof exception.stack === 'string') {
+                $out.innerHTML += '<pre>' + exception.stack + '</pre>';
+            }
         }
     }.bind(undefined));
     $form.elements['save'].addEventListener('click', function (event) {
