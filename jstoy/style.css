@@ -4,6 +4,10 @@ h1 {
     font-size: 1.6em;
 }
 
+pre {
+    color: darkgreen;
+}
+
 #info {
     margin-left: 6px;
     color: gray;
