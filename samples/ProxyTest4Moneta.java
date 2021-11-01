@@ -3,8 +3,8 @@
  *
  *  Run in docker:
  *
- * docker run --rm --mount type=bind,source=/home/username/src,target=/local/src \
- *   eclipse-temurin:11 java /local/src/ProxyTest4Moneta.java
+ * docker run --rm --mount type=bind,source=${PWD}/src,target=/local/src \
+ *   eclipse-temurin:11 java /local/src/ProxyTest4Moneta.java /local/src/envelope.json
  *
  *  @author Paul Ziebert
  */
@@ -17,10 +17,13 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.Base64;
-import java.util.Map;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class ProxyTest4Moneta {
@@ -37,24 +40,18 @@ public class ProxyTest4Moneta {
         "secret", "secret"
     );
 
-    private static String envelopeRequest =
-"{ " + 
-"    \"Envelope\": { " +
-"        \"Header\": { " +
-"            \"Security\": { " +
-"                \"UsernameToken\": { " +
-"                    \"Username\": \"moneta@nowhere.ru\", " +
-"                    \"Password\": \"secret\" " +
-"                } " +
-"            } " +
-"        }, " +
-"        \"Body\": { " +
-"            \"PingRequest\": { " +
-"                \"any\": \"hello\" " +
-"            } " +
-"        } " +
-"    } " +
-"}";
+    /**
+     *  @exception RuntimeException
+     */
+    private static String readEnvelope(String filename) {
+        try {
+            var lines = Files.readAllLines(Paths.get(filename));
+            return String.join("\n", lines);
+        } catch(IOException e) {
+            LOG.severe("error reading file: " + e.getMessage());
+            throw new RuntimeException(e);
+        }
+    }
 
     private static HttpClient createHttpClient(
         Map<String, String> config
@@ -103,7 +100,12 @@ public class ProxyTest4Moneta {
             "java.util.logging.SimpleFormatter.format",
             "[%1$tF %1$tT] [%4$-7s] %5$s %n"
         );
+        if(args.length != 1) {
+            LOG.info("java ProxyTest4Moneta filename");
+            System.exit(-1);
+        }
         LOG.info("Ping request for " + serviceUri);
+        final String envelopeRequest = readEnvelope(args[0]);
         final var client = createHttpClient(proxyConfig);
         final var request = createHttpRequest(
             serviceUri,

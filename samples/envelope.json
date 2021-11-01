@@ -1,0 +1,17 @@
+{
+    "Envelope": {
+        "Header": {
+            "Security": {
+                "UsernameToken": {
+                    "Username": "user@mail.ru",
+                    "Password": "secret"
+                }
+            }
+        },
+        "Body": {
+            "PingRequest": {
+                "any": "hello"
+            }
+        }
+    }
+}
