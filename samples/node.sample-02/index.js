@@ -15,17 +15,17 @@ app.post("*", async (req, res) => {
     console.log('headers',  req.headers);
     console.log('body:', req.body);
     try {
-        var upshot = await axios.post('http://localhost:6780', req.body, {
+        var payload = await axios.post('http://localhost:6780', req.body, {
             headers: {
                 'content-type': 'application/json',
                 'accept': 'application/json'
             }
         });
-        console.log(upshot.status);
-        if(upshot.status != 200) {
-            throw new Error(`status = ${upshot.status}`);
+        console.log(payload.status);
+        if(payload.status != 200) {
+            throw new Error(`status = ${payload.status}`);
         }
-        return res.json(upshot.data);
+        return res.json(payload.data);
     } catch(err) {
         console.error('connection error:' + err.message);
         return res.status(502).json({ msg: err.message });
