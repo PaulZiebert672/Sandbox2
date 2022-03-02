@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Fourier series}
+\author{Paul}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Orthogonality}
+
+Let $n,m \in \mathbb{N}$. The computation of the Fourier series is based on the integral identities
+
+\begin{align*} 
+\int \limits_{x=-\pi}^{\pi} \cos{n x} \cos{m x} \, \mathrm{d} x &=  \pi \delta_{n m} \\ 
+\int \limits_{x=-\pi}^{\pi} \sin{n x} \sin{m x} \, \mathrm{d} x &=  \pi \delta_{n m} \\ 
+\int \limits_{x=-\pi}^{\pi} \sin{n x} \cos{m x} \, \mathrm{d} x &=  0
+\end{align*}
+
+\section{Series expansion}
+
+The Fourier series of a real function $f(x)$ for $x \in [-\pi,\pi]$ is given by
+
+\begin{align*} 
+f(x) &=  \dfrac{1}{2} a_0 + \sum_{k=1}^{\infty} a_k \cos{k x} + \sum_{k=1}^{\infty} b_k \sin{k x} 
+\end{align*}
+
+where
+
+\begin{align*} 
+a_k &=  \dfrac{1}{\pi} \int \limits_{x=-\pi}^{\pi} f(x) \cos{k x} \, \mathrm{d} x \\ 
+b_k &=  \dfrac{1}{\pi} \int \limits_{x=-\pi}^{\pi} f(x) \sin{k x} \, \mathrm{d} x
+\end{align*}
+
+\section{Complex coefficients}
+
+The Fourier series of a real function $f(x)$ for $x \in [-\pi,\pi]$ is given by
+
+\begin{align*} 
+f(x) &=  \sum_{k=-\infty}^{\infty} c_k \, \mathrm{e}^{i k x} 
+\end{align*}
+
+where $c_k$ are complex values for $k \in \mathbb{Z}$
+
+\begin{align*} 
+c_k &=  \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} f(x) \, \mathrm{e}^{-i k x} \, \mathrm{d} x
+\end{align*}
+
+This expansion is based on orthogonality relations
+\begin{align*} 
+\langle \epsilon_n, \epsilon_m \rangle &= \delta_{n m} \\
+\langle \epsilon_n, \epsilon_m \rangle &= \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} {\epsilon_n}^* {\epsilon_m} \, \mathrm{d} x
+\end{align*}
+
+for the set of complex functions $\epsilon_k(z) = \mathrm{e}^{i k z}, k \in \mathbb{Z}$
+
+\end{document}
