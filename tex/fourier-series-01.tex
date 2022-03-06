@@ -49,10 +49,26 @@ c_k &=  \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} f(x) \, \mathrm{e}^{-i k x}
 
 This expansion is based on orthogonality relations
 \begin{align*} 
-\langle \epsilon_n, \epsilon_m \rangle &= \delta_{n m} \\
-\langle \epsilon_n, \epsilon_m \rangle &= \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} {\epsilon_n}^* {\epsilon_m} \, \mathrm{d} x
+\langle \phi_n, \phi_m \rangle &= \delta_{n m} \\
+\langle \phi_n, \phi_m \rangle &= \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} \overline{\phi_n(x)} \, {\phi_m(x)} \, \mathrm{d} x
 \end{align*}
 
-for the set of complex functions $\epsilon_k(z) = \mathrm{e}^{i k z}, k \in \mathbb{Z}$
+for the set of complex functions $\phi_k(z) = \mathrm{e}^{i k z}, k \in \mathbb{Z}$
+
+\section{Parseval's theorem}
+
+The Fourier coefficients of function $f(x)$ will satisfy the relation, which is a generalized Pythagorean theorem for inner-product spaces
+
+\begin{align*}
+\dfrac{1}{2}a_0^2 + \sum_{n=1}^{\infty} (a_n^2+b_n^2) &=
+  \dfrac{1}{\pi} \int \limits_{x=-\pi}^{\pi} \vert f(x) \vert^2 \, \mathrm{d} x
+\end{align*}
+
+For a complex Fourier series,
+
+\begin{align*}
+\sum_{k=-\infty}^{\infty} \vert c_k \vert^2 &=
+  \dfrac{1}{2 \pi} \int \limits_{x=-\pi}^{\pi} \vert f(x) \vert^2 \, \mathrm{d} x
+\end{align*}
 
 \end{document}
