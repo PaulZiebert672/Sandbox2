@@ -1,0 +1,175 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newtheorem{axiom}{Axiom}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\DeclareMathOperator{\tr}{Tr}
+
+\title{Axioms of Quantum Mechanics}
+\author{Paul}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{States}
+
+\begin{axiom}
+With every quantum system there is associated a complex separable Hilbert space $(\mathfrak{H}, +, \cdot, \langle\,\rangle)$. The states of the system are all positive trace-class linear maps $\varrho:\mathfrak{H}\rightarrow\mathfrak{H}$ for which $\tr\varrho = 1$
+\end{axiom}
+
+\begin{remark}
+Almost everywhere it is stated:
+The normalized elements $\psi\in\mathfrak{H}$ are the states of the quantum system - it is false.
+\end{remark}
+
+\begin{definition}
+A state is called a pure state (not pure = mixed) if there exists $\psi\in\mathfrak{H}$ such that
+
+\begin{align*}
+\varrho:\mathfrak{H}\rightarrow\mathfrak{H} & , & \alpha \mapsto \varrho(\alpha) = \dfrac{\langle\psi,\alpha\rangle}{\langle\psi,\psi\rangle}\,\psi
+\end{align*}
+
+\end{definition}
+
+\begin{remark}
+Thus for pure states it is true that state $\varrho$ is associated with the element of the Hilbert space $\psi$.
+\end{remark}
+
+\begin{description}
+\item[Complex Hilbert space] $(\mathfrak{H}, +, \cdot, \langle..\rangle)$
+\end{description}
+
+\begin{itemize}
+\item $\mathfrak{H}$ is a set that satisfies the axioms of complex vector space
+
+\begin{itemize}
+\item $\phantom{\cdot}+:\mathfrak{H}\times\mathfrak{H}\rightarrow\mathfrak{H}$
+\item $\phantom{+}\cdot:\mathfrak{H}\times\mathbb{C}\rightarrow\mathfrak{H}$
+\end{itemize}
+
+\item Sesquilinear map $\langle.,.\rangle:\mathfrak{H}\times\mathfrak{H}\rightarrow\mathbb{C}$ satisfying
+
+\begin{itemize}
+\item $\langle\phi,\psi\rangle = \overline{\langle\psi,\phi\rangle}$ (complex conjugate)
+\item $\langle\phi,\psi_1 + \alpha\psi_2\rangle = \langle\phi,\psi_1\rangle + \alpha\langle\phi,\psi_2\rangle$, $\forall \alpha \in \mathbb{C}$
+\item $\langle\psi,\psi\rangle \geq 0$, $\forall \psi \in \mathfrak{H}$ and $\langle\psi,\psi\rangle = 0 \Leftrightarrow \psi = 0$
+\end{itemize}
+
+\item $\mathfrak{H}$ is complete
+\end{itemize}
+
+If one has a sequence in $\mathfrak{H}$, $\phi:\mathbb{N}\rightarrow\mathfrak{H}$, which satisfies the Cauchy property $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n,m \geq N$: $\|\phi_n - \phi_m\| < \epsilon$, where $\|\phi\| = \sqrt{\langle\phi,\phi\rangle}$, one may already conclude that the sequence $\phi$ converges in $\mathfrak{H}$ i.e. $\exists\phi\in\mathfrak{H}$ such that $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n \geq N$: $\|\phi - phi_n\| < \epsilon$.
+
+\begin{remark}
+For linear map $A:\mathfrak{H} \supset \mathcal{D}_A \rightarrow \mathfrak{H}$ we will only look at densely defined linear maps
+
+\begin{align*}
+\forall\psi\in\mathfrak{H}, \,\forall\epsilon > 0 \,\exists \chi\in\mathcal{D}_A &: & \|\chi - \psi\| < \epsilon \\
+A(\phi + \alpha\psi) = A\phi + \alpha A\psi, & & \forall \alpha \in \mathbb{C}
+\end{align*}
+
+\end{remark}
+
+\begin{definition}
+Positive linear map is a map $A$ such that $\forall\psi\in\mathcal{D}_A$: $\langle\psi, A\psi\rangle \geq 0$
+\end{definition}
+
+\begin{definition}
+Trace-class linear map is a map $A:\mathfrak{H}\rightarrow\mathfrak{H}$ (defined on the entire Hilbert space) such that $\forall$ orthonormal basis $\{e_n\}$ of $\mathfrak{H}$ the sum/series $\sum_n \langle e_n, A e_n \rangle < \infty$, $\tr A = \sum_n \langle e_n, A e_n \rangle$
+\end{definition}
+
+\begin{remark}
+Hilbert space $\mathfrak{H}$ has to be separable.
+\end{remark}
+
+\section{Observables}
+
+\begin{axiom}
+The observables of a quantum system are the self-adjoint linear maps $A:\mathcal{D}_A\longrightarrow\mathfrak{H}$
+\end{axiom}
+
+\begin{definition}
+A linear map $A:\mathcal{D}_A\longrightarrow\mathfrak{H}$ densely defined on its domain is called self-adjoint if it coincides with its adjoint map $A^{*}:\mathcal{D}_{A^{*}}\longrightarrow\mathfrak{H}$
+\end{definition}
+
+\begin{align*}
+\mathcal{D}_{A^{*}} = \mathcal{D}_A & & A^{*}\psi = A\psi
+\end{align*}
+
+\begin{definition}
+The adjoint $A^{*}:\mathcal{D}_{A^{*}}\longrightarrow\mathfrak{H}$ of a linear map $A:\mathcal{D}_A\longrightarrow\mathfrak{H}$ is defined by
+
+\begin{align*}
+\mathcal{D}_{A^{*}} = & \Big\{ \psi \in \mathfrak{H} \,\Big\vert\, \forall\alpha\in\mathcal{D}_A \,\exists\eta\in\mathfrak{H}: \langle\psi,A\alpha\rangle = \langle\eta,\alpha\rangle \Big\} \\
+A^{*}\psi = & \eta
+\end{align*}
+
+\end{definition}
+
+$A^{*}$ is well defined if there is unique $\eta$
+
+\section{Measurements}
+
+\begin{axiom}
+The probability that a measurement of an observable $A$ on a system that is in the state $\varrho$ yields a result in the Borel set $E \subseteq \mathbb{R}$ is given by
+
+\begin{equation*}
+\mu_{\varrho}^{A}(E) = \tr\big( P_A(E) \circ \varrho \big)
+\end{equation*}
+
+\end{axiom}
+
+$P_A(E)$ is a bounded operator. The composition of trace-class operator with the bounded operator is again trace-class operator.
+
+\begin{equation*}
+P_A:\text{Borel($\mathbb{R}$)} \longrightarrow \mathcal{L}(\mathfrak{H}):\text{Banach space of bounded linear maps on $\mathfrak{H}$}
+\end{equation*}
+
+is the unique projection-valued measure that is associated with a self-adjoint map $A$ accordingly to the spectral theorem
+
+\begin{equation*}
+A = \int\limits_{-\infty}^{\infty} \lambda \, \mathrm{d}P_A(\lambda)
+\end{equation*}
+
+\section{Unitary dynamics}
+
+Time intervals $(t_1, t_2)$ during which no measurement occurs
+
+\begin{axiom}
+State $\varrho(t_1)$ and state $\varrho(t_2)$ are related through
+
+\begin{equation*}
+\varrho(t_2) = \mathcal{U}(t_2 - t_1)\, \varrho(t_1)\, \mathcal{U}^{-1}(t_2 - t_1)
+\end{equation*}
+
+where
+
+\begin{equation*}
+\mathcal{U}(t) = \exp{\Big(-\dfrac{i}{\hbar} \mathcal{H} t\Big)}
+\end{equation*}
+
+\end{axiom}
+
+$\mathcal{H}$ is the energy observable
+
+\begin{equation*}
+f(A) = \int\limits_{-\infty}^{\infty} f(\lambda) \, \mathrm{d}P_A(\lambda)
+\end{equation*}
+
+\section{Projective dynamics}
+
+Step in when a measurement is made at time $t_m$
+
+\begin{axiom}
+The state $\varrho_{after}$ immediately after the measurement of an observable $A$ is
+
+\begin{equation*}
+\varrho_{after} = \dfrac{P_A(E) \circ \varrho_{before} \circ P_A(E)}{\tr\big(P_A(E) \circ \varrho_{before} \circ P_A(E)\big)}
+\end{equation*}
+
+where $E$ is the smallest Borel set in which the actual outcome of the measurement happened to lie.
+\end{axiom}
+
+\end{document}
