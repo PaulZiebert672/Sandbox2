@@ -16,7 +16,7 @@
 \section{States}
 
 \begin{axiom}
-With every quantum system there is associated a complex separable Hilbert space $(\mathfrak{H}, +, \cdot, \langle\,\rangle)$. The states of the system are all positive trace-class linear maps $\varrho:\mathfrak{H}\rightarrow\mathfrak{H}$ for which $\tr\varrho = 1$
+With every quantum system there is associated a complex separable Hilbert space $(\mathfrak{H}, +, \cdot, \langle\phantom{m}\rangle)$. The states of the system are all positive trace-class linear maps $\varrho:\mathfrak{H}\rightarrow\mathfrak{H}$ for which $\tr\varrho = 1$
 \end{axiom}
 
 \begin{remark}
@@ -38,7 +38,7 @@ Thus for pure states it is true that state $\varrho$ is associated with the elem
 \end{remark}
 
 \begin{description}
-\item[Complex Hilbert space] $(\mathfrak{H}, +, \cdot, \langle..\rangle)$
+\item[Complex Hilbert space] $(\mathfrak{H}, +, \cdot, \langle\phantom{m}\rangle)$
 \end{description}
 
 \begin{itemize}
@@ -46,7 +46,7 @@ Thus for pure states it is true that state $\varrho$ is associated with the elem
 
 \begin{itemize}
 \item $\phantom{\cdot}+:\mathfrak{H}\times\mathfrak{H}\rightarrow\mathfrak{H}$
-\item $\phantom{+}\cdot:\mathfrak{H}\times\mathbb{C}\rightarrow\mathfrak{H}$
+\item $\phantom{+}\cdot:\mathbb{C}\times\mathfrak{H}\rightarrow\mathfrak{H}$
 \end{itemize}
 
 \item Sesquilinear map $\langle.,.\rangle:\mathfrak{H}\times\mathfrak{H}\rightarrow\mathbb{C}$ satisfying
@@ -60,7 +60,7 @@ Thus for pure states it is true that state $\varrho$ is associated with the elem
 \item $\mathfrak{H}$ is complete
 \end{itemize}
 
-If one has a sequence in $\mathfrak{H}$, $\phi:\mathbb{N}\rightarrow\mathfrak{H}$, which satisfies the Cauchy property $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n,m \geq N$: $\|\phi_n - \phi_m\| < \epsilon$, where $\|\phi\| = \sqrt{\langle\phi,\phi\rangle}$, one may already conclude that the sequence $\phi$ converges in $\mathfrak{H}$ i.e. $\exists\phi\in\mathfrak{H}$ such that $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n \geq N$: $\|\phi - phi_n\| < \epsilon$.
+If one has a sequence in $\mathfrak{H}$, $\phi:\mathbb{N}\rightarrow\mathfrak{H}$, which satisfies the Cauchy property $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n,m \geq N$: $\|\phi_n - \phi_m\| < \epsilon$, where $\|\phi\| = \sqrt{\langle\phi,\phi\rangle}$, one may already conclude that the sequence $\phi$ converges in $\mathfrak{H}$ i.e. $\exists\phi\in\mathfrak{H}$ such that $\forall\epsilon > 0\,\exists N \in \mathbb{N}$ such that $\forall n \geq N$: $\|\phi - \phi_n\| < \epsilon$.
 
 \begin{remark}
 For linear map $A:\mathfrak{H} \supset \mathcal{D}_A \rightarrow \mathfrak{H}$ we will only look at densely defined linear maps
@@ -102,8 +102,8 @@ A linear map $A:\mathcal{D}_A\longrightarrow\mathfrak{H}$ densely defined on its
 The adjoint $A^{*}:\mathcal{D}_{A^{*}}\longrightarrow\mathfrak{H}$ of a linear map $A:\mathcal{D}_A\longrightarrow\mathfrak{H}$ is defined by
 
 \begin{align*}
-\mathcal{D}_{A^{*}} = & \Big\{ \psi \in \mathfrak{H} \,\Big\vert\, \forall\alpha\in\mathcal{D}_A \,\exists\eta\in\mathfrak{H}: \langle\psi,A\alpha\rangle = \langle\eta,\alpha\rangle \Big\} \\
-A^{*}\psi = & \eta
+\mathcal{D}_{A^{*}} = & \,\Big\{ \psi \in \mathfrak{H} \,\Big\vert\, \forall\alpha\in\mathcal{D}_A \,\exists\eta\in\mathfrak{H}: \langle\psi,A\alpha\rangle = \langle\eta,\alpha\rangle \Big\} \\
+A^{*}\psi = & \,\eta
 \end{align*}
 
 \end{definition}
