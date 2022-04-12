@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bigints}
+
+\title{Electromagnetism}
+\author{Paul}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Field equations}
+
+For a given distribution of charges the fields are determined by
+
+\begin{eqnarray*}
+\nabla \times \vec{E} & = & - \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{B} \\
+\nabla \cdot \vec{B} & = & 0 \\
+\nabla \times \vec{B} & = & \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{E} + \dfrac{4 \pi}{c} \vec{j} \\
+\nabla \cdot \vec{E} & = & 4 \pi \rho
+\end{eqnarray*}
+
+Conservation of charge
+
+\begin{eqnarray*}
+\dfrac{\partial}{\partial t} \rho + \nabla \cdot \vec{j} & = & 0
+\end{eqnarray*}
+
+The motion of the charges is given by
+
+\begin{eqnarray*}
+\vec{k} & = & \rho \vec{E} + \dfrac{1}{c} \vec{j} \times \vec{B}
+\end{eqnarray*}
+
+\section{Potentials}
+
+It follows that $\vec{B}$ can be represented as $\vec{B} = \nabla \times \vec{A}$, where $\vec{A}$ is called the \textit{vector potential}. Then
+
+\begin{equation*}
+\nabla \times \left( \vec{E} + \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{A} \right) = 0
+\end{equation*}
+
+or
+
+\begin{equation*}
+\vec{E} + \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{A} = - \nabla \phi
+\end{equation*}
+
+where $\phi$ represents a scalar function --- the \textit{scalar potential}. Then values of fields can be expressed as
+
+\begin{eqnarray*}
+\vec{B} & = & \nabla \times \vec{A} \\
+\vec{E} & = & - \nabla \phi - \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{A}
+\end{eqnarray*}
+
+Making use of the general vector relation $\nabla \times \nabla \vec{A} = \nabla \nabla \cdot \vec{A} - \nabla^2 \vec{A}$ differential equations for potentials can be written in the form
+
+\begin{eqnarray*}
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \vec{A} - \nabla^2 \vec{A} + \nabla \left( \nabla \cdot \vec{A} + \dfrac{1}{c} \dfrac{\partial}{\partial t} \phi \right) & = & \dfrac{4 \pi}{c} \vec{j} \\
+-\nabla^2 \phi - \dfrac{1}{c} \dfrac{\partial}{\partial t} \nabla \cdot \vec{A} & = & 4 \pi \rho
+\end{eqnarray*}
+
+\subsection{Gauge transformation}
+
+The vector $\vec{A}$ is not completely defined by the value of $\vec{B}$. Since for any scalar function $\chi$ it is true that $\nabla \times \nabla \chi = 0$, transformation
+
+\begin{eqnarray*}
+\vec{A} & \rightarrow & \vec{A} + \nabla \chi \\
+\phi & \rightarrow & \phi - \dfrac{1}{c} \dfrac{\partial}{\partial t} \chi
+\end{eqnarray*}
+
+does not change the values of fields $\left( \vec{E}, \vec{B} \right)$.
+
+\subsection{Lorentz gauge}
+
+The condition
+
+\begin{equation*}
+\nabla \cdot \vec{A} + \dfrac{1}{c} \dfrac{\partial}{\partial t} \phi = 0
+\end{equation*}
+
+is called the \textit{Lorent gauge}. Equations for potentials then become
+
+\begin{eqnarray*}
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \vec{A} - \nabla^2 \vec{A} & = & \dfrac{4 \pi}{c} \vec{j} \\
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \phi - \nabla^2 \phi & = & 4 \pi \rho
+\end{eqnarray*}
+
+There is still freedom in selecting $\chi$ which satisfies the homogeneous wave equation
+
+\begin{equation*}
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \chi - \nabla^2 \chi = 0
+\end{equation*}
+
+\subsection{Coulomb gauge}
+
+Another important gauge which is particularly important in quantum theory is
+
+\begin{equation*}
+\nabla \cdot \vec{A} = 0
+\end{equation*}
+
+which is called the \textit{Coulomb gauge}. Equations for potentials then become
+
+\begin{eqnarray*}
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \vec{A} - \nabla^2 \vec{A} + \dfrac{1}{c} \dfrac{\partial}{\partial t} \nabla \phi & = & \dfrac{4 \pi}{c} \vec{j} \\
+- \nabla^2 \phi & = & 4 \pi \rho
+\end{eqnarray*}
+
+There is still freedom in selecting $\chi$ which can be any harmonic function
+
+\begin{equation*}
+\nabla^2 \chi = 0
+\end{equation*}
+
+\section{Retarded potential}
+
+Special solutions for inhomogeneous wave equations are
+
+\begin{eqnarray*}
+\vec{A}(t,x) & = & \dfrac{1}{c} \bigintss \dfrac{j\left(t - \dfrac{r_{x x'}}{c}, x'\right)}{r_{x x'}} \, \mathrm{d} \tau' \\
+\phi(t,x) & = & \bigintss \dfrac{\rho\left(t - \dfrac{r_{x x'}}{c}, x'\right)}{r_{x x'}} \, \mathrm{d} \tau'
+\end{eqnarray*}
+
+The Lorentz gauge is satisfied by the charge conservation condition.
+
+For the part of the field, which satisfies the homogeneous wave equation, on can choose $\chi$ within the Lorentz gauge so that $\phi$ vanishes. The field which is independent of charges is given by
+
+\begin{eqnarray*}
+\dfrac{1}{c^2} \dfrac{\partial^2}{\partial t^2} \vec{A} - \nabla^2 \vec{A} & = & 0 \\
+\nabla \cdot \vec{A} & = & 0 \\
+\vec{E} & = & - \dfrac{1}{c} \dfrac{\partial}{\partial t} \vec{A} \\
+\vec{B} & = & \nabla \times \vec{A}
+\end{eqnarray*}
+
+\end{document}

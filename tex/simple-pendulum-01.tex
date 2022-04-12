@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bigints}
+
+\title{Mathematical pendulum}
+\author{Paul}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Hamiltonian}
+
+\begin{equation}
+\mathcal{H} = \dfrac{1}{2} p^2 + 2 \sin^2 \dfrac{1}{2} \theta
+\end{equation}
+
+\section{Equations of motion}
+
+Select initial conditions so that $\theta\Big\vert_{t=0} = 0$
+
+\subsection{Librations}
+
+Case $\mathcal{E} < 2$. Assign $k^2 = \dfrac{1}{2} \mathcal{E}$
+
+\begin{eqnarray}
+\theta(t) & = & 2 \arcsin (k \, \mathrm{sn}(t ; k)) \\
+p(t) & = & 2 k \, \mathrm{cn}(t ; k)
+\end{eqnarray}
+
+Period of librations
+
+\begin{equation}
+T = 4 \mathrm{K}(k)
+\end{equation}
+
+\subsection{Rotations}
+
+Case $\mathcal{E} > 2$. Assign $k^2 = 2 \, \mathcal{E}^{-1}$
+
+\begin{eqnarray}
+\theta(t) & = & 2 \, \mathrm{am} (k^{-1} t ; k) \\
+p(t) & = & 2 k^{-1} \, \mathrm{dn}(k^{-1} t ; k)
+\end{eqnarray}
+
+Period of rotations
+
+\begin{equation}
+T = 2 k \, \mathrm{K}(k)
+\end{equation}
+
+\section{Elliptic integral via AGM}
+
+The \textit{elliptic integral of the first kind} $\mathrm{F}(\phi;k)$ and the \textit{complete elliptic integral of the first kind} $\mathrm{K}(k)$ are defined as
+
+\begin{eqnarray}
+\mathrm{F}(\phi;k) & = & \int \limits_{0}^{\phi} \dfrac{\mathrm{d} \theta}{\sqrt{1 - k^2 \sin^2 \theta}} \\
+\mathrm{K}(k) & = & \mathrm{F}\left( \dfrac{\pi}{2}; k \right)
+\end{eqnarray}
+
+The complete elliptic integral of the first kind can be evaluated via the \textit{arithmetic-geometric mean} (AGM) 
+
+\begin{equation}
+\mathrm{K}(k) = \dfrac{\pi}{2} \dfrac{1}{\mathcal{M}\left( 1, \sqrt{1 - k^2} \right)}
+\end{equation}
+
+\section{Jacobi elliptic functions}
+
+Elliptic functions can be represented via Jacobi amplitude function
+
+\begin{eqnarray}
+\mathrm{sn}(u;k) & = & \sin \mathrm{am} (u;k) \\
+\mathrm{cn}(u;k) & = & \cos \mathrm{am} (u;k) \\
+\mathrm{dn}(u;k) & = & \dfrac{\partial}{\partial u} \mathrm{am} (u;k)
+\end{eqnarray}
+
+where the amplitude function is defined via inverse of the elliptic integral
+
+\begin{equation}
+\mathrm{F}(\mathrm{am}(u; k); k) = u
+\end{equation}
+
+\end{document}
