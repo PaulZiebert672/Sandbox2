@@ -1,0 +1,27 @@
+\begin{array}{l}
+  \text{Random variable}\;X:\Omega\rightarrow\mathbb{R} \\
+  {\small
+  \mu(\{\omega\in\Omega\vert X(\omega)\le x_0\}) =
+  \int\limits_{-\infty}^{x_0}\,w(x)\mathrm{d}x } \\
+  \langle f(X) \rangle =
+  \int\limits_{-\infty}^{\infty}\,f(x)w(x)\mathrm{d}x \\
+
+  \text{Characteristic function} \\
+  \phi(t) = \langle\mathrm{e}^{iXt}\rangle =
+  \sum\limits_{n=0}^{\infty}\dfrac{(it)^n}{n!}\langle X^n \rangle \\
+
+  \text{Moments of distribution} \\
+  \langle X^n \rangle = \dfrac{1}{i^n}\dfrac{\mathrm{d}}{\mathrm{d}t}
+  \phi(t)\Big\vert_{t=0} \\
+  {\small m(X) = \langle X\rangle,\;
+  \sigma^2(X) = \langle X^2\rangle - \langle X\rangle^2 } \\
+
+  \text{Binominal distribution} \\
+  \phi(t) = (p\mathrm{e}^{it} + q)^N\qquad
+  p + q = 1 \\
+  m(X) = Np,\;\sigma^2(X) = Npq \\
+
+  \text{Poisson distribution} \\
+  \phi(t) = \,\mathrm{e}^{\lambda(\mathrm{e}^{it} - 1)} \\
+  m(X) = \lambda,\;\sigma^2(X) = \lambda \\
+\end{array}

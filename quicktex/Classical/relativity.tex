@@ -1,0 +1,45 @@
+\begin{array}{l}
+  \text{Relativity} \\
+  \eta_{\mu\nu} = \mathrm{diag}(+1,-1,-1,-1) \\
+
+  \begin{array}{cc}
+    \partial_{\mu} = (\partial_t, \partial_i) &
+    A_{\mu} = (\varphi, -A_i)
+  \end{array} \\
+
+  \text{Fields} \\
+  B_i = \epsilon_{ijk}\partial_{j}A_k,\;
+  E_i = -\partial_i\varphi - \partial_{t}A_i \\
+
+  \text{Faraday tensor} \\
+  \quad\mathrm{F}_{\mu\nu} =
+  \partial_{\mu}A_{\nu} - \partial_{\nu}A_{\mu} \\
+  \mathrm{F}_{\mu\nu} =
+  \begin{bmatrix}
+    0 & \phantom{-}E_1 & \phantom{-}E_2 & \phantom{-}E_3 \\
+    -E_1 & 0 & -B_3 & \phantom{-}B_2 \\
+    -E_2 & \phantom{-}B_3 & 0 & -B_1 \\
+    -E_3 & -B_2 & \phantom{-}B_1 & 0
+  \end{bmatrix} \\
+
+  \quad\mathrm{\tilde{F}}_{\mu\nu} =
+  \frac{1}{2}\epsilon_{\mu\nu\sigma\rho} \mathrm{F}^{\sigma\rho} \\
+  \mathrm{\tilde{F}}_{\mu\nu} =
+  \begin{bmatrix}
+    0 & \phantom{-}B_1 & \phantom{-}B_2 & \phantom{-}B_3 \\
+    -B_1 & 0 & \phantom{-}E_3 & -E_2 \\
+    -B_2 & -E_3 & 0 & \phantom{-}E_1 \\
+    -B_3 & \phantom{-}E_2 & -E_1 & 0
+  \end{bmatrix} \\
+
+  \begin{array}{ll}
+    \small{ \mathrm{F}_{\mu\nu} = \left(\vec{E},-\vec{B}\right) } &
+    \small{ \mathrm{F}^{\mu\nu} = \left(-\vec{E},-\vec{B}\right) } \\
+    \small{ \mathrm{\tilde{F}}_{\mu\nu} = \left(\vec{B},\vec{E}\right) } &
+    \small{ \mathrm{\tilde{F}}^{\mu\nu} = \left(-\vec{B},\vec{E}\right) }
+  \end{array} \\
+
+  \mathrm{F}_{\mu\nu}\mathrm{F}^{\mu\nu} = 2\vec{B}^2 - 2\vec{E}^2 \\
+  \epsilon_{\mu\nu\sigma\rho}\mathrm{F}^{\mu\nu}\mathrm{F}^{\sigma\rho} =
+  -8\vec{E}\cdot\vec{B} \\
+\end{array}

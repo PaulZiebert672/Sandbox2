@@ -1,0 +1,22 @@
+\begin{array}{l}
+  \text{Smoothing} \\
+  \phi_n:[-1,1]\rightarrow[0,\infty),\quad
+  \phi_n\in\mathcal{C} \\
+
+  \displaystyle\int_{\delta\le\vert x\vert\le 1}\!\!\!\!\!\!\!\!\!\!\!\!\!\!\phi_n(x)\,\mathrm{d}x
+  \rightarrow 0,\;\forall\delta > 0,\delta < 1 \\  
+  \displaystyle\int_{\vert x\vert\le 1}\!\!\!\!\!\!\!\!\!\phi_n(x)\,\mathrm{d}x = 1,\;
+  \forall n\in\mathbb{N} \\
+
+  \forall f\in\,\mathcal{C}\left[-\frac{1}{2},\frac{1}{2}\right],\:
+  f\left(\pm\frac{1}{2}\right) = 0 \\
+
+  {\small f_n(x) =
+  \displaystyle\int\limits_{-\frac{1}{2}}^{\frac{1}{2}}\!\!f(s)\phi_n(s - x)\,\mathrm{d}s
+  \rightrightarrows f(x) } \\
+
+  \text{Polynomial approximation} \\
+  \phi_n(x) = \dfrac{\left(1 - x^2\right)^n}
+  {\displaystyle\int_{-1}^1\!\!\left(1 - s^2\right)^n\,\mathrm{d}s} \\
+  \mathcal{P}(x)\ni f_n(x)\rightrightarrows f(x) \\
+\end{array}

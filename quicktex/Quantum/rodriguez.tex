@@ -1,0 +1,30 @@
+\begin{array}{l}
+  \text{Legendre polynomials} \\
+  \mathrm{P}_n(x) = \dfrac{1}{2^n n!}
+  \dfrac{\mathrm{d}^n}{\mathrm{d}x^n}(x^2-1)^n \\
+  \dfrac{1}{\sqrt{1 - 2tx + t^2}} = \sum\limits_{n = 0}^\infty t^n \, \mathrm{P}_n(x) \\
+
+  \small{ (n+1)\mathrm{P}_{n+1} =
+  (2n+1)x\mathrm{P}_n-n\mathrm{P}_{n-1} } \\
+  \mathrm{P}_1(x) = x \\
+  \mathrm{P}_2(x) = \frac{1}{2}(3x^2 - 1) \\
+
+  \text{Associated Legendre polynomials} \\
+  \mathrm{P}_n^m(x) = (-1)^m (1-x^2)^{\frac{m}{2}}
+  \dfrac{\mathrm{d}^m \mathrm{P}_n(x) }{\mathrm{d}x^m} \\
+  \mathrm{P}_n^{-m} = (-1)^m \dfrac{(n-m)!}{(n+m)!} \, \mathrm {P}_n^m(x) \\
+
+  \displaystyle\int\limits^{1}_{-1}  
+  \mathrm{P}_n^m(x)^2\,\mathrm{d}x =
+  \dfrac{2}{2n+1}\dfrac{(n+m)!}{(n-m)!} \\
+
+  \text{Spherical harmonics} \\
+  \begin{array}{rcl}
+    \mathrm{Y}^m_n(\theta,\phi) & \!\!\!\!\!\!= & \!\!\!\!\!\!
+    \sqrt{\dfrac{2n+1}{4\pi}\dfrac{(n-\vert m\vert)!}{(n+\vert m\vert)!}} \\
+    & &
+    \mathrm{P}^{\vert m\vert}_n(\cos\theta)\mathrm{e}^{im\phi}
+  \end{array} \\
+
+  \nabla^2_{S^2}\mathrm{Y}^m_n+n(n+1)\mathrm{Y}^m_n=0,\;n\in\mathbb{Z} \\
+\end{array}

@@ -1,0 +1,31 @@
+\begin{array}{l}
+  \text{Triple pendulum} \\
+  \mathcal{L} = \frac{1}{2}
+  [{}^{t}\dot\theta]_{a}[\mathtt{M}(\theta_c)]_{ab}[\dot\theta]_{b} -
+  \mathcal{U}(\theta_c) \\
+
+  \mathtt{M} =
+  \begin{bmatrix}
+    3 & 2C_{12} & C_{13} \\
+    2C_{12} & 2 & C_{23} \\
+    C_{13} & C_{23} & 1
+  \end{bmatrix} \\
+
+  C_{ab} = \cos{(\theta_{a} - \theta_{b})} \\
+  \mathcal{U} = 6\sin^2{\frac{\theta_1}{2}} + 4\sin^2{\frac{\theta_2}{2}} + 2\sin^2{\frac{\theta_3}{2}} \\
+
+  \mathcal{H} = \frac{1}{2}
+  [{}^{t}p]_{a}[\mathtt{M}^{-1}(\theta_c)]_{ab}[p]_{b} +
+  \mathcal{U}(\theta_c) \\
+  \det\mathtt{M} = 4 - 2C^2_{12} - C^2_{23} \\
+
+  \mathtt{M}^{-1}\det\mathtt{M} = \\
+  {\scriptsize \begin{bmatrix}
+    2 - C^2_{23} & \!\! C_{13,32} - 2C_{12} & \!\! 2C_{12,23} - 2C_{13} \\
+    C_{13,32} - 2C_{12} & \!\! 3 - 2C^2_{13} & \!\! 2C_{21,13} - 3C_{23} \\
+    2C_{12,23} - 2C_{13} & \!\! 2C_{21,13} - \!\! 3C_{23} & 6 - 4C^2_{12}
+  \end{bmatrix} } \\
+
+  C_{ab,bc} = \cos{(\theta_{a} - \theta_{b})}\cos{(\theta_{b} - \theta_{c})} \\
+
+\end{array}

@@ -1,0 +1,45 @@
+\begin{array}{l}
+
+\text{EM field} \\
+\begin{cases}
+  \nabla\cdot\mathbf{B} = 0 &
+  \nabla\times\mathbf{E} = -\dot{\mathbf{B}} \\
+  \nabla\cdot\mathbf{E} = 4\pi\rho &
+  \nabla\times\mathbf{B} = \dot{\mathbf{E}} + 4\pi\mathbf{j}
+\end{cases} \\
+
+\text{Charge conservation} \\
+\quad\dot{\rho} + \nabla\cdot\mathbf{j} = 0 \\
+
+\text{Potentials} \\
+\begin{array}{ll}
+  \mathbf{B} = \nabla\times\mathbf{A}, &
+  \mathbf{E} = -\dot{\mathbf{A}} - \nabla\phi
+\end{array} \\
+
+\text{Interaction} \\
+S_{\text{int}} = -e\displaystyle\int
+\left(\phi - \mathbf{v}\cdot\mathbf{A}\right)
+\,\mathrm{d}t \\
+
+\text{Gauge transformations} \\
+\begin{array}{ll}
+  \mathbf{A} \to \mathbf{A} + \nabla\alpha, &
+  \phi \to \phi - \dot{\alpha}
+\end{array} \\
+
+\text{Lorentz gauge} \\
+\quad\dot{\phi} + \nabla\cdot\mathbf{A} = 0 \\
+
+\text{Helmholz equations} \\
+\begin{cases}
+  \ddot{\mathbf{A}} - \nabla^2\mathbf{A} & = & 4\pi\mathbf{j} \\
+  \ddot{\phi} - \nabla^2\phi & = & 4\pi\rho
+\end{cases} \\
+
+\text{Retarded potential} \\
+\mathbf{A}(t,\mathbf{r}) = \displaystyle\int
+\frac{\mathbf{j}(t-\vert\mathbf{r}-\mathbf{r}'\vert,\mathbf{r}')}{\vert\mathbf{r}-\mathbf{r}'\vert}
+\,\mathrm{d}\mathbf{r}' \\
+
+\end{array}

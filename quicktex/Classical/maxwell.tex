@@ -1,0 +1,51 @@
+\begin{array}{l}
+  \text{Faraday tensor} \\
+  \mathrm{F}_{\mu\nu} \,\equiv
+  \partial_\mu A_\nu - \partial_\nu A_\mu \\
+  \mathrm{\tilde{F}}_{\mu\nu} \,\equiv
+  \frac{1}{2}
+  \epsilon_{\mu\nu\rho\sigma} \mathrm{F}^{\rho\sigma} \\
+  \mathrm{F}^{\mu\nu} \,=\, \mathrm{g}^{\mu\sigma}
+  \mathrm{F}_{\sigma\rho}\mathrm{g}^{\rho\nu} \\
+
+  \text{Lagrangian density} \\
+  4\pi\mathcal{L} =
+  -\frac{1}{4} \mathrm{F_{\mu\nu}}\mathrm{F^{\mu\nu}}
+  - A_\sigma j^\sigma \\
+
+  \text{Maxwell equations} \\
+  \begin{cases}
+    \partial_\mu\mathrm{F}^{\mu\nu} = 4\pi j^\nu \\
+    \mathrm{F}_{[\mu\nu,\sigma]} = 0 &
+    \text{or} &
+    \partial_\mu\mathrm{\tilde{F}}^{\mu\nu} = 0
+  \end{cases} \\
+
+  \text{Energy-momentum tensor} \\
+  \small{ 4\pi\mathrm{T}_{\mu\nu} =\,
+  \mathrm{F}_{\mu\rho}\mathrm{g}^{\rho\sigma}\mathrm{F}_{\sigma\nu} +
+  \frac{1}{4}\mathrm{g}_{\mu\nu}\mathrm{F}_{\rho\sigma}\mathrm{F}^{\rho\sigma} } \\
+
+  4\pi\mathrm{T}^{\mu\nu} = \!\!\frac{1}{2}\!\!
+  \left( \mathrm{F}^{\mu\sigma}\mathrm{g}_{\sigma\rho}\mathrm{F}^{\rho\nu} + 
+  \tilde{\mathrm{F}}^{\mu\sigma}\mathrm{g}_{\sigma\rho}\tilde{\mathrm{F}}^{\rho\nu}
+  \right) \\
+
+  \small{ 4\pi\mathrm{T}_{\mu\nu} =
+  \begin{bmatrix}
+    \frac{1}{2}(E^2+B^2) &
+    -\epsilon_{ijk}E_{j}B_{k} \\
+    -\epsilon_{ijk}E_{j}B_{k} &
+    -\sigma_{ij}
+  \end{bmatrix} } \\
+
+  \small{ \sigma_{ij} = E_{i}E_{j} + B_{i}B_{j} -
+  \frac{1}{2}\delta_{ij}(E^2 + B^2) } \\
+
+  \partial_\mu\mathrm{T}^{\mu\nu}_\text{(total)} = 0 \\
+
+  \text{Angular momentum tensor} \\
+  \mathrm{M}^{\mu\rho\sigma} = 
+  x^{\rho}\mathrm{T}^{\mu\sigma} - x^{\sigma}\mathrm{T}^{\mu\rho} \\
+  \partial_\mu\mathrm{M}^{\mu\rho\sigma}_\text{(total)} = 0
+\end{array}

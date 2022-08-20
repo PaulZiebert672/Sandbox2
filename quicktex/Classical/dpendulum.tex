@@ -1,0 +1,35 @@
+\begin{array}{l}
+  \text{Double pendulum} \\
+  \begin{array}{rcl}
+    \mathcal{L} & = &
+    \dot{\theta_1}^2 + 
+    \frac{1}{2}\dot{\theta_2}^2 + 
+    \dot{\theta_1}\dot{\theta_2}\cos\theta_{12} \\
+    & + & 2\cos\theta_1 + \cos\theta_2 \\
+
+    \mathcal{H} & = &
+    \dfrac{p_1^2 + 2p_2^2 - 2p_1p_2\cos\theta_{12}}
+      {2(2-\cos^2\theta_{12})} \\
+    & + & 4\sin^2\frac{\theta_1}{2} + 2\sin^2\frac{\theta_2}{2}
+  \end{array} \\
+  \text{where}\quad \theta_{12} =\theta_1 - \theta_2 \\
+
+  \text{Small oscillations} \\
+  \begin{array}{rcl}
+    \mathcal{H}_0 & = &
+    \frac{1}{2}[p^t]_a[\mathtt{M}^{-1}]_{ab}[p]_b \\
+    & + &
+    \frac{1}{2}[\theta^t]_a[\mathtt{K}]_{ab}[\theta]_b
+  \end{array} \\
+
+  \begin{array}{rcl}
+    \mathtt{M},\mathtt{K} & = &
+    \begin{pmatrix}
+      2 & 1 \\ 1 & 1
+    \end{pmatrix}, 
+    \begin{pmatrix}
+      2 & 0 \\ 0 & 1
+    \end{pmatrix} \\
+    {\omega^2}_a & = & 2\pm\sqrt{2}
+  \end{array}
+\end{array}

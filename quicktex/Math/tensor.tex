@@ -1,0 +1,39 @@
+\begin{array}{l}
+  \text{Chart}\quad
+  \varphi:\mathsf{M}\supset U\rightarrow\,\mathbb{R}^n \\
+
+  \mathcal{C}^\infty(\mathsf{M})\equiv
+  \left\{f:\mathsf{M}\rightarrow\mathbb{R}\vert
+  f\;\text{smooth}\right\} \\
+  \begin{cases}
+  (f+g)(P) & = & f(P) + g(P) \\
+  (\alpha f)(P) & = & \alpha f(P)
+  \end{cases} \\
+
+  \text{Smooth curve}\quad
+  \gamma:(-1,1)\rightarrow\,\mathsf{M} \\
+
+  \text{Velocity at}\; \gamma(0) = P \\
+  \gamma'_P:\,\mathcal{C}^\infty(\mathsf{M})\rightarrow\,\mathbb{R} \\
+  f\mapsto\gamma'_P(f)\equiv\frac{\mathrm{d}}{\mathrm{d}s}(f\circ\gamma)\Big\vert_{s=0} \\
+
+  \text{Tangent vector space} \\
+  \mathsf{T}_{\!\!P}\mathsf{M}\equiv\left\{\gamma'_P:\,\mathcal{C}^\infty(\mathsf{M})\rightarrow\,\mathbb{R}\right\} \\
+  \begin{array}{rl}
+    +: & \small{ \mathsf{T}_{\!\!P}\mathsf{M}^{\times 2}\rightarrow
+    \mathrm{Hom}\left(\mathcal{C}^\infty(\mathsf{M}),\mathbb{R}\right) } \\
+    & \small{ (\gamma'_P + \sigma'_P)(f)\equiv\gamma'_P(f) + \sigma'_P(f) } \\
+    \cdot: & \small{ \mathbb{R}\times\mathsf{T}_{\!\!P}\mathsf{M}\rightarrow
+    \mathrm{Hom}\left(\mathcal{C}^\infty(\mathsf{M}),\mathbb{R}\right) } \\
+    & \small{ (\alpha\cdot\gamma'_P)(f)\equiv\alpha\gamma'_P(f) }
+  \end{array} \\
+
+  (r,s)\text{-tensor} \\
+  \begin{array}{llll}
+    \mathrm{T}: &
+    {\mathsf{T}_{\!\!P}^*\mathsf{M}}^{\otimes r}
+    \otimes
+    {\mathsf{T}_{\!\!P}\mathsf{M}}^{\otimes s} &
+    \rlap{\:\:{}^\sim}\longrightarrow & \mathbb{R} 
+  \end{array} \\
+\end{array}

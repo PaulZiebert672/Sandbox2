@@ -1,0 +1,17 @@
+\begin{array}{l}
+  \text{Riemann integral} \\
+  \mathcal{P} = \left\{J_k=\left[x_k,x_{k+1}\right],0\le k\le n\right\} \\
+  a = x_0 < x_1 < \cdots < x_{n+1} = b \\
+  \ell(J_k) = x_{k+1} - x_k \\
+  \begin{array}{lll}
+    {}^*\mathfrak{I}_{\mathcal{P}}(f) & = &
+    \displaystyle\sum_{k=0}^n \sup_{J_k}f(x)\ell(J_k) \\
+    {}_*\mathfrak{I}_{\mathcal{P}}(f) & = &
+    \displaystyle\sum_{k=0}^n \inf_{J_k}f(x)\ell(J_k) 
+  \end{array} \\
+  \begin{cases}
+    {}^*\mathfrak{I}(f) = \displaystyle\inf_{\mathcal{P}\in\Pi(a,b)}\!\!\!\!{}^*\mathfrak{I}_{\mathcal{P}}(f) \\
+    {}_*\mathfrak{I}(f) = \displaystyle\sup_{\mathcal{P}\in\Pi(a,b)}\!\!\!\!{}_*\mathfrak{I}_{\mathcal{P}}(f)
+  \end{cases} \\
+  {}^*\mathfrak{I}(f) = {}_*\mathfrak{I}(f) = \displaystyle\int\limits_a^b f(x)\,\mathrm{d}x \\
+\end{array}

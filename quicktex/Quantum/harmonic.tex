@@ -1,0 +1,30 @@
+\begin{array}{l}
+  \text{Harmonic oscillator} \\
+  \mathcal{H} = \dfrac{p^2}{2m} + \dfrac{1}{2}m\omega^2 x^2 \\
+  \text{set}\quad
+    \xi = x\sqrt{\dfrac{m\omega}{\hbar}},\,
+    \nu = \dfrac{p}{\sqrt{m\omega\hbar}} \\
+  \mathcal{H} = \frac{1}{2}\hbar\omega(\nu^2 + \xi^2) \\
+
+  \mathscr{E}_n = \hbar\omega\left(n + \frac{1}{2}\right),\;
+  n = 0,1,\ldots,\infty \\
+  \psi_n(\xi) = \sqrt{\dfrac{1}{2^n n!\sqrt{\pi}}}
+  \,\mathrm{H}_n(\xi)\mathrm{e}^{-\frac{\xi^2}{2}} \\
+
+  \text{Hermite polynomials} \\
+  \mathrm{H}_n(z) = (-1)^n\mathrm{e}^{z^2}
+  \dfrac{\mathrm{d}^n\mathrm{e}^{-z^2}}{\mathrm{d}z^n} \\
+  \mathrm{e}^{2zt - t^2} = \sum\limits_{n=0}^\infty \dfrac{t^n}{n!} \, \mathrm{H}_n(z) \\
+  \mathrm{H}_{n+1}(z) = 2 z \mathrm{H}_n(z) - 2 n \mathrm{H}_{n-1}(z) \\
+  \mathrm{H}_1(z) = 2 z \\
+  \mathrm{H}_2(z) = 4 z^2 - 2 \\
+
+  \text{Creation/annihilation} \\
+  a = \frac{1}{\sqrt{2}}\big(\xi + \mathrm{i}\nu\big), \;
+    \left[a,a^\dagger\right] = 1 \\
+
+  \begin{cases}
+    a\vert n\rangle = \sqrt{n}\vert n-1\rangle \\
+    a^\dagger\vert n\rangle = \sqrt{n+1}\vert n+1\rangle
+  \end{cases} \\
+\end{array}

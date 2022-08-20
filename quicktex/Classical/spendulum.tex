@@ -1,0 +1,29 @@
+\begin{array}{l}
+  \text{Simple pendulum} \\
+  \mathcal{H} = \frac{1}{2}p^2 + 2\sin^2{\frac{\theta}{2}},\quad
+  \theta(t_0) = 0 \\
+
+  \quad\mathtt{A}.\;\text{Librations}\quad
+  \mathscr{E} < 2,\;k^2 = \frac{\mathscr{E}}{2} \\
+  \theta(t) = 2\arcsin(k\,\mathrm{sn}(t - t_0;k)) \\
+  p(t) = 2k\,\mathrm{cn}(t - t_0;k) \\
+  T = 4\mathrm{K}(k) \\
+
+  \quad\mathtt{B}.\;\text{Rotations}\quad
+  \mathscr{E} > 2,\;k^2 = \frac{2}{\mathscr{E}} \\
+  \theta(t) = 2\,\mathrm{am}\big(k^{-1}(t - t_0); k\big) \\
+  p(t) = 2k^{-1}\,\mathrm{dn}\big(k^{-1}(t - t_0); k\big) \\
+  T = 2k\mathrm{K}(k) \\
+
+  \text{Jacobi elliptic functions} \\
+  \mathrm{sn}(u;k) = \sin\mathrm{am}(u;k) \\
+  \mathrm{cn}(u;k) = \cos\mathrm{am}(u;k) \\
+  \mathrm{dn}(u;k) = \frac{\mathrm{d}}{\mathrm{d}u}\mathrm{am}(u;k) \\
+  \mathrm{F}(\mathrm{am}(u;k);k) = u \\
+
+  \text{Elliptic integral via AGM} \\
+  \mathrm{F}(\phi;k) = \displaystyle\int_0^\phi
+  \dfrac{\mathrm{d}\theta}{\sqrt{1-k^2\sin^2\theta}} \\
+  \mathrm{K}(k) = \mathrm{F}(\frac{\pi}{2};k) =
+  \frac{\pi}{2\mathcal{M}\left(1,\sqrt{1-k^2}\right)} \\
+\end{array}

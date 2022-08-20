@@ -1,0 +1,47 @@
+\begin{array}{l}
+  \text{Derivative of a function } f(x^\mu) \\
+  \quad\text{along a curve }x^\mu(s)\in\mathsf{M} \\
+  \frac{\mathrm{d}}{\mathrm{d}s}f = 
+  f_{,\mu}u^\mu,\;
+  u^\mu\in\mathsf{TM} \\
+
+  \text{Connection} \\
+  \frac{\mathrm{D}}{\mathrm{d}s}X^\mu =
+  X^\mu_{\phantom{\mu};\nu}u^\nu,\;
+  \frac{\mathrm{D}}{\mathrm{d}s}\omega_\mu =
+  \omega_{\mu;\nu}u^\nu \\
+  \begin{array}{lllll}
+    X^\mu_{\phantom{\mu};\nu} & = &
+    X^\mu_{\phantom{\mu},\nu} & + &
+    \Gamma^\mu_{\phantom{\mu}\sigma\nu}X^\sigma \\
+    \omega_{\mu;\nu} & = &
+    \omega_{\mu,\nu} & - &
+    \Gamma^\sigma_{\phantom{\sigma}\mu\nu}\omega_\sigma
+  \end{array} \\
+
+  \text{Christoffel symbols} \\
+  \Gamma^\lambda_{\phantom{\lambda}\mu\nu} =
+  \Gamma^\lambda_{\phantom{\lambda}\nu\mu},\;
+  \mathrm{g}_{\mu\nu;\sigma} = 0 \\
+  \Gamma^\lambda_{\phantom{\lambda}\mu\nu} =
+  \frac{1}{2}\mathrm{g}^{\lambda\sigma}\left(
+  \mathrm{g}_{\mu\sigma,\nu} +
+  \mathrm{g}_{\nu\sigma,\mu} -
+  \mathrm{g}_{\mu\nu,\sigma}
+  \right) \\
+
+  \text{Lie derivative}\quad
+  \rlap{-}\mathscr{L}_{u}f = f_{,\mu}u^\mu \\
+  \begin{array}{lllll}
+    \rlap{-}\mathscr{L}_u X^\mu & = &
+    X^\mu_{\phantom{\mu},\nu}u^\nu & - &
+    u^\mu_{\phantom{\mu},\nu}X^\nu \\
+    \rlap{-}\mathscr{L}_u\omega_\mu & = &
+    \omega_{\mu,\nu}u^\nu & + &
+    u^\nu_{\phantom{\nu},\mu}\omega_\nu
+  \end{array} \\
+
+  \text{Killing vectors} \\
+  \rlap{-}\mathscr{L}_\xi\mathrm{g}_{\mu\nu} = 0,\;
+  \xi_{\mu;\nu} + \xi_{\nu;\mu} = 0 \\
+\end{array}

@@ -1,0 +1,32 @@
+\begin{array}{l}
+  \text{Quantum square well} \\
+  \begin{cases}
+    \Big(
+      -\dfrac{1}{2}
+      \dfrac{\partial^2}{\partial{x}^2} +
+      \mathcal{U}(x)
+    \Big)
+    \phi = \mathscr{E}\phi \\
+    \phi(-\pi) = \phi(\pi) = 0
+  \end{cases} \\
+  \text{where} \\
+  \mathcal{U}(x) =
+  \begin{cases}
+    0,&-\pi\le x \le \pi \\
+    \infty,&\text{otherwise}
+  \end{cases} \\
+
+  \mathscr{E}_n = \frac{1}{8} n^2 \quad
+  \text{for}\, n=1,2,3,\ldots\infty \\
+  \phi_n(x)\Big\vert_{x \in [-\pi, \pi]} = \dfrac{1}{\sqrt{\pi}}
+    \sin\dfrac{n}{2}(x + \pi) \\
+  \phi_n(x)\big\vert_{x \notin [-\pi, \pi]} = 0 \\
+
+  \begin{array}{lll}
+    x_{rs} & = & \dfrac{8}{\pi} \dfrac{rs\big( (-1)^{r+s} - 1 \big)}{(r^2 - s^2)^2} \\
+    p_{rs} & = & -\dfrac{i}{\pi} \dfrac{rs\big( (-1)^{r+s} - 1 \big)}{r^2 - s^2}
+  \end{array} \\
+
+  \chi_n(p) = \dfrac{1}{\pi\sqrt{2}}
+  \dfrac{n\sin(p - \frac{n}{2})\pi}{p^2 - (\frac{n}{2})^2}
+\end{array}

@@ -1,0 +1,34 @@
+\begin{array}{l}
+  \text{Set sequences }
+  \{X_n\}:\mathbb{N}\to X \\
+  \displaystyle\liminf_{n\to\infty}X_n =
+  \bigcup\limits_{n=1}^\infty\bigcap\limits_{k=n}^\infty X_k \\
+  \displaystyle\limsup_{n\to\infty}X_n =
+  \bigcap\limits_{n=1}^\infty\bigcup\limits_{k=n}^\infty X_k \\
+
+  \liminf X_n\subset\limsup X_n \\
+
+  \text{Monotone sequences} \\
+  X_{k}\subset X_{k+1}\;\forall k\in\mathbb{N}\Rightarrow X_n\nearrow X \\
+  X_{k}\supset X_{k+1}\;\forall k\in\mathbb{N}\Rightarrow X_n\searrow X \\
+  \liminf X_n = \limsup X_n = \lim X_n \\
+
+  \sigma\text{-algebras} \\
+  \{X_n\}_{n=1}^\infty\subset\mathfrak{A}\Rightarrow
+  \liminf X_n\subset\mathfrak{A} \\
+  \phantom{\{X_n\}_{n=1}^\infty\subset\mathfrak{A}}\Rightarrow
+  \limsup X_n\subset\mathfrak{A} \\
+
+  \text{Measures} \\
+  \mu\left(\liminf X_n\right) \le
+  \liminf\mu\left(X_n\right) \\
+
+  \mu\left(\limsup X_n\right) \ge
+  \limsup\mu\left(X_n\right) \\
+  \qquad\text{ if }\footnotesize {
+  \mu\left(\bigcup\limits_{n=1}^\infty X_n\right) < \infty } \\
+
+  \mu\left(\lim X_n\right) = \lim\mu\left(X_n\right) \\
+  \qquad\text{ if }\exists\lim X_n \\
+
+\end{array}

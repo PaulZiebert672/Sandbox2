@@ -1,0 +1,19 @@
+\begin{array}{l}
+\text{Fourier series} \quad \theta\in \mathbb{T} = [-\pi,\pi] \\
+\hat{f}_n = \dfrac{1}{2\pi} \displaystyle\int_{\mathbb{T}} f(\theta) \mathrm{e}^{-\mathrm{i}n\theta}\,\mathrm{d}\theta,\quad n\in\mathbb{Z} \\
+f(\theta) = \displaystyle\sum\limits_{n=-\infty}^{\infty} \hat{f}_n \mathrm{e}^{\mathrm{i}n\theta} \\
+
+\text{Parseval's identity} \\
+\displaystyle\sum\limits_{n=-\infty}^{\infty} \vert\hat{f}_n\vert^2 = \dfrac{1}{2\pi} \displaystyle\int_{\mathbb{T}} \vert f(\theta) \vert^2 \, \mathrm{d}\theta \\
+
+\text{Convolution on the unit circle} \\
+\small { (f*g)(\theta) = \dfrac{1}{2\pi} \displaystyle\int_{\mathbb{T}} f(\eta) g(\theta - \eta) \,\mathrm{d}\eta } \\
+(\hat{f*g})_n = \hat{f}_n\cdot \hat{g}_n \\
+
+\text{Convolution duality} \\
+\hat{(f\cdot g)}_n = \displaystyle\sum_{k=-\infty}^{\infty} \hat{f}_k \hat{g}_{n-k} \\
+
+\text{Dirichlet's kernel} \\
+D_N(\theta) = \dfrac{\sin((N + \frac{1}{2})\theta)}{\sin(\frac{1}{2}\theta)} \\
+
+\end{array}

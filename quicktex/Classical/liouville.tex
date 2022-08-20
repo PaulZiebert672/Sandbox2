@@ -1,0 +1,28 @@
+\begin{array}{l} \\
+  \text{Hamilton equations} \\
+  \dot{\xi}_i = \,\mathtt{J}_{ij}
+  \dfrac{\partial}{\partial{\xi_j}}\mathcal{H}(\xi,t) \\
+
+  \xi_i = \begin{pmatrix} q_r \\ p_r \end{pmatrix},\quad
+  \mathtt{J}_{ij}\, = \begin{pmatrix}
+    \phantom{-}\mathtt{0}_n & \mathtt{I}_n \\
+    -\mathtt{I}_n & \mathtt{0}_n
+  \end{pmatrix} \\
+  \mathtt{J}^2\, = -\mathtt{I},\quad
+  \mathtt{J}^{-1}\, = \,\mathtt{J}^t \\
+
+  \text{Canonical transformations} \\
+  \eta_i = \,\mathtt{S}_{ij}\xi_j,\quad
+  \mathtt{S}_{ij}\, = \dfrac{\partial\eta_i}{\partial\xi_j} \\
+  \mathtt{S}^t\mathtt{J}\mathtt{S} = \mathtt{J} \\
+
+  \text{Poisson bracket} \\
+  \{f,g\}_\xi = \dfrac{\partial{f}}{\partial\xi_i}
+  \mathtt{J}_{ij}
+  \dfrac{\partial{g}}{\partial\xi_j} \\
+  \{f,g\}_\eta = \{f,g\}_\xi \\
+
+  \text{Symplectic volume element} \\
+  \Omega = \bigwedge\limits_{r=1}^n
+  \mathrm{d}p_r\wedge\mathrm{d}q_r \\
+\end{array}

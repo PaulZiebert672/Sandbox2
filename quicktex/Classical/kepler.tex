@@ -1,0 +1,24 @@
+\begin{array}{l}
+  \text{Kepler problem},\quad U = -\kappa r^{-1} \\
+  \mathcal{L} = \frac{1}{2}m\Big(\dot{r}^2 + r^2\dot{\phi}^2\Big) - U(r) \\
+  \text{Angular momentum},\; \ell = m r^2 \dot{\phi}^2 \\
+  \mathcal{H} = \dfrac{p_r^2}{2m} + \dfrac{\ell^2}{2mr^2} + U(r) \\
+
+  r^{-1} = p^{-1}\left(1 + \epsilon\cos(\phi - \phi_0)\right) \\
+  p = \dfrac{\ell^{2}}{m\kappa},\quad
+  \epsilon = \sqrt{1 + \dfrac{2\mathscr{E}\ell^2}{m\kappa^2}} \\
+  
+  \text{Elliptical orbit},\quad\epsilon < 1 \\
+  \dfrac{r}{a} = \dfrac{1 - \epsilon^2}{1 + \epsilon\cos(\phi - \phi_0)} \\
+  \omega = \sqrt{\dfrac{\kappa}{m a^3}},\quad
+  a = -\dfrac{\kappa}{2\mathscr{E}} \\
+
+  {\small \text{Kepler equation:}\;
+  \omega t = \psi - \epsilon\sin\psi } \\  
+  \psi = \omega t + \displaystyle\sum_{n=1}^\infty\dfrac{2}{n}\mathrm{J}_n(n\epsilon)\sin n\omega t \\
+  \begin{cases}
+    \dfrac{r}{a} = 1 - \epsilon\cos\psi \\
+    \tan\dfrac{\phi}{2} = \sqrt{\dfrac{1 + \epsilon}{1 - \epsilon}}
+    \tan\dfrac{\psi}{2}
+  \end{cases} \\
+\end{array}

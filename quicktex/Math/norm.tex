@@ -1,0 +1,30 @@
+\begin{array}{l}
+  \text{Metric}\quad\forall{u,v,w}\in\mathsf{V} \\
+  d:\mathsf{V}\times\mathsf{V}\rightarrow[0,\infty) \\
+  \begin{cases}
+    d(u,v) = 0 & \Leftrightarrow  u = v \\
+    d(u,v) = d(v,u) \\
+    d(u,v) + d(v,w) & \ge d(u,w)
+  \end{cases} \\
+
+  \text{Norm}\quad\forall\lambda\in\mathbb{C} \\
+  \|.\|:\mathsf{V}\rightarrow[0,\infty),\;
+  u\mapsto\|u\| \\
+  \begin{cases}
+    \|u\| = 0 & \Leftrightarrow  u = 0 \\
+    \|\lambda{u}\| & = \vert\lambda\vert\|u\| \\
+    \|u\| + \|v\| & \ge \|u+v\|
+  \end{cases} \\
+
+  \text{Inner product} \\
+  \langle.,.\rangle:\mathsf{V}\times\mathsf{V}\rightarrow\mathbb{C} \\
+  \begin{cases}
+    \langle u,u\rangle \in [0,\infty) \\
+    \langle u,u\rangle = 0 \quad \Leftrightarrow  u = 0 \\
+    \langle u,v\rangle = \langle v,u\rangle^\ast \\
+    \langle \lambda u + v,w\rangle = \lambda\langle u,w\rangle + \langle v,w\rangle
+  \end{cases} \\
+
+  \text{Cauchy-Schwarz inequality} \\
+  \vert\langle u,v\rangle\vert \le \|u\|\|v\| \\
+\end{array}

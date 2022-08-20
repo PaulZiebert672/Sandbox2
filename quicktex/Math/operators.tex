@@ -1,0 +1,46 @@
+\begin{array}{l}
+  \text{Space of bounded operators} \\
+  \mathrm{T}:\mathsf{V}\,\rlap{\:\:^\sim}\longrightarrow
+  \mathsf{W}\in\text{Banach space} \\
+  \displaystyle\sup_{\|v\|=1}\|\mathrm{T}v\| < \infty,\;
+  v\in\,\mathsf{V} \\
+
+  \text{Operator norm}\;
+  \|\mathsf{T}\|\equiv\displaystyle\sup_{\|v\|=1}\|\mathrm{T}v\| \\
+
+  \small{ \mathcal{L}(\mathsf{V},\mathsf{W})\equiv
+  \left\{\mathrm{T}:\mathsf{V}\,\rlap{\:\:^\sim}\longrightarrow\mathsf{W}\big\vert
+  \mathrm{T}\text{ bounded}\right\} } \\
+
+  \mathcal{L}(\mathsf{V},\mathsf{W})\text{ is a Banach space} \\
+  \{\mathrm{T}_n\}_{n=1}^\infty:\mathbb{N}\,\rightarrow\mathcal{L}(\mathsf{V},\mathsf{W})
+  \text{ such that} \\
+
+  \forall\varepsilon > 0\;\exists N_\varepsilon\in\mathbb{N}: \forall n,m\ge N_\varepsilon \\
+  \|\mathrm{T}_n - \mathrm{T}_m\| < \varepsilon
+  \small{ \text{ (Cauchy sequence)} } \\
+
+  \displaystyle\lim_{n\to\infty}\mathrm{T}_n:\mathsf{V}\,\rlap{\:\:^\sim}\longrightarrow\mathsf{W},\;
+  v\mapsto\displaystyle\lim_{n\to\infty}\mathrm{T}_n v \\
+
+  \text{Operator extension} \\
+  \mathrm{T}:\mathsf{V}\supset\,\mathcal{D}_{\mathrm{T}}\,
+  \rlap{{}^{\;\;\sim}}\longrightarrow\mathsf{W},\;
+  \overline{\mathcal{D}_{\mathrm{T}}} = \mathsf{V} \\
+
+  \small{ \overline{\mathrm{T}}:\mathsf{V}\,
+  \rlap{{}^{\;\;\sim}}\longrightarrow\mathsf{W},\;
+  \overline{\mathrm{T}}v_n = \mathrm{T}v_n\;
+  \forall v_n\in\,\mathcal{D}_{\mathrm{T}} } \\
+
+  \small{ v\mapsto\displaystyle\lim_{n\to\infty} \mathrm{T}v_n\;
+  \forall\{v_n\}_{n=1}^\infty:\lim_{n\to\infty}v_n=v } \\
+  \|\overline{\mathrm{T}}\| = \|\mathrm{T}\| \\
+
+  \text{Dual space}\;
+  \mathsf{V}^\ast\equiv\mathcal{L}(\mathsf{V},\mathbb{C}) \\
+
+  \text{Weak convergence} \\
+  v_n\rightharpoonup v\Leftarrow f(v_n)\to f(v),
+  \forall f\in\,\mathsf{V}^\ast \\
+\end{array}

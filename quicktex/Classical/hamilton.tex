@@ -1,0 +1,27 @@
+\begin{array}{l}
+  \text{Hamiltonian dynamics} \\
+  \begin{array}{cc}
+    \dot{\mathbf{q}} = \nabla_{\mathbf{p}}\mathcal{H} &
+    \dot{\mathbf{p}} = -\nabla_{\mathbf{q}}\mathcal{H}
+  \end{array} \\
+
+  \text{Dynamical variable}\;f(\mathbf{p},\mathbf{q}) \\
+  \dot{f} = \{\mathcal{H},f\} \\
+
+  \text{Poisson bracket} \\
+  \{f,g\} =
+  {\Large \sum\limits_{\small r=1}^{\small N}}\Big(
+  \dfrac{\partial{f}}{\partial{p_r}}\dfrac{\partial{g}}{\partial{q_r}} - 
+  \dfrac{\partial{f}}{\partial{q_r}}\dfrac{\partial{g}}{\partial{p_r}}
+  \Big) \\
+  \{ p_r, q_s \} = \delta_{rs} \\
+  \{ p_r, p_s \} = \{ q_r, q_s \} = 0 \\
+
+  \text{Bracket properties} \\
+  \{f,g + \lambda{h}\} = \{f,g\} + \lambda\{f,h\} \\
+  \{f,g\} = -\{g,f\} \\
+  {\small
+  \{f,\{g,h\}\} + \{g,\{h,f\}\} + \{h,\{f,g\}\}
+  } \\ \qquad{\small = 0 \quad\text{(Jacobi identity)}} \\
+  \{f,gh\} = \{f,g\}h + g\{f,h\}
+\end{array}

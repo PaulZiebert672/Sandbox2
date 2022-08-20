@@ -1,0 +1,29 @@
+\begin{array}{l}
+  \text{Bessel function} \\
+  \mathrm{J}_n(x) = \,\displaystyle\sum_{k=0}^\infty
+  \dfrac{(-1)^k}{k! (n+k)!}\left(\dfrac{x}{2}\right)^{n+2k} \\
+
+  {\small \mathrm{J}_n(x) = \dfrac{1}{\pi}\displaystyle\int_0^{\pi}
+  \cos(n\phi - x\sin\phi)\,\mathrm{d}\phi } \\
+
+  \mathrm{J}_n(x) \,\rlap{{}^{\!\footnotesize{{}^{x\to\infty}}}}\to
+  \sqrt{\dfrac{2}{\pi x}}
+  \cos\left(x - \dfrac{n\pi}{2} - \dfrac{\pi}{4}\right) \\
+
+  \mathrm{J}_{\pm\frac{1}{2}}(x) = \sqrt{\dfrac{2}{\pi x}}
+  \begin{cases}\sin x \\ \cos x \end{cases} \\
+
+  \text{Recurrence relations} \\
+  \begin{array}{lll}
+  2\dfrac{\mathrm{d}}{\mathrm{d}x}\mathrm{J}_n(x)\!\!\!\! & \!\!\!\!=\!\!\!\! &
+  \!\!\!\!\mathrm{J}_{n-1}(x) - \,\mathrm{J}_{n+1}(x) \\
+  \phantom{\Bigg\vert}
+  2\dfrac{n}{x}\mathrm{J}_n(x)\!\!\!\! & \!\!\!\!=\!\!\!\! &
+  \!\!\!\!\mathrm{J}_{n-1}(x) + \,\mathrm{J}_{n+1}(x) 
+  \end{array} \\
+
+  \text{Generating function} \\
+  \mathrm{e}^{ix\cos\phi}\, =
+  \displaystyle\sum_{n=-\infty}^{\infty}
+  i^n\mathrm{J}_n(x)\mathrm{e}^{in\phi} \\
+\end{array}

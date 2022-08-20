@@ -1,0 +1,33 @@
+\begin{array}{l}
+  \text{Vector space}\qquad u \in\mathsf{V} \\
+  \begin{cases}
+    \forall u,v\in\mathsf{V} &
+    u+v\in\mathsf{V} \\
+    \forall\lambda\in\mathbb{K} &
+    \lambda u\in\mathsf{V}
+  \end{cases} \\
+
+  \quad\mathtt{1.}\quad\forall u,v,w\in\mathsf{V} \\
+  u+v = v+u \\
+  (u+v)+w = u+(v+w) \\
+  \exists0\in\mathsf{V}: u+0 = u \\
+  \exists(-u)\in\mathsf{V}: u +(-u) = 0 \\
+
+  \quad\mathtt{2.}\quad\forall\lambda,\mu\in\mathbb{K} \\
+  \lambda(\mu u) = (\lambda\mu) u \\
+  1 u = u \\
+  \lambda(u+v) = \lambda u + \lambda v \\
+  (\lambda + \mu)u = \lambda u + \mu u \\
+
+  \text{Hamel base}\quad
+  \mathcal{B}\in\mathsf{V} \\
+  \exists\{e_1,\ldots,e_n\}\subset\mathcal{B}: \\
+  \begin{cases}
+    \sum\limits_{k=1}^n\lambda^k e_k = 0
+    \Rightarrow \lambda^k = 0,
+    \forall k \\
+    \small{ \exists\{\mu^1,\ldots,\mu^n\}:
+    v=\sum\limits_{k=1}^n\mu^k e_k,
+    \forall v\in\mathsf{V} }
+  \end{cases}
+\end{array}
