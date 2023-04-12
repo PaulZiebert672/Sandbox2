@@ -29,7 +29,7 @@ Kinematical relations are needed to represent energy values via the generalized 
 
 $$
 \begin{eqnarray}
-x_1 & = & \phantom{x_1}\,\phantom{+} l_1\sin\theta_1 \\
+x_1 & = & \phantom{x_1}\phantom{+} l_1\sin\theta_1 \\
 y_1 & = & \phantom{y_1} - l_1\cos\theta_1 \\
 x_2 & = & x_1 + l_2\sin\theta_2 \\
 y_2 & = & y_1 -l_2\cos\theta_2 \\
@@ -62,7 +62,7 @@ $$
 \Bigg(
   \dfrac{\mathrm{d}}{\mathrm{d}t} \dfrac{\partial}{\partial\dot{\theta_i}}  - \dfrac{\partial}{\partial\theta_i}
 \Bigg)
-\, \mathcal{L}(\dot{\theta_i}, \theta_i) = 0
+\mathcal{L}(\dot{\theta_i}, \theta_i) = 0
 \qquad
 i = \{1, 2\}
 $$
@@ -166,9 +166,17 @@ $$
 where
 
 $$
-\mathtt{M} = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}
+\mathtt{M} = 
+\begin{pmatrix}
+2 & 1 \\
+1 & 1
+\end{pmatrix}
 \qquad
-\mathtt{K} = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix}
+\mathtt{K} = 
+\begin{pmatrix}
+2 & 0 \\
+0 & 1
+\end{pmatrix}
 $$
 
 Normal frequencies
@@ -230,5 +238,5 @@ p_1 p_2 - 2\cos(\theta_1 - \theta_2)(\mathcal{E}_0 - 3 + 2\cos\theta_1 + \cos\th
 \Big)
 $$
 
-where $\,\mathcal{E}_0 = \mathcal{H}\Big\vert_{t = 0}$
+where $\mathcal{E}_0 = \mathcal{H}\Big\vert_{t = 0}$
 
