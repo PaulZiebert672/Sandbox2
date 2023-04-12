@@ -19,7 +19,7 @@ $$
 T & = &
   \dfrac{m_1}{2} \Big( \dot{x_1}^2 + \dot{y_1}^2 \Big) +
   \dfrac{m_2}{2} \Big( \dot{x_2}^2 + \dot{y_2}^2 \Big) \\
-U & = & m_1\mathrm{g}\,y_1 + m_2\mathrm{g}\,y_2
+U & = & m_1\mathrm{g} y_1 + m_2\mathrm{g} y_2
 \end{eqnarray}
 $$
 
@@ -106,6 +106,14 @@ $$
 
 ### Numerical solution
 
+For initial conditions
+
+$$
+\theta_1=0, \quad \theta_2=\dfrac{\pi}{2}, \quad \dot{\theta_1}=0, \quad \dot{\theta_2}=0
+$$
+
+![dpendulum-numeric-solution](plotutils/orbit.png)
+
 #### plotutils ode
 
 ODE description
@@ -128,14 +136,6 @@ E0 = u1^2 + u2^2/2 + u1*u2*cos(t1 - t2) + 3 - 2*cos(t1) - cos(t2)
 print t1, u1, t2, u2, E0
 step 0, 2*192, 0.02
 ```
-
-For initial conditions
-
-$$
-\theta_1=0, \quad \theta_2=\dfrac{\pi}{2}, \quad \dot{\theta_1}=0, \quad \dot{\theta_2}=0
-$$
-
-![dpendulum-numeric-solution](plotutils/orbit.png)
 
 #### plotutils graph
 
@@ -239,4 +239,3 @@ p_1 p_2 - 2\cos(\theta_1 - \theta_2)(\mathcal{E}_0 - 3 + 2\cos\theta_1 + \cos\th
 $$
 
 where $\mathcal{E}_0 = \mathcal{H}(t = 0)$
-

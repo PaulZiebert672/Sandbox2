@@ -44,3 +44,28 @@ $$
 For $\epsilon = 0.6$ and $N = 120$
 
 ![kepler-numeric-solution](plotutils/orbit.png)
+
+#### plotutils ode
+
+ODE description
+
+```
+# Kepler problem
+
+eps = 0.6
+
+x1' = u1
+x2' = u2
+u1' = -x1/(sqrt(x1^2 + x2^2))^3
+u2' = -x2/(sqrt(x1^2 + x2^2))^3
+
+x1 = 1 - eps
+x2 = 0
+u1 = 0
+u2 = sqrt((1 + eps)/(1 - eps))
+
+E0 = u1^2/2 + u2^2/2 - 1/sqrt(x1^2 + y2^2)
+
+print x1, u1, x2, u2, E0
+step 0, 8*atan(1), 8*atan(1)/120
+```
