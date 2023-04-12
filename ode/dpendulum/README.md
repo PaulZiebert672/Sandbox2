@@ -238,5 +238,5 @@ p_1 p_2 - 2\cos(\theta_1 - \theta_2)(\mathcal{E}_0 - 3 + 2\cos\theta_1 + \cos\th
 \Big)
 $$
 
-where $\mathcal{E}_0 = \mathcal{H}\Big\vert_{t = 0}$
+where $\mathcal{E}_0 = \mathcal{H}(t = 0)$
 
