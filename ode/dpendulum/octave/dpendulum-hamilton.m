@@ -3,8 +3,8 @@
 printf(" --- Initial conditions --- \n");
 p01 = 0
 p02 = 0
-q01 = 4*atan(2 - sqrt(3))
-q02 = 0*atan(2 - sqrt(3))
+q01 = 0*atan(2 - sqrt(3))
+q02 = 6*atan(2 - sqrt(3))
 
 Tmax = 1*384
 Nstep = 50
@@ -32,6 +32,7 @@ scatter(x(:, 3), x(:, 1), 0.5);
 Hv = arrayfun("H", x(: ,1), x(:, 2), x(: ,3), x(: ,4));
 
 axis equal
+axis([-1.25, 1.25, -2.0, 2.0])
 grid on
 title "Double pendulum"
 xlabel "q1"

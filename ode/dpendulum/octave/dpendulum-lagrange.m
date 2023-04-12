@@ -17,6 +17,7 @@ x = lsode("f", [0; 3*atan(1/sqrt(3)); 0; 0], (t = linspace (0, 384, 19200)'));
 scatter(x(:, [1]), x(:, [3]), 0.5);
 
 axis equal
+axis([-1.25, 1.25, -1.5, 1.5])
 grid on
 title "Double pendulum"
 xlabel "q1"
