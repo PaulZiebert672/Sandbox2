@@ -30,7 +30,7 @@ $$
 
 ### Bounded orbits
 
-Elliptical orbit with eccentricity $\epsilon = 0 \ldots 1$ and period $\,T = 2\pi$.
+Elliptical orbit with eccentricity $\epsilon = 0 \ldots 1$ and period $T = 2\pi$.
 
 Initial conditions
 
@@ -41,6 +41,6 @@ x_2 = 0; \quad
 \dot{x}_2 = \sqrt{\dfrac{1 + \epsilon}{1 - \epsilon}}
 $$
 
-For $\,\epsilon = 0.6$ and $\,N=120$
+For $\epsilon = 0.6$ and $N = 120$
 
 ![kepler-numeric-solution](plotutils/orbit.png)
