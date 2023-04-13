@@ -41,10 +41,7 @@ ylabel "p1"
 ts1 = sprintf("E0 = %f\nT = %.4f\n", H(p01, p02, q01, q02), Tmax);
 ts2 = sprintf("m(H) = %f\nd(H) = %f\n", mean(Hv), sqrt(cov(Hv)));
 hP = axis();
-text(hP(2) + 0.02*(hP(2) - hP(1)), hP(4) - 0.05*(hP(4) - hP(3)), ts1);
-text(hP(2) + 0.02*(hP(2) - hP(1)), 0.5*(hP(4) + hP(3)) - 0.05*(hP(4) - hP(3)), ts2);
+text(-hP(2) + 0.02*(hP(2) - hP(1)), hP(4) - 0.05*(hP(4) - hP(3)), ts1);
+#text(-hP(2) + 0.02*(hP(2) - hP(1)), 0.5*(hP(4) + hP(3)) - 0.05*(hP(4) - hP(3)), ts2);
 
-printf(" --- Energy integral --- \n");
-printf(ts1);
-printf(ts2);
-
+printf(" --- Energy integral --- \n%s\n%s\n", ts1, ts2);
