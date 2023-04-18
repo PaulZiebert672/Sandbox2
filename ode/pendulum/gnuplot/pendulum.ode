@@ -1,0 +1,13 @@
+# Mathematical pendulum
+
+q' = u
+u' = -sin(q)
+
+q = 3*atan(1/sqrt(3))
+u = 0
+
+E0 = u^2/2 + 1 - cos(q)
+#T = 8*atan(1)*(1 + (1/4)*(1-1/4))
+
+print q, u, E0
+step 0, 7.4163, 7.4163/120
