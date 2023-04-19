@@ -53,9 +53,13 @@ $$
 \theta=\dfrac{\pi}{2}, \quad p = 0
 $$
 
+Period $T = 4\mathrm{K}\big( \frac{1}{2} \big) \approx 7.4163$
+
 ![phase space orbit](plotutils/orbit.png)
 
 #### plotutils ode
+
+ODE description
 
 ```
 # Mathematical pendulum
