@@ -9,15 +9,21 @@ Rotation matrix will satisfy $R^{T}R = I$ and can be represened as $R = \exp(\th
 $$
 L_1 =
 \begin{pmatrix}
-0 & 0 & 0 \\ 0 & 0 & -1 \\ 0 & 1 & 0
+0 & 0 & 0 \\
+0 & 0 & -1 \\
+0 & 1 & 0
 \end{pmatrix} \qquad
 L_2 =
 \begin{pmatrix}
-0 & 0 & 1 \\ 0 & 0 & 0 \\ -1 & 0 & 0
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+-1 & 0 & 0
 \end{pmatrix} \qquad
 L_3 =
 \begin{pmatrix}
-0 & -1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 0
+0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 0
 \end{pmatrix} \qquad
 $$
 
@@ -41,15 +47,18 @@ Pauli matrices are defined as
 $$
 \sigma_1 =
 \begin{pmatrix}
-0 & 1 \\ 1 & 0
+0 & 1 \\
+1 & 0
 \end{pmatrix} \qquad
 \sigma_2 =
 \begin{pmatrix}
-0 & -i \\ i & 0
+0 & -i \\
+i & 0
 \end{pmatrix} \qquad
 \sigma_3 =
 \begin{pmatrix}
-1 & 0 \\ 0 & -1
+1 & 0 \\
+0 & -1
 \end{pmatrix}
 $$
 
@@ -97,27 +106,45 @@ $$
 \begin{eqnarray}
 K_1 = -i
 \begin{pmatrix}
-0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
 \end{pmatrix} \qquad
 K_2 = -i
 \begin{pmatrix}
-0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0
 \end{pmatrix} \qquad
 K_3 = -i
 \begin{pmatrix}
-0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0
 \end{pmatrix} \\
 J_1 = i
 \begin{pmatrix}
-0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & -1 \\
+0 & 0 & 1 & 0
 \end{pmatrix} \qquad
 J_2 = i
 \begin{pmatrix}
-0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & -1 & 0 & 0
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & -1 & 0 & 0
 \end{pmatrix} \qquad
 J_3 = i
 \begin{pmatrix}
-0 & 0 & 0 & 0 \\ 0 & 0 & -1 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0
+0 & 0 & 0 & 0 \\
+0 & 0 & -1 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0
 \end{pmatrix}
 \end{eqnarray}
 $$
@@ -159,11 +186,13 @@ where $\eta^{\mu\nu}$ is the metric in Minkowski space.
 $$
 \gamma^0 =
 \begin{pmatrix}
-\sigma_0 & \\ & -\sigma_0
+\sigma_0 & \\
+& -\sigma_0
 \end{pmatrix} \qquad
 \gamma^{i} =
 \begin{pmatrix}
-& \sigma_i \\ -\sigma_i &
+& \sigma_i \\
+-\sigma_i &
 \end{pmatrix}
 $$
 
@@ -172,11 +201,13 @@ $$
 $$
 \gamma^0 =
 \begin{pmatrix}
-& \sigma_0 \\ \sigma_0 &
+& \sigma_0 \\
+\sigma_0 &
 \end{pmatrix} \qquad
 \gamma^{i} =
 \begin{pmatrix}
-& \sigma_i \\ -\sigma_i &
+& \sigma_i \\
+-\sigma_i &
 \end{pmatrix}
 $$
 
