@@ -20,7 +20,13 @@ $$
 
 #### Ortogonality condition
 
-For orthogonal coordinate systems $\hat{\xi}_i \cdot \hat{\xi}_j = \delta_{ij}$. This gives the orthogonality condition that
+For orthogonal coordinate systems
+
+$$
+\hat{\xi}_i \cdot \hat{\xi}_j = \delta_{ij}
+$$
+
+This gives the orthogonality condition that
 
 $$
 \sum_{k=1}^3 \dfrac{\partial x_k}{\partial q_i} \dfrac{\partial x_k}{\partial q_j} = h_i h_j \delta_{ij}
@@ -33,7 +39,7 @@ $$h_i = \sqrt{ \sum_{k=1}^3 \bigg( \dfrac{\partial x_k}{\partial q_i} \bigg)^2 }
 ### Gradient
 
 $$
-\mathrm{d}\phi \equiv \nabla \phi \, \cdot \mathrm{d}\vec{r}
+\mathrm{d}\phi \equiv \nabla \phi \cdot \mathrm{d}\vec{r}
 $$
 
 $$
@@ -47,7 +53,7 @@ $$
 $$
 
 $$
-\nabla \cdot \vec{A} = \dfrac{1}{h_1 h_2 h_3} \Bigg\{ \dfrac{\partial}{\partial q_1} h_2 h_3 A_1 + \ldots\text{cyclic} \Bigg\}
+\nabla \cdot \vec{A} = \dfrac{1}{h_1 h_2 h_3} \Bigg( \dfrac{\partial}{\partial q_1} h_2 h_3 A_1 + \ldots\text{cyclic} \Bigg)
 $$
 
 ### Curl
@@ -68,9 +74,9 @@ $$
 ### Laplacian
 
 $$
-\nabla^2 \phi \equiv \nabla \, \cdot \Big( \nabla \phi \Big)
+\nabla^2 \phi \equiv \nabla \cdot \Big( \nabla \phi \Big)
 $$
 
 $$
-\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \Bigg\{ \dfrac{\partial}{\partial q_1} \bigg[ \dfrac{h_2 h_3}{h_1} \dfrac{\partial}{\partial q_1} \phi \bigg] + \ldots\text{cyclic} \Bigg\}
+\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \Bigg( \dfrac{\partial}{\partial q_1} \bigg[ \dfrac{h_2 h_3}{h_1} \dfrac{\partial}{\partial q_1} \phi \bigg] + \ldots\text{cyclic} \Bigg)
 $$
