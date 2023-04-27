@@ -80,7 +80,7 @@ $$
 Pauli matrices satisfy the Clifford algebra
 
 $$
-\big\{ \sigma_i, \sigma_j \big\} = 2 \delta_{ij} \phantom{\cdot} \sigma_0
+\big \[ \sigma_i, \sigma_j \big]_+ = 2 \delta_{ij} \phantom{\cdot} \sigma_0
 $$
 
 where $\delta_{ij}$ is essentialy the metric in Euclidean space.
@@ -88,6 +88,7 @@ where $\delta_{ij}$ is essentialy the metric in Euclidean space.
 ### Transformation of spinors
 
 Two-component spinor $\chi$ is transformed as
+
 $$
 \chi^{\prime} = \exp \Big( \dfrac{i}{2} \sigma_i \theta_i \Big) \phantom{\cdot} \chi
 $$
@@ -96,7 +97,7 @@ $$
 
 ### Lorentz transformations
 
-Metric $\eta_{\mu\nu} = \mathrm{diag}\big\{ 1, -1, -1, -1\big\}$
+Metric $\eta_{\mu\nu} = \mathrm{diag}\big( 1, -1, -1, -1 \big)$
 
 Transformation matrix $\Lambda$ satisfies the relation $\Lambda^{T} \eta \Lambda = \eta$
 
@@ -176,7 +177,7 @@ Generators $J_i^+, J_i^-$  form a Lie algebra $\mathfrak{su}(2) \oplus \mathfrak
 Define the Dirac gamma matrices that will satisfy the Clifford algebra
 
 $$
-\big\{ \gamma^{\mu}, \gamma^{\nu} \big\} = 2 \eta^{\mu\nu} \phantom{\cdot} \mathtt{I}_{4 \times 4}
+\big\[ \gamma^{\mu}, \gamma^{\nu} \big\]_+ = 2 \eta^{\mu\nu} \phantom{\cdot} \mathtt{I}_{4 \times 4}
 $$
 
 where $\eta^{\mu\nu}$ is the metric in Minkowski space.
