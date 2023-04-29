@@ -29,8 +29,8 @@ Kinematical relations are needed to represent energy values via the generalized 
 
 $$
 \begin{eqnarray}
-x_1 & = & \phantom{x_1}\phantom{+} l_1\sin\theta_1 \\
-y_1 & = & \phantom{y_1} - l_1\cos\theta_1 \\
+x_1 & = & l_1\sin\theta_1 \\
+y_1 & = & - l_1\cos\theta_1 \\
 x_2 & = & x_1 + l_2\sin\theta_2 \\
 y_2 & = & y_1 -l_2\cos\theta_2 \\
 \end{eqnarray}
@@ -78,10 +78,10 @@ $$
   2\sin\theta_1 & = & 0
 \\
 & 
-  \phantom{2}\ddot{\theta_2} +
+  \ddot{\theta_2} +
   \cos(\theta_1 - \theta_2)\ddot{\theta_1} -
   \sin(\theta_1 - \theta_2)\dot{\theta_1}^2 +
-  \phantom{2}\sin\theta_2 & = & 0
+  \sin\theta_2 & = & 0
 \end{cases}
 $$
 
@@ -90,10 +90,10 @@ Solving for $\ddot{\theta_i}$ yields
 $$
 \begin{cases}
 & \ddot{\theta_1} & = & \dfrac{
-  \phantom{2}\sin\theta_2\cos(\theta_1 - \theta_2) -
+  \sin\theta_2\cos(\theta_1 - \theta_2) -
   2\sin\theta_1 -
   \sin(\theta_1 - \theta_2)
-    \Big[ \phantom{2}\dot{\theta_2}^2 + \cos(\theta_1 - \theta_2)\dot{\theta_1}^2 \Big]
+    \Big[ \dot{\theta_2}^2 + \cos(\theta_1 - \theta_2)\dot{\theta_1}^2 \Big]
 }{2 - \cos^2(\theta_1 - \theta_2)} & \\
 & \ddot{\theta_2} & = & \dfrac{
   2\sin\theta_1\cos(\theta_1 - \theta_2) -
@@ -196,7 +196,7 @@ $$
 p_1 = \dfrac{\partial \mathcal{L}}{\partial \dot{\theta_1}} & = & 
   2\dot{\theta_1} + \cos(\theta_1 - \theta_2)\dot{\theta_2} \\
 p_2 = \dfrac{\partial \mathcal{L}}{\partial \dot{\theta_2}} & = &
-  \phantom{2}\dot{\theta_2} + \cos(\theta_1 - \theta_2)\dot{\theta_1}
+  \dot{\theta_2} + \cos(\theta_1 - \theta_2)\dot{\theta_1}
 \end{eqnarray}
 $$
 
@@ -224,10 +224,10 @@ $$
 
 $$
 \begin{cases}
-\dot{\theta_1} & = & \dfrac{\phantom{2}p_1 - \cos(\theta_1 - \theta_2) p_2}{2 - \cos^2(\theta_1 - \theta_2)} \\
+\dot{\theta_1} & = & \dfrac{p_1 - \cos(\theta_1 - \theta_2) p_2}{2 - \cos^2(\theta_1 - \theta_2)} \\
 \dot{\theta_2} & = & \dfrac{2p_2 + \cos(\theta_1 - \theta_2) p_1}{2 - \cos^2(\theta_1 - \theta_2)} \\
 \dot{p_1} & = & -2\sin\theta_1 - \mathcal{W}(p_1, p_2, \theta_1, \theta_2) \\
-\dot{p_2} & = & -\phantom{2}\sin\theta_2 + \mathcal{W}(p_1, p_2, \theta_1, \theta_2)
+\dot{p_2} & = & -\sin\theta_2 + \mathcal{W}(p_1, p_2, \theta_1, \theta_2)
 \end{cases}
 $$
 
