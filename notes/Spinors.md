@@ -4,7 +4,7 @@
 
 ### Rotations
 
-Rotation matrix will satisfy $R^{T}R = I$ and can be represened as $R = \exp(\theta_i \phantom{\cdot} L_i)$, where $L_i$ are the $SO(3)$ group generators 
+Rotation matrix will satisfy $R^{T}R = I$ and can be represened as $R = \exp(\theta_i L_i)$, where $L_i$ are the $SO(3)$ group generators
 
 $$
 L_1 =
@@ -80,7 +80,7 @@ $$
 Pauli matrices satisfy the Clifford algebra
 
 $$
-\big \[ \sigma_i, \sigma_j \big]_+ = 2 \delta_{ij} \phantom{\cdot} \sigma_0
+\big[ \sigma_i, \sigma_j \big]_+ = 2 \delta_{ij} \sigma_0
 $$
 
 where $\delta_{ij}$ is essentialy the metric in Euclidean space.
@@ -90,7 +90,7 @@ where $\delta_{ij}$ is essentialy the metric in Euclidean space.
 Two-component spinor $\chi$ is transformed as
 
 $$
-\chi^{\prime} = \exp \Big( \dfrac{i}{2} \sigma_i \theta_i \Big) \phantom{\cdot} \chi
+\chi^{\prime} = \exp \Big( \dfrac{i}{2} \sigma_i \theta_i \Big) \chi
 $$
 
 ## Spinors in Minkowski space
@@ -177,7 +177,7 @@ Generators $J_i^+, J_i^-$  form a Lie algebra $\mathfrak{su}(2) \oplus \mathfrak
 Define the Dirac gamma matrices that will satisfy the Clifford algebra
 
 $$
-\big\[ \gamma^{\mu}, \gamma^{\nu} \big\]_+ = 2 \eta^{\mu\nu} \phantom{\cdot} \mathtt{I}_{4 \times 4}
+\big[ \gamma^{\mu}, \gamma^{\nu} \big]_+ = 2 \eta^{\mu\nu} \mathtt{I}_{4 \times 4}
 $$
 
 where $\eta^{\mu\nu}$ is the metric in Minkowski space.
@@ -223,7 +223,7 @@ $$
 Four-component spinor $\psi$ is transformed as
 
 $$
-\psi^{\prime} = \exp \Big( \dfrac{i}{4} \sigma^{\mu\nu} \omega_{\mu\nu} \Big) \phantom{\cdot} \psi
+\psi^{\prime} = \exp \Big( \dfrac{i}{4} \sigma^{\mu\nu} \omega_{\mu\nu} \Big) \psi
 $$
 
 Define Dirac adjoint as $\bar{\psi} = \psi^{\dagger} \gamma_0$. Combination $\bar{\psi} \psi$ is Lorentz invariant.
