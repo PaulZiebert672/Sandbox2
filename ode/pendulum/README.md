@@ -25,8 +25,8 @@ Case $\mathcal{E} < 2$. Assign $k^2 = \dfrac{1}{2}\mathcal{E}$
 
 $$
 \begin{eqnarray}
-\theta & = & 2 \arcsin\big( k \phantom{\cdot} \mathrm{sn}(t; k) \big) \\
-p & = & 2k \phantom{\cdot} \mathrm{cn}(t; k)
+\theta & = & 2 \arcsin\big( k \mathrm{sn}(t; k) \big) \\
+p & = & 2k \mathrm{cn}(t; k)
 \end{eqnarray}
 $$
 
@@ -38,12 +38,12 @@ Case $\mathcal{E} > 2$. Assign $k^2 = 2\mathcal{E}^{-1}$
 
 $$
 \begin{eqnarray}
-\theta & = & 2 \phantom{\cdot} \mathrm{am}\bigg( \dfrac{t}{k}; k \bigg) \\
+\theta & = & 2 \mathrm{am}\bigg( \dfrac{t}{k}; k \bigg) \\
 p & = & \dfrac{2}{k} \mathrm{dn}\bigg( \dfrac{t}{k}; k \bigg)
 \end{eqnarray}
 $$
 
-Period of rotations $T = 2k\phantom{\cdot}\mathrm{K}(k)$
+Period of rotations $T = 2k \mathrm{K}(k)$
 
 ## Numerical solution
 
