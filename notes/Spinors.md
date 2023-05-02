@@ -80,7 +80,7 @@ $$
 Pauli matrices satisfy the Clifford algebra
 
 $$
-\big[ \sigma_i, \sigma_j \big]_+ = 2 \delta_{ij} \sigma_0
+\big[ \sigma_i, \sigma_j \big] \cdot_{+} = 2 \delta_{ij} \sigma_0
 $$
 
 where $\delta_{ij}$ is essentialy the metric in Euclidean space.
@@ -177,7 +177,7 @@ Generators $J_i^+, J_i^-$  form a Lie algebra $\mathfrak{su}(2) \oplus \mathfrak
 Define the Dirac gamma matrices that will satisfy the Clifford algebra
 
 $$
-\big[ \gamma^{\mu}, \gamma^{\nu} \big]_+ = 2 \eta^{\mu\nu} \mathtt{I}_{4 \times 4}
+\big[ \gamma^{\mu}, \gamma^{\nu} \big] \cdot_{+} = 2 \eta^{\mu\nu} \mathcal{I}
 $$
 
 where $\eta^{\mu\nu}$ is the metric in Minkowski space.
