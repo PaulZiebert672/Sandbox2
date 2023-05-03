@@ -20,15 +20,15 @@ end
 gr(size = (300, 300))
 Plots.scalefontsizes()
 Plots.scalefontsizes(0.45)
-plotOrbit = plot(
+plotOrbit = scatter(
     a[:, 1],
     a[:, 2],
-    seriestype=:scatter,
     aspect_ratio = 1,
     xlabel = L"\theta",
     ylabel = L"p",
     plot_title = "Mathematical pendulum",
     markersize = 1.2,
+    alpha = 0.75,
     legend = false,
     dpi = 300
 )
