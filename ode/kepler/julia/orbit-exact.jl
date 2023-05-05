@@ -27,15 +27,15 @@ end
 gr(size = (300, 300))
 Plots.scalefontsizes()
 Plots.scalefontsizes(0.45)
-plotOrbit = plot(
+plotOrbit = scatter(
     a[:, 1],
     a[:, 2],
-    seriestype=:scatter,
     aspect_ratio = 1,
     xlabel = L"x",
     ylabel = L"y",
     plot_title = "Kepler problem",
-    markersize = 1.5,
+    markersize = 1.2,
+    alpha = 0.75,
     legend = false,
     framestyle = :origin,
     dpi = 300
@@ -54,19 +54,19 @@ end
 gr(size = (300, 300))
 Plots.scalefontsizes()
 Plots.scalefontsizes(0.45)
-plotRadial = plot(
+plotRadial = scatter(
     map(eachrow(a)) do s 
         rho(s[1], s[2])
     end,
     map(eachrow(a)) do s 
         (s[3]*s[1] + s[2]*s[4])/rho(s[1], s[2])
     end,
-    seriestype=:scatter,
     aspect_ratio = 1,
     xlabel = L"r",
     ylabel = L"p_r",
     plot_title = "Kepler problem",
-    markersize = 1.5,
+    markersize = 1.2,
+    alpha = 0.75,
     legend = false,
     dpi = 300
 )
@@ -76,3 +76,25 @@ annotate!(
     L"\epsilon = %$eps%$"
 )
 savefig(plotRadial, "kepler-radial.png")
+
+Plots.scalefontsizes()
+Plots.scalefontsizes(0.45)
+plotOrbit = scatter(
+    a[:, 3],
+    a[:, 4],
+    aspect_ratio = 1,
+    xlabel = L"p_x",
+    ylabel = L"p_y",
+    plot_title = "Kepler problem",
+    markersize = 1.2,
+    alpha = 0.75,
+    legend = false,
+    framestyle = :origin,
+    dpi = 300
+)
+annotate!(
+    xlims(plotOrbit)[1] + 0.07*(xlims(plotOrbit)[2] - xlims(plotOrbit)[1]),
+    ylims(plotOrbit)[2] - 0.03*(ylims(plotOrbit)[2] - ylims(plotOrbit)[1]),
+    L"\epsilon = %$eps%$"
+)
+savefig(plotOrbit, "kepler-hodograph.png")
