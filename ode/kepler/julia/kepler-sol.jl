@@ -45,7 +45,7 @@ annotate!(
     ylims(plotOrbit)[2] - 0.03*(ylims(plotOrbit)[2] - ylims(plotOrbit)[1]),
     L"\epsilon = %$eps%$"
 )
-savefig(plotOrbit, "kepler-orbit.png")
+savefig(plotOrbit, "orbit-exact.png")
 
 function rho(x, y)
     sqrt(x^2 + y^2)
@@ -75,7 +75,7 @@ annotate!(
     ylims(plotRadial)[2] - 0.03*(ylims(plotRadial)[2] - ylims(plotRadial)[1]),
     L"\epsilon = %$eps%$"
 )
-savefig(plotRadial, "kepler-radial.png")
+savefig(plotRadial, "radial-exact.png")
 
 Plots.scalefontsizes()
 Plots.scalefontsizes(0.45)
@@ -97,4 +97,4 @@ annotate!(
     ylims(plotOrbit)[2] - 0.03*(ylims(plotOrbit)[2] - ylims(plotOrbit)[1]),
     L"\epsilon = %$eps%$"
 )
-savefig(plotOrbit, "kepler-hodograph.png")
+savefig(plotOrbit, "hodograph-exact.png")
