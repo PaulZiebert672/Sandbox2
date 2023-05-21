@@ -157,7 +157,7 @@ graph -T png \
 
 ## Poincare section
 
-$\mathcal{E}_0 = 1.0$
+Section $\theta_2 = 0, \quad \mathcal{E}_0 = 1.0$
 
 ![dpendulum-poincare-section](octave/u-section-100_sm.png)
 
