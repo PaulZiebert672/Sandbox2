@@ -155,6 +155,12 @@ graph -T png \
   -Y "d \*H_1 / d t"
 ```
 
+## Poincare section
+
+$\mathcal{E}_0 = 1.0$
+
+![dpendulum-poincare-section](octave/u-section-100_sm.png)
+
 ## Small oscillations
 
 Linearized equations of motion for small amplitudes
