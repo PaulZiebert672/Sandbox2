@@ -3,7 +3,7 @@
 % --- Time span
 
 t_step = 0.02;
-t_max = 2*192.0;
+t_max = 25*192.0;
 
 N_max = floor(t_max/t_step) + 1;
 
@@ -21,13 +21,24 @@ function e = energy(x)
   e = x(3)^2 + 0.5*x(4)^2 + x(3)*x(4)*cos(x(1) - x(2)) + 3 - 2*cos(x(1)) - cos(x(2));
 endfunction
 
+function match = is_section_limits(x_start, x_finish)
+  match = logical(0);
+  if (x_start(2)*x_finish(2) <= 0)
+    t1 = x_start(1);
+    u1 = x_start(3);
+    u2 = x_start(4);
+    if (u2 > -u1*cos(t1))
+      match = logical(1);
+    endif
+  endif
+endfunction
+
 function result = find_section_data(x, t)
   N_span = 3;
   result = [];
   for k = [1:length(t)]
     if (k == 1) continue endif
-    if (x(k, 2)*x(k - 1, 2) > 0) continue endif
-    if (x(k - 1, 4) < 0) continue endif
+    if (!is_section_limits(x(k - 1, :), x(k, :))) continue endif
 
 ##    printf("~~> k = %d, t = %f \n", k, t(k - 1));
 ##    printf("~~> x(k - 1) = %f, %f, %f, %f \n", x(k - 1, 1), x(k - 1, 2), x(k - 1, 3), x(k - 1, 4));
@@ -58,12 +69,12 @@ endfunction
 
 function hf = plot_section(x0_preset, e0, t_max, N_max)
   q_max = acos((2 - e0)/2) + 0.05;
-  p_max = sqrt(2*e0) + 0.05;
+  u_max = sqrt(2*e0) + 0.05;
 
   hf = figure();
   hold on
   axis equal;
-  axis([-q_max, q_max, -p_max, p_max]);
+  axis([-q_max, q_max, -u_max, u_max]);
   grid on;
   title "Double pendulum. Poincare section"
   xlabel "\q_1"
@@ -95,19 +106,24 @@ e0 = 1.0;
 x0_preset = [];
 q01_max = acos((2 - e0)/2);
 q02_max = acos(1 - e0);
+u01_max = sqrt(e0);
+u02_max = sqrt(2*e0);
 
-N_steps = 6;
+N_steps = 60;
 
-for q02 = [-q02_max:pi/N_steps:q02_max];
+for psi = [0:pi/N_steps:pi];
+  q02 = q02_max*cos(psi);
   x0_preset = [x0_preset; [acos((3 - e0 - cos(q02))/2), q02, 0, 0]];
 endfor
 
-for q01 = [0:pi/N_steps:q01_max];
-  x0_preset = [x0_preset; [q01, 0, sqrt(e0 - 2 + 2*cos(q01)), 0]];
+for psi = [pi/2:pi/N_steps:3*pi/4];
+  u02 = u02_max*cos(psi);
+  x0_preset = [x0_preset; [0, 0, -0.5*u02 + sqrt(e0 - (u02/2)^2), u02]];
 endfor
 
-for q02 = [0:pi/N_steps:q02_max];
-  x0_preset = [x0_preset; [0, q02, 0, sqrt(2*(e0 - 1 + cos(q02)))]];
+for psi = [pi/4:pi/N_steps:pi/2];
+  u01 = -u01_max*cos(psi);
+  x0_preset = [x0_preset; [0, 0, u01, -u01 + sqrt(2*e0 - u01^2)]];
 endfor
 
 clc;
