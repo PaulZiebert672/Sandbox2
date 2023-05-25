@@ -1,3 +1,5 @@
+# Kepler problem
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -5,7 +7,7 @@ from scipy.integrate import solve_ivp
 
 eps = 0.6
 N_ppr = 120   # Number of points per rotation
-N_rot = 25    # Number of rotations
+N_rot = 24    # Number of rotations
 t_step = 2*np.pi/N_ppr
 x_init = [1 - eps, 0, 0, np.sqrt((1 + eps)/(1 - eps))]
 
@@ -26,8 +28,9 @@ def angular(x):
     L = x[0]*x[3] - x[2]*x[1]
     return L
 
-sol = solve_ivp(dfunc, [0, N_rot*2*np.pi], x_init, t_eval=[n*t_step for n in range(0, N_rot*N_ppr + 1)], method="DOP853")
+sol = solve_ivp(dfunc, [0, N_rot*2*np.pi], x_init, t_eval=[n*t_step for n in range(0, N_rot*N_ppr + 1)], method="DOP853", rtol=1e-10, atol=1e-10)
 
+# Plot orbit
 fig = plt.figure(figsize=(8, 8))
 plt.title("Kepler problem. Orbit")
 plt.axis("equal")
@@ -35,12 +38,12 @@ plt.xlabel("x")
 plt.ylabel("y")
 plt.grid(True)
 
-#plt.scatter(sol.y[0], sol.y[1])
-plt.plot(sol.y[0], sol.y[1])
+plt.plot(sol.y[0], sol.y[1], fillstyle='none', marker='o', markersize=3.0, linestyle='None')
 xmin, xmax, ymin, ymax = plt.axis()
-plt.text(xmin + 0.05*(xmax - xmin), ymax - 0.03*(xmax - xmin), "eps = {}".format(eps))
+plt.text(xmin + 0.05*(xmax - xmin), ymax - 0.03*(xmax - xmin), "eps = {}\nN_rot = {}".format(eps, N_rot))
 fig.savefig('orbit.png', dpi=150)
 
+# Plot invariant error
 e0 = energy(x_init)
 l0 = angular(x_init)
 fig = plt.figure(figsize=(8, 8))
