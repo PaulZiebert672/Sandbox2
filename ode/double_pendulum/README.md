@@ -2,6 +2,8 @@
 
 ## Lagrangian dynamics
 
+![double-pendulum-coordinates](python/coordinates.jpg)
+
 ### Notation
 
 $$
