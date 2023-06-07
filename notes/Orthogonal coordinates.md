@@ -23,13 +23,15 @@ $$
 For orthogonal coordinate systems
 
 $$
-\hat{\xi}_i \cdot \hat{\xi}_j = \delta_{ij}
+\begin{align}
+\hat{\xi_i} \cdot \hat{\xi_j} = \delta_{ij}
+\end{align}
 $$
 
 This gives the orthogonality condition that
 
 $$
-\sum_{k=1}^3 \dfrac{\partial x_k}{\partial q_i} \dfrac{\partial x_k}{\partial q_j} = h_i h_j \delta_{ij}
+\sum_{k=1}^3 \dfrac{\partial{x_k}}{\partial{q_i}} \dfrac{\partial{x_k}}{\partial{q_j}} = h_i h_j \delta_{ij}
 $$
 
 In case $i = j$
