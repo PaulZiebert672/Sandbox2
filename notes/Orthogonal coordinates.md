@@ -5,17 +5,17 @@ A general coordinate system with three variables $q_1, q_2, q_3$ can be defined 
 The differential of the position vector $\vec{r}$ can be written as
 
 $$
-\mathrm{d}\vec{r} = \sum_{k=1}^3 \hat{n}_k \mathrm{d}x_k
-= \sum_{k=1}^3 \hat{n}_k \sum_{i=1}^3 \dfrac{\partial x_k}{\partial q_i} \mathrm{d}q_i
-= \sum_{i=1}^3 \bigg[ \sum_{k=1}^3 \dfrac{\partial x_k}{\partial q_i} \hat{n}_k \bigg] \mathrm{d}q_i
+\mathrm{d}\vec{r} = \sum_{k=1}^3 \hat{n_k} \mathrm{d}x_k
+= \sum_{k=1}^3 \hat{n_k} \sum_{i=1}^3 \dfrac{\partial x_k}{\partial q_i} \mathrm{d}q_i
+= \sum_{i=1}^3 \bigg[ \sum_{k=1}^3 \dfrac{\partial x_k}{\partial q_i} \hat{n_k} \bigg] \mathrm{d}q_i
 $$
 
 The quantity in square brackets is in the direction of $\hat{\xi}_i$, but it may not have unit magnitude.
 
 $$
-\mathrm{d}\vec{r} \equiv \sum_{i=1}^3 h_i \hat{\xi}_i \mathrm{d}q_i
+\mathrm{d}\vec{r} \equiv \sum_{i=1}^3 h_i \hat{\xi_i} \mathrm{d}q_i
 \qquad
-h_i \hat{\xi}_i = \sum_{i=1}^3 \dfrac{\partial x_k}{\partial q_i} \hat{n}_k
+h_i \hat{\xi_i} = \sum_{i=1}^3 \dfrac{\partial x_k}{\partial q_i} \hat{n_k}
 $$
 
 #### Ortogonality condition
