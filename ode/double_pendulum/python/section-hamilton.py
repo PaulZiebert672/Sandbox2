@@ -10,14 +10,15 @@ from typing import List
 
 # Time span
 dt = 0.02
-t_max = 12*192.0
+t_max = 45*192.0
 
 N_max = np.floor(t_max/dt) + 1
 
 def energy(x):
     theta_1, theta_2, p_1, p_2 = x
     cdiff = cos(theta_1 - theta_2)
-    return 0.5*(p_1**2 + 2*p_2**2 - 2*p_1*p_2*cdiff)/(2 - cdiff**2) + 3 - 2*cos(theta_1) - cos(theta_2)
+    return 0.5*(p_1**2 + 2*p_2**2 - 2*p_1*p_2*cdiff)/(2 - cdiff**2) \
+        + 3 - 2*cos(theta_1) - cos(theta_2)
 
 def dfunc(t, x):
     theta_1, theta_2, p_1, p_2 = x
@@ -40,7 +41,11 @@ def is_section_limit(x_start, x_finish):
     return False
 
 def legendre_poly(k:int) -> Polynomial:
-    coeff = np.array([[-1/16, 1/24, 1/4, -1/6], [9/16, -9/8, -1/4, 1/2], [9/16, 9/8, -1/4, -1/2], [-1/16, -1/24, 1/4, 1/6]])
+    coeff = np.array([
+        [-1/16, 1/24, 1/4, -1/6],
+        [9/16, -9/8, -1/4, 1/2],
+        [9/16, 9/8, -1/4, -1/2],
+        [-1/16, -1/24, 1/4, 1/6]])
     return Polynomial(coeff[k])
 
 def get_interpolation_poly(y:List[float]) -> Polynomial:
@@ -85,7 +90,7 @@ def find_section_data(t, x):
     return np.array(res)
 
 def plot_section(x0_preset, e0, t_max, dt):
-    fig = plt.figure(figsize=(6, 8))
+    fig = plt.figure(figsize=(8, 12))
     plt.title("Double pendulum. Poincare section")
     plt.axis("equal")
     #plt.xlim(-2, 2)
@@ -96,26 +101,60 @@ def plot_section(x0_preset, e0, t_max, dt):
 
     for m in range(len(x0_preset)):
         x0 = x0_preset[m]
-        print("{} - {}/{} - x0:{}".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset), x0))
-        sol = solve_ivp(dfunc, [0, t_max], x0, t_eval=np.arange(0, t_max, dt), method="DOP853", rtol=1e-10, atol=1e-10)
-        print("{} - {}/{} - integration complete".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset)))
+        print("{} - {}/{} - x0:{}"
+              .format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset), x0))
+        sol = solve_ivp(
+            dfunc,
+            [0, t_max],
+            x0,
+            t_eval=np.arange(0, t_max, dt),
+            method="DOP853",
+            rtol=1e-10,
+            atol=1e-10
+        )
+        print("{} - {}/{} - integration complete"
+              .format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset)))
         res = find_section_data(sol.t, sol.y)
-        print("{} - {}/{} - interpolation complete: {} points".format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset), len(res)))
-        plt.plot(res[:, 0], res[:, 2], fillstyle='none', marker='.', markersize=0.5, linestyle='None', alpha=0.45)
+        print("{} - {}/{} - interpolation complete: {} points"
+              .format(datetime.now().strftime("%d/%m/%Y %H:%M:%S"), m + 1, len(x0_preset), len(res)))
+        plt.plot(
+            res[:, 0],
+            res[:, 2],
+            fillstyle='none',
+            marker='.',
+            markersize=0.4,
+            linestyle='None',
+            alpha=0.35
+        )
     xmin, xmax, ymin, ymax = plt.axis()
-    plt.text(xmin + 0.01*(xmax - xmin), ymax - 0.05*(xmax - xmin), "E = {:.4f}".format(e0))
-    fig.savefig('section-hamilton.png', dpi=150)
+    plt.text(
+        xmin + 0.01*(xmax - xmin),
+        ymax - 0.05*(xmax - xmin),
+        "E = {:.4f}".format(e0))
+    fig.savefig('p-section.png', dpi=150)
 
 
 # Main procedure
 e0 = 1.0
-N_steps = 60
+N_steps = 120
 
 q02_max = np.arccos(1 - e0)
+u01_max = np.sqrt(e0)
+u02_max = np.sqrt(2*e0)
 x0_preset = []
 for psi in np.arange(0, np.pi, np.pi/N_steps):
     q02 = q02_max*cos(psi)
     x0_current = [np.arccos((3 - e0 - cos(q02))/2), q02, 0, 0]
+    x0_preset.append(x0_current)
+for psi in np.arange(np.pi/2, 3*np.pi/4, np.pi/N_steps):
+    u02 = u02_max*cos(psi)
+    u01 = -0.5*u02 + np.sqrt(e0 - (u02/2)**2)
+    x0_current = [0, 0, 2*u01 + u02, u01 + u02]
+    x0_preset.append(x0_current)
+for psi in np.arange(np.pi/4, np.pi/2, np.pi/N_steps):
+    u01 = -u01_max*cos(psi)
+    u02 = -u01 + np.sqrt(2*e0 - u01**2)
+    x0_current = [0, 0, 2*u01 + u02, u01 + u02]
     x0_preset.append(x0_current)
 
 for s in range(len(x0_preset)):
