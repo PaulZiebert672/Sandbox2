@@ -6,9 +6,7 @@ from typing import Tuple
 
 def legendre_poly(k:int) -> Tuple[Polynomial, Polynomial]:
     coeff = np.array([[-1/16, 1/24, 1/4, -1/6], [9/16, -9/8, -1/4, 1/2], [9/16, 9/8, -1/4, -1/2], [-1/16, -1/24, 1/4, 1/6]])
-    res_prime = [coeff[k][1], 2*coeff[k][2], 3*coeff[k][3]]
-    res = coeff[k]
-    return (Polynomial(res), Polynomial(res_prime))
+    return (Polynomial(coeff[k]), Polynomial(coeff[k]).deriv())
 
 # Create interpolation polynomials of 3-rd order
 x = np.linspace(-2, 3, 201)
