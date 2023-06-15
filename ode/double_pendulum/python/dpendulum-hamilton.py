@@ -4,10 +4,16 @@ import matplotlib.pyplot as plt
 from numpy import sin, cos
 from scipy.integrate import solve_ivp
 
-t_max = 2*192.0
+t_max = 12*192.0
 dt = 0.02
 
-x_init = [0*np.pi/3, 1*np.pi/2, 0, 0]
+#x_init = [1*np.pi/3, 0*np.pi/2, 0, 0]
+
+e0 = 1.5
+psi = 0.95*np.pi
+q02_max = np.arccos(1 - e0)
+q02 = q02_max*cos(psi)
+x_init = [np.arccos((3 - e0 - cos(q02))/2), q02, 0, 0]
 
 def energy(x):
     theta_1, theta_2, p_1, p_2 = x
@@ -31,16 +37,39 @@ def dfunc(t, x):
 e0 = energy(x_init)
 sol = solve_ivp(dfunc, [0, t_max], x_init, t_eval=np.arange(0, t_max, dt), method="DOP853", rtol=1e-10, atol=1e-10)
 
-fig = plt.figure(figsize=(6, 8))
+q01_max = np.arccos((2 - e0)/2) + 0.5
+p01_max = 2*np.sqrt(e0) + 0.1
+
+fig = plt.figure(figsize=(6, 6*1.5))
 plt.title("Double pendulum")
 plt.axis("equal")
+plt.xlim(-q01_max, q01_max)
+plt.ylim(-p01_max, p01_max)
 plt.xlabel("theta_1")
 plt.ylabel("p_1")
 plt.grid(True)
 
-plt.plot(sol.y[0], sol.y[2], fillstyle='none', marker='o', markersize=1.0, linestyle='None', alpha=0.25)
+plt.plot(sol.y[0], sol.y[2], fillstyle='none', marker='o', markersize=1.0, linestyle='None', alpha=0.15)
 xmin, xmax, ymin, ymax = plt.axis()
-plt.text(xmin + 0.01*(xmax - xmin), ymax - 0.05*(xmax - xmin), "E = {:.4f}".format(e0))
+plt.text(xmin + 0.08*(xmax - xmin), ymax - 0.10*(xmax - xmin), "E = {:.4f}".format(e0))
+
+theta_1, theta_2 = [x_init[0], x_init[1]]
+bar = 0.25
+x0 = xmax - 0.65
+y0 = ymax - 0.25
+x1 = x0 + bar*np.sin(theta_1)
+y1 = y0 - bar*np.cos(theta_1)
+x2 = x1 + bar*np.sin(theta_2)
+y2 = y1 - bar*np.cos(theta_2)
+line1 = plt.Line2D([x0, x1], [y0, y1], linewidth=3, color='green', alpha=0.65)
+line2 = plt.Line2D([x1, x2], [y1, y2], linewidth=3, color='green', alpha=0.65)
+circle1 = plt.Circle((x1, y1), radius=0.05, color='green', alpha=0.85)
+circle2 = plt.Circle((x2, y2), radius=0.05, color='green', alpha=0.85)
+plt.gca().add_artist(circle1)
+plt.gca().add_artist(circle2)
+plt.gca().add_artist(line1)
+plt.gca().add_artist(line2)
+
 fig.savefig('orbit-hamilton.png', dpi=150)
 
 fig = plt.figure(figsize=(8, 8))
