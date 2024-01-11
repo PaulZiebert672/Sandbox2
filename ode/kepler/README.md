@@ -22,10 +22,10 @@ $$
 Constants of motion
 
 $$
-\begin{eqnarray}
+\begin{align}
 \mathcal{E}_0 & = & \dfrac{1}{2}\big( \dot{x}_1^2 + \dot{x}_2^2 \big) - \dfrac{1}{\sqrt{ x_1^2 + x_2^2}} \\
 L_0 & = & x_1 \dot{x}_2 - x_2 \dot{x_1}
-\end{eqnarray}
+\end{align}
 $$
 
 ### Bounded orbits
