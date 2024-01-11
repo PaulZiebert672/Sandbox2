@@ -24,10 +24,10 @@ Solultions can be expressed via Jacobi elliptic functions. Select initial condit
 Case $\mathcal{E} < 2$. Assign $k^2 = \dfrac{1}{2}\mathcal{E}$
 
 $$
-\begin{eqnarray}
+\begin{align}
 \theta & = & 2 \arcsin\big( k \cdot \mathrm{sn}(t; k) \big) \\
 p & = & 2k \cdot \mathrm{cn}(t; k)
-\end{eqnarray}
+\end{align}
 $$
 
 Period of librations $T = 4\mathrm{K}(k)$
@@ -37,10 +37,10 @@ Period of librations $T = 4\mathrm{K}(k)$
 Case $\mathcal{E} > 2$. Assign $k^2 = 2\mathcal{E}^{-1}$
 
 $$
-\begin{eqnarray}
+\begin{align}
 \theta & = & 2 \cdot \mathrm{am}\bigg( \dfrac{t}{k}; k \bigg) \\
 p & = & \dfrac{2}{k} \mathrm{dn}\bigg( \dfrac{t}{k}; k \bigg)
-\end{eqnarray}
+\end{align}
 $$
 
 Period of rotations $T = 2k \cdot \mathrm{K}(k)$
