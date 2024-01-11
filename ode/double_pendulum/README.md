@@ -17,12 +17,12 @@ $$
 Lagrange's function $\mathcal{L}(\theta_i, \dot{\theta_i})$ is expressed via kinetic and potential energy $\,T - U$
  
 $$
-\begin{eqnarray}
+\begin{align}
 T & = &
   \dfrac{m_1}{2} \Big( \dot{x_1}^2 + \dot{y_1}^2 \Big) +
   \dfrac{m_2}{2} \Big( \dot{x_2}^2 + \dot{y_2}^2 \Big) \\
 U & = & m_1\mathrm{g} y_1 + m_2\mathrm{g} y_2
-\end{eqnarray}
+\end{align}
 $$
 
 ### Kinematical relations
@@ -30,12 +30,12 @@ $$
 Kinematical relations are needed to represent energy values via the generalized coordinates
 
 $$
-\begin{eqnarray}
+\begin{align}
 x_1 & = & l_1\sin\theta_1 \\
 y_1 & = & - l_1\cos\theta_1 \\
 x_2 & = & x_1 + l_2\sin\theta_2 \\
 y_2 & = & y_1 -l_2\cos\theta_2 \\
-\end{eqnarray}
+\end{align}
 $$
 
 ### Symmetric double mathematical pendulum
@@ -200,12 +200,12 @@ $$
 ### Momentum
 
 $$
-\begin{eqnarray}
+\begin{align}
 p_1 = \dfrac{\partial \mathcal{L}}{\partial \dot{\theta_1}} & = & 
   2\dot{\theta_1} + \cos(\theta_1 - \theta_2)\dot{\theta_2} \\
 p_2 = \dfrac{\partial \mathcal{L}}{\partial \dot{\theta_2}} & = &
   \dot{\theta_2} + \cos(\theta_1 - \theta_2)\dot{\theta_1}
-\end{eqnarray}
+\end{align}
 $$
 
 ### Hamiltonian
