@@ -104,7 +104,7 @@ Transformation matrix $\Lambda$ satisfies the relation $\Lambda^{T} \eta \Lambda
 Generators of the $SO(1,3)$ group can produce any transformation matrix $\Lambda = \exp\big( i\beta_i K_i + i\theta_j J_j \big)$. They constitute set of 3 boosts and 3 rotations:
 
 $$
-\begin{eqnarray}
+\begin{align}
 K_1 = -i
 \begin{pmatrix}
 0 & 1 & 0 & 0 \\
@@ -147,27 +147,27 @@ J_3 = i
 0 & 1 & 0 & 0 \\
 0 & 0 & 0 & 0
 \end{pmatrix}
-\end{eqnarray}
+\end{align}
 $$
 
 These generators satisfy commutation relations
 
 $$
-\begin{eqnarray}
+\begin{align}
 \big[ J_i, J_j \big] & = & i \epsilon_{i j k} J_k \\
 \big[ K_i, K_j \big] & = & -i \epsilon_{i j k} J_k \\
 \big[ J_i, K_j \big] & = & i \epsilon_{i j k} K_k \\
-\end{eqnarray}
+\end{align}
 $$
 
 Linear combinations $J_i^+ = \dfrac{1}{2}\Big( J_i + iK_i \Big)$ and $J_i^- = \dfrac{1}{2}\Big( J_i - iK_i \Big)$ will satisfy
 
 $$
-\begin{eqnarray}
+\begin{align}
 \big[ J_i^+, J_j^+ \big] & = & i \epsilon_{i j k} J_k^+ \\
 \big[ J_i^-, J_j^- \big] & = & i \epsilon_{i j k} J_k^- \\
 \big[ J_i^+, J_j^- \big] & = & 0 \\
-\end{eqnarray}
+\end{align}
 $$
 
 Generators $J_i^+, J_i^-$  form a Lie algebra $\mathfrak{su}(2) \oplus \mathfrak{su}(2)$.
