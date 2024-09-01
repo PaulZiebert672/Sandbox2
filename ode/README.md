@@ -3,8 +3,11 @@
 [Double pendulum](double_pendulum/README.md)
 : the simple physical system that exhibits rich dynamic behavior with a strong sensitivity to initial conditions
 
-[Kepler problem](kepler/README.md)
+[Kepler problem](kepler_problem/README.md)
 : the two-body problem in celestial dynamics
+
+[Plain restricted 3-body problem](pr_3-body_problem/README.md)
+: plain restricted 3-body problem in celestial dynamics
 
 [Mathematical pendulum](mathematical_pendulum/README.md)
 : the simple physical system that allows analytic solution
