@@ -1,9 +1,8 @@
 # Restricted 3-body problem in corotating frame
 using DifferentialEquations
-using Elliptic
 using Plots
 
-include("pr_3-body_config.jl")
+include("config.jl")
 
 # Numerical Methods for Ordinary Differential Equations
 # J. C. Butcher
@@ -38,17 +37,20 @@ plotOrbit = scatter(
     markersize = 0.25,
     alpha = 0.05,
     legend = false,
-    dpi = 300
+    dpi = 300,
+    annotation = (0.15, -0.25, text("\$\\mu= $(mu)\$\n\$T = 0...$(t_period)\$", :crimson, :bottom, 4))
 )
 
+# Heavy body position
 scatter!(
     plotOrbit,
-    [mu], [0],
+    [-mu], [0],
     markersize = 5.0,
     markercolor = :steelblue,
     alpha = 0.8
 )
 
+# Light body position
 scatter!(
     plotOrbit,
     [1 - mu], [0],
@@ -61,10 +63,5 @@ plot!(plotOrbit, x_foreground_color_axis=:lightgrey, y_foreground_color_axis=:li
 plot!(plotOrbit, x_foreground_color_text=:lightgrey, y_foreground_color_text=:lightgrey)
 plot!(plotOrbit, x_foreground_color_border=:lightgrey, y_foreground_color_border=:lightgrey)
 
-# annotate!(
-#     xlims(plotOrbit)[1] + 0.18*(xlims(plotOrbit)[2] - xlims(plotOrbit)[1]),
-#     ylims(plotOrbit)[2] - 0.06*(ylims(plotOrbit)[2] - ylims(plotOrbit)[1]),
-#     text("\$\\mathcal{E}_0 = $(round(energy(u0), digits=4))\$\n\$T = $(round(t_period, digits=4))\$", :crimson, :right, 4)
-# )
 gui(), readline()
-savefig(plotOrbit, "pr_3-body_orbit.png")
+savefig(plotOrbit, "orbit.png")

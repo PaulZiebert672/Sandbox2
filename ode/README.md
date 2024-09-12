@@ -6,8 +6,8 @@
 [Kepler problem](kepler_problem/README.md)
 : the two-body problem in celestial dynamics
 
-[Plain restricted 3-body problem](pr_3-body_problem/README.md)
-: plain restricted 3-body problem in celestial dynamics
+[Circular restricted 3-body problem](cr_3-body_problem/README.md)
+: circular restricted 3-body problem in celestial dynamics
 
 [Mathematical pendulum](mathematical_pendulum/README.md)
 : the simple physical system that allows analytic solution
