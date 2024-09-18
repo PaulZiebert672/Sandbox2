@@ -59,3 +59,13 @@ J = \dfrac{1}{2} \Big[ u_1^2 + u_2^2 + u_3^2 \Big] + U
 $$
 
 is called the *Jacobi constant*, and represents the total energy of the tertiary mass relative to the rotating reference frame.
+
+### Pseudo-periodic orbit
+
+Initial conditions for Earth-Moon like system $\mu = 1/81.45$
+
+$$
+\mathbf{x}_0 = (0.87978, 0, 0) \quad \mathbf{u}_0 = (0, -0.3797, 0) \quad T = 19.14045706162071
+$$
+
+![3-body-numeric-solution](plotutils/orbit.png)
