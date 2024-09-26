@@ -17,7 +17,7 @@ X, Y = np.meshgrid(x, y)
 Z = - (1 - cfg.mu)/r_1(X, Y) - cfg.mu/r_2(X, Y) - 0.5*((1 - cfg.mu)*r_1(X, Y)**2 + cfg.mu*r_2(X, Y)**2)
 
 fig = plt.figure(figsize=(8, 8))
-plt.title("Potential energy in circular resticted 3-body problem")
+plt.title("Potential energy in circular restricted 3-body problem")
 plt.axis("equal")
 plt.xlabel("x")
 plt.ylabel("y")
