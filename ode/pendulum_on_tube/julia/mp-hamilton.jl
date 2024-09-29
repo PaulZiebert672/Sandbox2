@@ -50,11 +50,12 @@ annotate!(
 # gui(), readline()
 savefig(plotOrbit, "mp-hamilton-orbit.png")
 
-constant_of_motion = map(H, data[:, 2], data[:, 1])
+constant_of_motion = map(H, data[:, 1], data[:, 2])
 # display(constant_of_motion)
 println("mean energy = ", mean(constant_of_motion))
 println("std energy = ", std(constant_of_motion))
 
+gr(size = (360, 240))
 Plots.scalefontsizes()
 Plots.scalefontsizes(0.4)
 plotError = scatter(

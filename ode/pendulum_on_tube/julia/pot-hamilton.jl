@@ -26,7 +26,7 @@ println("period = ", t_period)
 t_step = t_period/N
 t_max = K*t_period
 prob = HamiltonianProblem(H, u0[2]*(1 + rho*u0[1])^2, u0[1], (0.0, t_max), rho)
-sol = solve(prob, Vern7(), adaptive=false, dt=t_step)
+sol = solve(prob, Vern6(), adaptive=false, dt=t_step)
 data = map(x -> (x[2], x[1]), sol.u)
 # display(data)
 
@@ -65,6 +65,9 @@ constant_of_motion = map(H, map(x -> x[2], data), map(x -> x[1], data), map(x ->
 println("mean energy = ", mean(constant_of_motion))
 println("std energy = ", std(constant_of_motion))
 
+gr(size = (360, 240))
+Plots.scalefontsizes()
+Plots.scalefontsizes(0.4)
 plotError = scatter(
     sol.t, (constant_of_motion .- e0)./e0,
     xlabel = "Time",

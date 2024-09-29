@@ -20,7 +20,7 @@ t_step = t_period/N
 t_max = K*t_period
 
 prob = ODEProblem(pendulum, u0, (0.0, t_max))
-sol = solve(prob, Vern7(), adaptive=false, dt=t_step)
+sol = solve(prob, Vern6(), adaptive=false, dt=t_step)
 #display(sol)
 
 gr(size = (300, 300))
@@ -50,6 +50,9 @@ constant_of_motion = map(energy, sol.u)
 println("mean energy = ", mean(constant_of_motion))
 println("std energy = ", std(constant_of_motion))
 
+gr(size = (360, 240))
+Plots.scalefontsizes()
+Plots.scalefontsizes(0.4)
 plotError = scatter(
     sol.t, (constant_of_motion .- energy(u0))./energy(u0),
     xlabel = "Time",
