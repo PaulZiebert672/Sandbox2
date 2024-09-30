@@ -3,13 +3,12 @@ using QuadGK
 using DifferentialEquations
 using DiffEqPhysics
 using Plots
+using Statistics
 
 include("pot-config.jl")
 
-function H(p, q, param = 0)
-    rho = param
-    0.5*(p^2)/(1 + rho*q)^2 + rho*sin(q) + 1 - (1 + rho*q)*cos(q)
-end
+# Hamiltonian
+H(p, q, rho = 0) = 0.5*(p^2)/(1 + rho*q)^2 + rho*sin(q) + 1 - (1 + rho*q)*cos(q)
 
 e0 = H(u0[2]*(1 + rho*u0[1])^2, u0[1], rho)
 println("energy = ", e0)
@@ -24,11 +23,12 @@ result_right, qerror = quadgk(kernel, 0, theta_right)
 t_period = sqrt(2)*(result_left + result_right)
 println("period = ", t_period)
 
-t_step = t_period/N 
-prob = HamiltonianProblem(H, u0[2]*(1 + rho*u0[1])^2, u0[1], (0.0, 2*t_period), rho)
-sol = solve(prob, Vern7(), adaptive=false, dt=t_step)
+t_step = t_period/N
+t_max = K*t_period
+prob = HamiltonianProblem(H, u0[2]*(1 + rho*u0[1])^2, u0[1], (0.0, t_max), rho)
+sol = solve(prob, Vern6(), adaptive=false, dt=t_step)
 data = map(x -> (x[2], x[1]), sol.u)
-display(data)
+# display(data)
 
 gr(size = (300, 300))
 Plots.scalefontsizes()
@@ -38,7 +38,7 @@ plotOrbit = scatter(
     aspect_ratio = 1,
     xlabel = "\\theta",
     ylabel = "p",
-    plot_title = "Pendulum on the tube",
+    plot_title = "Pendulum on tube - Hamiltonian dynamics",
     markersize = 1.0,
     alpha = 0.25,
     legend = false,
@@ -57,5 +57,27 @@ annotate!(
     ylims(plotOrbit)[2] - 0.92*y_plot_size,
     text("\$\\rho = $(round(rho, digits=4))\$", :slateblue, :right, 4)
 )
-gui(), readline()
+# gui(), readline()
 savefig(plotOrbit, "pot-hamilton-orbit.png")
+
+constant_of_motion = map(H, map(x -> x[2], data), map(x -> x[1], data), map(x -> rho, sol.t))
+# display(energy)
+println("mean energy = ", mean(constant_of_motion))
+println("std energy = ", std(constant_of_motion))
+
+gr(size = (360, 240))
+Plots.scalefontsizes()
+Plots.scalefontsizes(0.4)
+plotError = scatter(
+    sol.t, (constant_of_motion .- e0)./e0,
+    xlabel = "Time",
+    ylabel = "Relative energy error",
+    plot_title = "Pendulum on tube - Hamiltonian dynamics",
+    markersize = 0.8,
+    alpha = 0.15,
+    legend = false,
+    dpi = 300,
+    annotation = (t_max - t_period, 0.0, text("\$\\rho= $(rho)\$\n\$\\mathcal{E}_0 = $(e0)\$", :crimson, :bottom, 4))
+)
+# gui(), readline()
+savefig(plotError, "pot-hamilton-error.png")

@@ -14,15 +14,16 @@ function cr3body(du, u, p, t)
     du[1] = u[4]
     du[2] = u[5]
     du[3] = u[6]
-    du[4] = 2*u[5] + u[1] - (1 - mu)*(u[1] + mu)/r_1(u)^3 - mu*(u[1] + mu - 1)/r_2(u)^3
-    du[5] = -2*u[4] + u[2] - (1 - mu)*u[2]/r_1(u)^3 - mu*u[2]/r_2(u)^3
-    du[6] =  -(1 - mu)*u[3]/r_1(u)^3 - mu*u[3]/r_2(u)^3
+    du[4] = 2*u[5] + u[1] - (1 - p)*(u[1] + p)/r_1(u)^3 - p*(u[1] + p - 1)/r_2(u)^3
+    du[5] = -2*u[4] + u[2] - (1 - p)*u[2]/r_1(u)^3 - p*u[2]/r_2(u)^3
+    du[6] =  -(1 - p)*u[3]/r_1(u)^3 - p*u[3]/r_2(u)^3
 end
 
-jacobi(u) = 0.5*(u[4]^2 + u[5]^2 + u[6]^2) - (1 - mu)/r_1(u) - mu/r_2(u) - 0.5*((1 - mu)*r_1(u)^2 + mu*r_2(u)^2)
+# Jacobi constant
+jacobi(u, p) = 0.5*(u[4]^2 + u[5]^2 + u[6]^2) - (1 - p)/r_1(u) - p/r_2(u) - 0.5*((1 - p)*r_1(u)^2 + p*r_2(u)^2)
 
 t_step = t_period/N
-prob = ODEProblem(cr3body, u0, (0.0, t_period))
+prob = ODEProblem(cr3body, u0, (0.0, t_period), mu)
 sol = solve(prob, Vern7(), adaptive=false, dt=t_step)
 
 println("mu = ", mu)
@@ -71,9 +72,9 @@ plot!(plotOrbit, x_foreground_color_border=:lightgrey, y_foreground_color_border
 #gui(), readline()
 savefig(plotOrbit, "orbit.png")
 
-inv0 = jacobi(u0)
+inv0 = jacobi(u0, mu)
 println("jacobi constant = ", inv0)
-inv = map(jacobi, sol.u)
+inv = map(jacobi, sol.u, map(x -> mu, sol.t))
 
 plotError = scatter(
     sol.t, (inv .- inv0)./inv0,
