@@ -20,12 +20,12 @@ z = @. energy(x', y)
 println("mu = ", mu)
 
 plotContour = contour(x, y, z,
-    levels = range(-1.75, -1.5, length = 120),
-    lw = 0.4,
+    levels = range(-1.75, -1.5, length = 60),
+    lw = 0.8,
     alpha = 0.95,
     aspect_ratio = 1,
     dpi = 300,
-    annotation = (0.15, -0.25, text("\$\\mu= $(mu)\$", :crimson, :bottom, 4))
+    annotation = (0.15, -0.25, text("\$\\mu= $(mu)\$", :blue, :bottom, 7))
 )
 
 gui(), readline()

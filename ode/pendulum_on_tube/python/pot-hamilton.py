@@ -39,9 +39,9 @@ print("T = ", t_period)
 # ODE numerical solution
 sol = solve_ivp(
     pendulum,
-    [0, 2*t_period],
+    [0, config.K_cycles*t_period],
     x_init,
-    t_eval=np.arange(0, 2*t_period, t_period/config.N_points),
+    t_eval=np.arange(0, config.K_cycles*t_period, t_period/config.N_points),
     method="DOP853",
     rtol=1e-10,
     atol=1e-10
@@ -49,7 +49,7 @@ sol = solve_ivp(
 
 # plot phase orbit
 fig = plt.figure(figsize=(6, 6*1.0))
-plt.title("Pendulum on the tube")
+plt.title("Pendulum on the tube. Hamiltonian dynamics")
 plt.axis("equal")
 plt.xlabel(r"$\theta$")
 plt.ylabel(r"$p$")
@@ -76,3 +76,25 @@ plt.text(
 
 plt.show()
 fig.savefig('pot-hamilton-orbit.png', dpi=150)
+
+# plot relative error in energy value
+fig = plt.figure(figsize=(5*1.5, 5))
+plt.title("Pendulum on the tube. Invariant error")
+plt.xlabel("Time")
+plt.ylabel("Relative energy error")
+plt.grid(True)
+
+plt.plot(sol.t, (energy(sol.y) - e0)/e0)
+plt.legend(['Energy'])
+xmin, xmax, ymin, ymax = plt.axis()
+plt.text(
+    xmin + 0.08*(xmax - xmin), ymax - 0.08*(ymax - ymin),
+    r"$\rho$ = {:.2f}".format(config.rho)
+)
+plt.text(
+    xmin + 0.08*(xmax - xmin), ymin + 0.08*(ymax - ymin),
+    r"$E_0$ = {:.4f}".format(e0) + "\n" + r"$T$ = {:.4f}".format(t_period)
+)
+
+plt.show()
+fig.savefig('pot-hamilton-error.png', dpi=150)
