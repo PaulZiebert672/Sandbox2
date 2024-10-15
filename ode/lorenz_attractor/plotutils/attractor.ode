@@ -1,0 +1,16 @@
+# Lorenz attractor
+
+sigma = 10.0
+rho = 28.0
+beta = 8/3
+
+x' = sigma*(y - x)
+y' = x*(rho - z) - y
+z' = x*y - beta*z
+
+x = 1
+y = 0
+z = 0
+
+print x, y, z
+step 0, 100, 0.01
