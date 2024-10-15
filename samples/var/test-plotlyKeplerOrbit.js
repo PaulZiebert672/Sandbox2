@@ -17,8 +17,15 @@ var orbit = new KeplerOrbit(eps);
 for (var n = 0; n < N; n++) {
     var t = n*2*Math.PI/N;
     var coord = orbit.coord(t);
+    /* -- Nonrotating frame -- */
     x.push(coord.q[0]);
     y.push(coord.q[1]);
+    /* -- Corotating frame with center in F_1 -- */
+    // x.push(coord.q[0]*Math.cos(t) + coord.q[1]*Math.sin(t));
+    // y.push(-coord.q[0]*Math.sin(t) + coord.q[1]*Math.cos(t));
+    /* -- Corotating frame with center in F_2 -- */
+    // x.push((coord.q[0] + 2*eps)*Math.cos(t) + coord.q[1]*Math.sin(t));
+    // y.push(-(coord.q[0] + 2*eps)*Math.sin(t) + coord.q[1]*Math.cos(t));
 };
 
 var trace = {
