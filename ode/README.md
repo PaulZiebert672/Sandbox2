@@ -9,6 +9,9 @@
 [Lorenz attractor](lorenz_attractor/README.md)
 : system of ODE notable for having chaotic solutions for certain parameter values and initial conditions
 
+[Van der Pohl oscillator](van_der_pohl_oscillator/README.md)
+: model of a generator on a triode for a tube with a cubic characteristic
+
 [Mathematical pendulum](mathematical_pendulum/README.md)
 : the simple physical system that allows analytic solution
 
