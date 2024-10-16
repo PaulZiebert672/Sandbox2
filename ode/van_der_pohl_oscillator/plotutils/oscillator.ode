@@ -1,0 +1,12 @@
+# Van der Pohl oscillator
+
+mu = 1.0
+
+x' = y
+y' = mu*(1 - x^2)*y - x
+
+x = 1
+y = 0
+
+print x, y
+step 0, 100, 0.01
