@@ -1,8 +1,6 @@
 'use strict';
 var VoidCode = VoidCode || {};
 
-/* ------------ */
-
 VoidCode.Limit = {
     normalizeQ: function (q, limits) {
         var high = limits[1], low = limits[0];
