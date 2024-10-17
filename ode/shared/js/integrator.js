@@ -2,16 +2,13 @@
 var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') {
-    VoidCode.Config = require('./config.js');
     VoidCode.Problem = require('./problem.js');
     VoidCode.EVector = require('./evector.js');
     VoidCode.Psi = require('./psi.js');
 }
 
-VoidCode.Integrator = function (name) {
-    var Integrator = VoidCode.Integrator,
-        Problem = VoidCode.Problem,
-        Config = VoidCode.Config;
+VoidCode.Integrator = function (name, isProblemSeparable) {
+    var Integrator = VoidCode.Integrator;
     var registry = {
         euler10: [                  /* Euler explicit */
             [], [1]
@@ -96,7 +93,7 @@ VoidCode.Integrator = function (name) {
     var isImplicit = function (matrixA) {
         var s = matrixA.length;
         if(matrixA[0] === 'p') {
-            if(Problem[Config.id].separable) {
+            if(isProblemSeparable) {
                 return isImplicitPart2(matrixA);
             }
             return true;
@@ -128,12 +125,12 @@ VoidCode.Integrator = function (name) {
         var result = composition[operator].exec(name);
         if(result) {
             var params = [];
-            params[0] = Integrator(result[1]);
+            params[0] = Integrator(result[1], isProblemSeparable);
             if(!isNaN(+result[2] - parseInt(result[2]))) {
                 params[1] = +result[2];
             }
             else {
-                params[1] = Integrator(result[2]);
+                params[1] = Integrator(result[2], isProblemSeparable);
             }
             return function (h) {
                 return Integrator[operator].call(this, params, h);

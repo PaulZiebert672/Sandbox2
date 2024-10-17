@@ -1,8 +1,6 @@
 'use strict';
 var VoidCode = VoidCode || {};
 
-/* ------------ */
-
 VoidCode.Problem = {
 
     /* Mathematical pendulum */

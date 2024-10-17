@@ -2,36 +2,29 @@
 var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') { /* we are in Node.js */
-    VoidCode.Config = require('./js/config.js');
+
+    VoidCode.Config = require('./conf/config.json');
+
     VoidCode.Problem = require('./js/problem.js');
     VoidCode.Point = require('./js/point.js');
     VoidCode.Psi = require('./js/psi.js');
     VoidCode.Limit = require('./js/limit.js');
 }
 
-if(typeof load === 'function') { /* we are in SpiderMonkey or Rhino */
-    load('js/config.js');
-    load('js/problem.js');
-    load('js/integrator.js');
-    load('js/point.js');
-    load('js/evector.js');
-    load('js/psi.js');
-    load('js/limit.js');
-}
-
 void function (Config, Problem, Point, Psi, Limit) {
-    var pt = new Point(Config.time[0], new Psi(Config.psi0));
-    var t0 = Config.time[0];
-    var t1 = Config.time[1];
-    var tau, h;
-    var limits = null;
-    var nMax = Config.step[0];
-    var nSkip = Config.step[1];
+    var t0 = Config.time[0], t1 = Config.time[1];
+    var pt = Point.create({
+        "t": t0,
+        "psi": new Psi(Config.psi0)
+    }, Config);
+    var nMax = Config.step[0], nSkip = Config.step[1];
     var i = 0; /* index of current time instance, i=0..nMax-1 */
-    var print = print || console.log;
+    var tau, h;
     var dump = function (pt) {
+        var print = print || console.log;
         print(pt.toString(), pt.toValue())
     };
+    var limits = null;
     /* scale time if necessary */
     if(Config.scale && Problem[Config.id].hasOwnProperty('period')) {
         tau = Problem[Config.id].period(pt.toValue());
@@ -42,7 +35,7 @@ void function (Config, Problem, Point, Psi, Limit) {
     }
     pt.t = t0;
     h = (t1 - t0) / nMax;
-    /* try to hold coordinates in prescribed limits */
+    /* try to keep coordinates in prescribed limits */
     if(Problem[Config.id].hasOwnProperty('limits')) {
         limits = function (q) {
             return Limit.normalizeQ(q, Problem[Config.id].limits);
@@ -57,4 +50,10 @@ void function (Config, Problem, Point, Psi, Limit) {
             dump(pt);
         }
     } while(i < nMax);
-}(VoidCode.Config, VoidCode.Problem, VoidCode.Point, VoidCode.Psi, VoidCode.Limit);
+}(
+    VoidCode.Config,
+    VoidCode.Problem,
+    VoidCode.Point,
+    VoidCode.Psi,
+    VoidCode.Limit
+);

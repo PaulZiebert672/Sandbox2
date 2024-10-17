@@ -1,8 +1,6 @@
 'use strict';
 var VoidCode = VoidCode || {};
 
-/* ------------ */
-
 VoidCode.EVector = {
     add: function (x, y) {
         if(x instanceof Array) {
