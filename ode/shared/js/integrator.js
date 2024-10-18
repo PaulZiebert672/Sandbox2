@@ -7,8 +7,45 @@ if(typeof require === 'function') {
     VoidCode.Psi = require('./psi.js');
 }
 
+/**
+ * @callback ODE
+ * @param {Psi} psi
+ * @param {Number} t
+ * @returns {Psi}
+ * 
+ * @callback Invariant
+ * @param {Psi} psi
+ * @returns {(Number|Number[])}
+ *
+ * @callback Integrator
+ * @param {Number} h - time step
+ * @returns {Point}
+ *
+ * @typedef {(Number|Number[])} EVector
+ * 
+ * @typedef {Object} Psi
+ * @property {EVector} q
+ * @property {EVector} p
+ * 
+ * @typedef {Object} Point
+ * @property {Number} t - time
+ * @property {Psi} psi - position in phase space
+ * @property {ODE} hamilton - system of ODE
+ * @property {Invariant} invariant
+ * @property {Integrator} integrator
+ */
+
+/**
+ * Creates integration method
+ * 
+ * @param {String} name - integration method name (may be a composition)
+ * @param {Boolean} isProblemSeparable - flag for separable problems
+ * @throws {ReferenceError} method name or composition is not implemented
+ * @returns {Integrator}
+ */
 VoidCode.Integrator = function (name, isProblemSeparable) {
     var Integrator = VoidCode.Integrator;
+    /* partitioned methods contain array with flag and two matrices */
     var registry = {
         euler10: [                  /* Euler explicit */
             [], [1]
@@ -61,6 +98,13 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
         _suzuki: /^su\[(.+),([0-9])\]$/,
     };
 
+    /**
+     * Determine if method is implicit by inspecting matrix properties
+     * Works only for partitioned methods
+     * 
+     * @param {Object[])} matrixA - matrix of specific method
+     * @returns {Boolean}
+     */
     var isImplicitPart2 = function (matrixA) {
         var s = matrixA[1].length;
         var diag = [];
@@ -90,6 +134,13 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
         }
         return false;
     };
+    /**
+     * Determine if method is implicit by inspecting matrix properties
+     * Relays on similar function for partitioned methods
+     * 
+     * @param {(Object|Object[])} matrixA - matrix of specific method
+     * @returns {Boolean}
+     */
     var isImplicit = function (matrixA) {
         var s = matrixA.length;
         if(matrixA[0] === 'p') {
@@ -98,7 +149,8 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
             }
             return true;
         }
-        for(var i = 0; i < s - 1; i++) {    /* fallback */
+        /* fallback */
+        for(var i = 0; i < s - 1; i++) {
             for(var j = i; j < s - 1; j++) {
                 if(matrixA[i][j]) {
                     return true;
@@ -108,6 +160,7 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
         return false;
     };
 
+    /* select method from registry */
     if(name in registry) {
         var matrixA = registry[name];
         matrixA.imp = isImplicit(matrixA);
@@ -116,11 +169,13 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
                 Integrator.partitionedRK.call(this, matrixA, h);
             }
         }
-        return function (h) { /* fallback */
+        /* fallback */
+        return function (h) {
             return Integrator.genericRK.call(this, matrixA, h);
         }
     }
 
+    /* composition of methods */
     for(var operator in composition) {
         var result = composition[operator].exec(name);
         if(result) {
@@ -137,6 +192,7 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
             };
         }
     }
+
     /* fallback */
     throw new ReferenceError([
         'integrator',
@@ -148,6 +204,14 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
 VoidCode.Integrator.EPSILON = 1e-15;
 VoidCode.Integrator.MAXNUM = 1000;
 
+/**
+ * Generic Runge-Kutta integration method.
+ * Calculates evolution of dynamical system in time for a given time step.
+ * 
+ * @param {Object} matrixA - matrix of specific method
+ * @param {Number} h - time step
+ * @returns {Point}
+ */
 VoidCode.Integrator.genericRK = function (matrixA, h) {
     var Psi = VoidCode.Psi,
         Integrator = VoidCode.Integrator;
@@ -203,10 +267,17 @@ VoidCode.Integrator.genericRK = function (matrixA, h) {
     return this;
 };
 
-/*
- * direct translation of genericRK()
- *   implementation does not allow different dimensions
+/**
+ * Generic partitioned Runge-Kutta method.
+ * Calculates evolution of dynamical system in time for a given time step.
+ * 
+ * Direct translation of genericRK().
+ * Implementation does not allow different dimensions
  *   for matrixA[1] and matrixA[2]
+ * 
+ * @param {Object[]} matrixA - array of matrices for specific method
+ * @param {Number} h - time step
+ * @returns {Point}
  */
 VoidCode.Integrator.partitionedRK = function (matrixA, h) {
     var Psi = VoidCode.Psi,
