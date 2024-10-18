@@ -1,7 +1,15 @@
 'use strict';
 var VoidCode = VoidCode || {};
 
+/**
+ * Static methods to normalize coordinates
+ */
 VoidCode.Limit = {
+    /**
+     * @param {EVector} q - coordinate
+     * @param {(Number[]|Number[][])} limits
+     * @returns {EVector}
+     */
     normalizeQ: function (q, limits) {
         var high = limits[1], low = limits[0];
         if(q instanceof Array) {

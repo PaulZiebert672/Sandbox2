@@ -5,6 +5,18 @@ if(typeof require === 'function') {
     VoidCode.EVector = require('./evector.js');
 }
 
+/**
+ * Position in phase space
+ * 
+ * @typedef {Object} Psi
+ * @property {EVector} q
+ * @property {EVector} p
+ * 
+ * @constructor
+ * @param {EVector} q - coordinate
+ * @param {EVector} p - momentum
+ * @returns {Psi}
+ */
 VoidCode.Psi = function (q, p) {
     var Psi = VoidCode.Psi;
     if(!(this instanceof Psi)) {
@@ -65,6 +77,13 @@ VoidCode.Psi.prototype.scaleBy = function (lambda) {
 
 VoidCode.Psi.prototype.toString = function () { return this.q + ' ' + this.p; };
 
+/**
+ * Difference of two vectors in phase space
+ * 
+ * @param {Psi} x
+ * @param {Psi} y
+ * @returns {Psi}
+ */
 VoidCode.Psi.diff = function (x, y) {
     return new VoidCode.Psi(
         VoidCode.EVector.diff(x.q, y.q),
@@ -72,16 +91,34 @@ VoidCode.Psi.diff = function (x, y) {
     );
 };
 
+/**
+ * L_1 norm of vector in phase space
+ * 
+ * @param {Psi} x
+ * @returns {Number}
+ */
 VoidCode.Psi.l1norm = function (x) {
     return VoidCode.EVector.norm(x.q) + VoidCode.EVector.norm(x.p);
 };
 
+/**
+ * L_2 norm of vector in phase space
+ * 
+ * @param {Psi} x
+ * @returns {Number}
+ */
 VoidCode.Psi.l2norm = function (x) {
     var normQ = VoidCode.EVector.norm(x.q);
     var normP = VoidCode.EVector.norm(x.p);
     return Math.sqrt(normQ*normQ + normP*normP);
 };
 
+/**
+ * L_{\inf} norm of vector in phase space
+ * 
+ * @param {Psi} x
+ * @returns {Number}
+ */
 VoidCode.Psi.l8norm = function (x) {
     return Math.max(VoidCode.EVector.norm(x.q), VoidCode.EVector.norm(x.p));
 };
