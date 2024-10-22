@@ -2,7 +2,6 @@
 var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') {
-    VoidCode.Problem = require('./problem.js');
     VoidCode.EVector = require('./evector.js');
     VoidCode.Psi = require('./psi.js');
 }
@@ -144,6 +143,7 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
     var isImplicit = function (matrixA) {
         var s = matrixA.length;
         if(matrixA[0] === 'p') {
+            // console.log('-+> %s', isProblemSeparable);
             if(isProblemSeparable) {
                 return isImplicitPart2(matrixA);
             }
