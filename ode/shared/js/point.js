@@ -34,11 +34,10 @@ if(typeof require === 'function') {
 /**
  * Evolution of a dynamical system in phase space
  * 
- * @typedef Point
- * @type {Object}
- * @property {Number} t
- * @property {Psi} psi
- * @property {ODE} hamilton
+ * @typedef {Object} Point
+ * @property {Number} t - time
+ * @property {Psi} psi - position in phase space
+ * @property {ODE} hamilton - system of ODE
  * @property {Invariant} invariant
  * @property {Integrator} integrator
  * 
@@ -68,6 +67,7 @@ VoidCode.Point.prototype.toValue = function () { return this.invariant(this.psi)
  */
 VoidCode.Point.create = function (init, cfg) {
     var point = new VoidCode.Point(init.t, init.psi);
+    point.params = cfg.params;
     VoidCode.Point.prototype.hamilton = VoidCode.Problem[cfg.id].hamilton;
     VoidCode.Point.prototype.invariant = VoidCode.Problem[cfg.id].invariant;
     VoidCode.Point.prototype.integrator = VoidCode.Integrator(cfg.integrator, VoidCode.Problem[cfg.id].separable);
