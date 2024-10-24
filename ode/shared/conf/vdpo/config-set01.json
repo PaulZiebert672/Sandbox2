@@ -1,0 +1,10 @@
+{
+    "id": "vdpo",
+    "integrator": "rk4",
+    "params": {
+        "mu": 1.0
+    },
+    "psi0": [1, 0],
+    "time": [0, 100],
+    "step": [10000, 1]
+}

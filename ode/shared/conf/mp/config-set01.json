@@ -1,0 +1,8 @@
+{
+    "id": "mp",
+    "integrator": "gauss4",
+    "psi0": [0, 1],
+    "time": [0, 24],
+    "scale": true,
+    "step": [1440, 1]
+}

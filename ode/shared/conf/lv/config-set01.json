@@ -1,0 +1,8 @@
+{
+    "id": "lv",
+    "integrator": "gauss4",
+    "psi0": [1, 0],
+    "time": [0, 24],
+    "scale": true,
+    "step": [1440, 1]
+}
