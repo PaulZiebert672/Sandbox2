@@ -12,6 +12,7 @@ VoidCode.Problem.CircularRestricted3_BodyProblem = {
         var r2 = Math.sqrt(q2*q2 + x.q[1]*x.q[1] + x.q[2]*x.q[2]);
         var r1By3 = Math.pow(r1, 3);
         var r2By3 = Math.pow(r2, 3);
+        /* co-rotating frame */
         return {
             qdot: x.p,
             pdot: [
@@ -27,7 +28,9 @@ VoidCode.Problem.CircularRestricted3_BodyProblem = {
         var q2 = x.q[0] + mu - 1;
         var r1 = Math.sqrt(q1*q1 + x.q[1]*x.q[1] + x.q[2]*x.q[2]);
         var r2 = Math.sqrt(q2*q2 + x.q[1]*x.q[1] + x.q[2]*x.q[2]);
-        return (x.p[0]*x.p[0] + x.p[1]*x.p[1] + x.p[2]*x.p[2])/2 - (1 - mu)/r1 - mu/r2 - ((1 - mu)*r1*r1 + mu*r2*r2)/2;
+        /* Jacobi constant */
+        return (x.p[0]*x.p[0] + x.p[1]*x.p[1] + x.p[2]*x.p[2])/2
+            - (1 - mu)/r1 - mu/r2 - ((1 - mu)*r1*r1 + mu*r2*r2)/2;
     },
 };
 

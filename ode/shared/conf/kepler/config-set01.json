@@ -1,0 +1,8 @@
+{
+    "id": "kepler",
+    "integrator": "su[lobatto4,4]",
+    "psi0": [[0.4, 0], [0, 2]],
+    "time": [0, 24],
+    "scale": true,
+    "step": [2880, 1]
+}
