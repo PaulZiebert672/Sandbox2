@@ -15,7 +15,6 @@ VoidCode.Problem.VanDerPohlOscillator = {
     invariant: function (x) {
         return x.p*x.p/2 + x.q*x.q/2;
     },
-    separable: true,
 };
 
 if(typeof module === 'object') {
