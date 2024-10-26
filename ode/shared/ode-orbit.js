@@ -5,7 +5,7 @@ if(typeof require === 'function') { /* we are in Node.js */
 
     VoidCode.Config = require('./conf/config.json');
 
-    VoidCode.Problem = require('./js/problem.js');
+    VoidCode.Problem = require('./js/problems');
     VoidCode.Point = require('./js/point.js');
     VoidCode.Psi = require('./js/psi.js');
     VoidCode.Limit = require('./js/limit.js');
