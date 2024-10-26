@@ -2,7 +2,7 @@
 
 Copy file `config-sample.json` to `config.json`
 
-### Example of configuration for specific problem
+### Example of configuration for a specific problem
 
 #### kepler
 
@@ -18,6 +18,11 @@ _Circular restricted 3-body problem_
 
 _Van der Pohl oscillator_
 : the model of a generator on a triode for a tube with a cubic characteristic
+
+#### lorenz
+
+_Lorenz attractor_
+: system of ODE notable for having chaotic solutions for certain parameter values and initial conditions
 
 #### lv
 

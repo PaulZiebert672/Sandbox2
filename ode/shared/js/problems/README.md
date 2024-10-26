@@ -17,6 +17,11 @@ _Circular restricted 3-body problem_
 _Van der Pohl oscillator_
 : the model of a generator on a triode for a tube with a cubic characteristic
 
+#### lorenz
+
+_Lorenz attractor_
+: system of ODE notable for having chaotic solutions for certain parameter values and initial conditions
+
 #### lv
 
 _Lotka-Volterra predator-prey model_
