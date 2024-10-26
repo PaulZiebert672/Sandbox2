@@ -3,12 +3,12 @@ var VoidCode = VoidCode || {};
 VoidCode.Problem = VoidCode.Problem || {};
 
 if(typeof require === 'function') {
-    VoidCode.Problem.MathematicalPendulum = require('./problem-mp.js');
-    VoidCode.Problem.LotkaVolterra = require('./problem-lv.js');
-    VoidCode.Problem.KeplerProblem = require('./problem-kepler.js');
-    VoidCode.Problem.DoublePendulum = require('./problem-dpm.js');
-    VoidCode.Problem.VanDerPohlOscillator = require('./problem-vdpo.js');
-    VoidCode.Problem.CircularRestricted3_BodyProblem = require('./problem-cr3bp.js');
+    VoidCode.Problem.MathematicalPendulum = require('./mp.js');
+    VoidCode.Problem.LotkaVolterra = require('./lv.js');
+    VoidCode.Problem.KeplerProblem = require('./kepler.js');
+    VoidCode.Problem.DoublePendulum = require('./dpm.js');
+    VoidCode.Problem.VanDerPohlOscillator = require('./vdpo.js');
+    VoidCode.Problem.CircularRestricted3_BodyProblem = require('./cr3bp.js');
 }
 
 /* short aliases */

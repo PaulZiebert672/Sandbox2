@@ -2,7 +2,7 @@
 var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') {
-    VoidCode.Problem = require('./problem.js');
+    VoidCode.Problem = require('./problems');
     VoidCode.Integrator = require('./integrator.js');
 }
 
