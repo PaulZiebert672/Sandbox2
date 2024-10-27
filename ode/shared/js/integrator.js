@@ -68,16 +68,23 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
             [], [1/2], [0, 1/2], [0, 0, 1],
             [1/6, 1/3, 1/3, 1/6]
         ],
+        rk6: [                      /* 6-th order Runge-Kutta */
+            [], [1/3], [0, 2/3], [1/12, 1/3, -1/12],
+            [25/48, -55/24, 35/48, 15/8],
+            [3/20, -11/24, -1/8, 1/2, 1/10],
+            [-261/260, 33/13, 43/156, -118/39, 32/195, 80/39],
+            [13/200, 0, 11/40, 11/40, 4/25, 4/25, 13/200]
+        ],
         gauss4: [                   /* Gauss collocation */
             [1/4, 1/4 - Math.sqrt(3)/6],
             [1/4 + Math.sqrt(3)/6, 1/4],
             [1/2, 1/2]
         ],
-        euler1a: ['p',              /* symplectic Euler */
+        euler1a: ['p',              /* symplectic Euler A */
             [[], [1]],
             [[1], [1]]
         ],
-        euler1b: ['p',              /* symplectic Euler */
+        euler1b: ['p',              /* symplectic Euler B */
             [[1], [1]],
             [[], [1]]
         ],
