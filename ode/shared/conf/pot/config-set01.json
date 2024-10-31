@@ -1,0 +1,9 @@
+{
+    "id": "pot",
+    "integrator": "gauss4",
+    "params": { "rho": 0.5 },
+    "psi0": [0, 1],
+    "time": [0, 24],
+    "scale": true,
+    "step": [2880, 1]
+}

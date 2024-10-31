@@ -1,1 +1,8 @@
 - recursive call of Integrator in integrator.js
+- flag isProblemSeparable ?
+
+# Orbit table for one-dimensional problem
+$ cat data/pot/set01.dat | awk 'BEGIN {print "q\tp"} {print $2, "\t", $3}' > data/pot/orbit01.tsv
+
+# Invariant table for one-dimensional problem
+$ cat data/pot/set01.dat | awk 'BEGIN {print "t\tdE"} {print $1, "\t", $4-(0.5)}' > data/pot/inv01.tsv

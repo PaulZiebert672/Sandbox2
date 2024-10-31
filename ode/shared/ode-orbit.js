@@ -27,7 +27,7 @@ void function (Config, Problem, Point, Psi, Limit) {
     var limits = null;
     /* scale time if necessary */
     if(Config.scale && Problem[Config.id].hasOwnProperty('period')) {
-        tau = Problem[Config.id].period(pt.toValue());
+        tau = Problem[Config.id].period.call(pt, pt.toValue());
         if(!isNaN(tau - parseFloat(tau))) {
             t0 *= tau;
             t1 *= tau;
