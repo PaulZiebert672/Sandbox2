@@ -32,6 +32,11 @@ _Lotka-Volterra predator-prey model_
 _Mathematical pendulum_
 : the simple physical system that allows analytic solution
 
+#### pot
+
+_Pendulum on the circular tube_
+: not so simple physical system similar to the mathematical pendulum
+
 #### dpm
 
 _Double pendulum (mathematical)_
