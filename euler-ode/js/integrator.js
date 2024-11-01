@@ -76,10 +76,39 @@ VoidCode.Integrator = function (name) {
             [-261/260, 33/13, 43/156, -118/39, 32/195, 80/39],
             [13/200, 0, 11/40, 11/40, 4/25, 4/25, 13/200]
         ],
-        gauss4: [                   /* Gauss collocation */
+        verner8: [                  /* 8-th order Runge-Kutta */
+            [], [1/2], [1/4, 1/4],
+            [1/7, (-7 - 3*Math.sqrt(21))/98, (21 + 5*Math.sqrt(21))/49],
+            [(11 + Math.sqrt(21))/84, 0, (18 + 4*Math.sqrt(21))/63,
+                (21 - Math.sqrt(21))/252],
+            [(5 + Math.sqrt(21))/48, 0, (9 + Math.sqrt(21))/36,
+                (-231 + 14*Math.sqrt(21))/360, (63 - 7*Math.sqrt(21))/80],
+            [(10 - Math.sqrt(21))/42, 0, (-432 + 92*Math.sqrt(21))/315,
+                (633 - 145*Math.sqrt(21))/90, (-504 + 115*Math.sqrt(21))/70,
+                (63 - 13*Math.sqrt(21))/35],
+            [1/14, 0, 0, 0, (14 - 3*Math.sqrt(21))/126,
+                (13 - 3*Math.sqrt(21))/63, 1/9],
+            [1/32, 0, 0, 0, (91 - 21*Math.sqrt(21))/576, 11/72,
+                (-385 - 75*Math.sqrt(21))/1152, (63 + 13*Math.sqrt(21))/128],
+            [1/14, 0, 0, 0, 1/9, (-733 - 147*Math.sqrt(21))/2205,
+                (515 + 111*Math.sqrt(21))/504, (-51 - 11*Math.sqrt(21))/56,
+                (132 + 28*Math.sqrt(21))/245],
+            [0, 0, 0, 0, (-42 + 7*Math.sqrt(21))/18,
+                (-18 + 28*Math.sqrt(21))/45, (-273 - 53*Math.sqrt(21))/72,
+                (301 + 53*Math.sqrt(21))/72, (28 - 28*Math.sqrt(21))/45,
+                (49 - 7*Math.sqrt(21))/18],
+            [1/20, 0, 0, 0, 0, 0, 0, 49/180, 16/45, 49/180, 1/20]
+        ],
+        gauss4: [                   /* 4-th order Gauss collocation */
             [1/4, 1/4 - Math.sqrt(3)/6],
             [1/4 + Math.sqrt(3)/6, 1/4],
             [1/2, 1/2]
+        ],
+        gauss6: [                   /* 6-th order Gauss collocation */
+            [5/36, 2/9 - Math.sqrt(15)/15, 5/36 - Math.sqrt(15)/30],
+            [5/36 + Math.sqrt(15)/24, 2/9, 5/36 - Math.sqrt(15)/24],
+            [5/36 + Math.sqrt(15)/30, 2/9 + Math.sqrt(15)/15, 5/36],
+            [5/18, 4/9, 5/18]
         ],
         euler1a: ['p',              /* symplectic Euler A */
             [[], [1]],
@@ -93,9 +122,22 @@ VoidCode.Integrator = function (name) {
             [[], [1/2, 1/2], [1/2, 1/2]],
             [[1/2], [1/2], [1/2, 1/2]]
         ],
-        lobatto4: ['p',             /* Lobatto IIIA-IIIB pair */
+        lobatto4: ['p',             /* 4-th order Lobatto IIIA-IIIB pair */
             [[], [5/24, 1/3, -1/24], [1/6, 2/3, 1/6], [1/6, 2/3, 1/6]],
             [[1/6, -1/6], [1/6, 1/3], [1/6, 5/6], [1/6, 2/3, 1/6]]
+        ],
+        lobatto6: ['p',             /* 6-th order Lobatto IIIA-IIIB pair */
+            [[], [(11 + Math.sqrt(5))/120, (25 - Math.sqrt(5))/120,
+                (25 - 13*Math.sqrt(5))/120, (-1 + Math.sqrt(5))/120],
+            [(11 - Math.sqrt(5))/120, (25 + 13*Math.sqrt(5))/120,
+                (25 + Math.sqrt(5))/120, (-1 - Math.sqrt(5))/120],
+            [1/12, 5/12, 5/12, 1/12],
+            [1/12, 5/12, 5/12, 1/12]],
+            [[1/12, (-1 - Math.sqrt(5))/24, (-1 + Math.sqrt(5))/24],
+            [1/12, (25 + Math.sqrt(5))/120, (25 - 13*Math.sqrt(5))/120],
+            [1/12, (25 + 13*Math.sqrt(5))/120, (25 - Math.sqrt(5))/120],
+            [1/12, (11 - Math.sqrt(5))/24, (11 + Math.sqrt(5))/24],
+            [1/12, 5/12, 5/12, 1/12]]
         ]
     };
     var composition = {
@@ -216,6 +258,7 @@ VoidCode.Integrator.MAXNUM = 1000;
  * Generic Runge-Kutta integration method.
  * Calculates evolution of dynamical system in time for a given time step.
  * 
+ * @this Point
  * @param {Object} matrixA - matrix of specific method
  * @param {Number} h - time step
  * @returns {Point}
@@ -283,6 +326,7 @@ VoidCode.Integrator.genericRK = function (matrixA, h) {
  * Implementation does not allow different dimensions
  *   for matrixA[1] and matrixA[2]
  * 
+ * @this Point
  * @param {Object[]} matrixA - array of matrices for specific method
  * @param {Number} h - time step
  * @returns {Point}
