@@ -68,9 +68,10 @@ VoidCode.Point.prototype.toValue = function () { return this.invariant(this.psi)
 VoidCode.Point.create = function (init, cfg) {
     var point = new VoidCode.Point(init.t, init.psi);
     point.params = cfg.params;
+    VoidCode.Problem.isProblemSeparable = !!(VoidCode.Problem[cfg.id].separable);
     VoidCode.Point.prototype.hamilton = VoidCode.Problem[cfg.id].hamilton;
     VoidCode.Point.prototype.invariant = VoidCode.Problem[cfg.id].invariant;
-    VoidCode.Point.prototype.integrator = VoidCode.Integrator(cfg.integrator, VoidCode.Problem[cfg.id].separable);
+    VoidCode.Point.prototype.integrator = VoidCode.Integrator(cfg.integrator);
     return point;
 };
 

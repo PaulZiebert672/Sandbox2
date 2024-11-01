@@ -38,11 +38,10 @@ if(typeof require === 'function') {
  * Creates integration method
  * 
  * @param {String} name - integration method name (may be a composition)
- * @param {Boolean} isProblemSeparable - flag for separable problems
  * @throws {ReferenceError} method name or composition is not implemented
  * @returns {Integrator}
  */
-VoidCode.Integrator = function (name, isProblemSeparable) {
+VoidCode.Integrator = function (name) {
     var Integrator = VoidCode.Integrator;
     /* partitioned methods contain array with flag and two matrices */
     var registry = {
@@ -150,8 +149,9 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
     var isImplicit = function (matrixA) {
         var s = matrixA.length;
         if(matrixA[0] === 'p') {
-            // console.log('-+> %s', isProblemSeparable);
-            if(isProblemSeparable) {
+            // console.log('@@>', JSON.stringify(this));
+            // console.log('+-> %s', this.Problem.isProblemSeparable);
+            if(this.Problem.isProblemSeparable) {
                 return isImplicitPart2(matrixA);
             }
             return true;
@@ -170,7 +170,7 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
     /* select method from registry */
     if(name in registry) {
         var matrixA = registry[name];
-        matrixA.imp = isImplicit(matrixA);
+        matrixA.imp = isImplicit.call(this, matrixA);
         if(matrixA[0] === 'p') {
             return function (h) {
                 Integrator.partitionedRK.call(this, matrixA, h);
@@ -187,12 +187,12 @@ VoidCode.Integrator = function (name, isProblemSeparable) {
         var result = composition[operator].exec(name);
         if(result) {
             var params = [];
-            params[0] = Integrator(result[1], isProblemSeparable);
+            params[0] = Integrator(result[1]);
             if(!isNaN(+result[2] - parseInt(result[2]))) {
                 params[1] = +result[2];
             }
             else {
-                params[1] = Integrator(result[2], isProblemSeparable);
+                params[1] = Integrator(result[2]);
             }
             return function (h) {
                 return Integrator[operator].call(this, params, h);
