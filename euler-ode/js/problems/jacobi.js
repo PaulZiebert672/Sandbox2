@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.JacobiElliptic = {
     title: "Jacobi elliptic functions",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var k = this.params.k;
         return {
             /* initial conditions [0, 1, 1] */

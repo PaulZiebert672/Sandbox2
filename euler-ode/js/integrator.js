@@ -30,7 +30,7 @@ if(typeof require === 'function') {
  * @typedef {Object} Point
  * @property {Number} t - time
  * @property {Psi} psi - position in phase space
- * @property {ODE} hamilton - system of ODE
+ * @property {ODE} ode - system of ODE
  * @property {Invariant} invariant
  * @property {Integrator} integrator
  */
@@ -242,7 +242,7 @@ VoidCode.Integrator.genericRK = function (matrixA, h) {
                     t += h * matrixA[i][j];
                 }
             }
-            vectorK[i] = new Psi(point.hamilton(psi, t));
+            vectorK[i] = new Psi(point.ode(psi, t));
         }
         return vectorK;
     };
@@ -254,7 +254,7 @@ VoidCode.Integrator.genericRK = function (matrixA, h) {
         }
         return err;
     };
-    var kstart = new Psi(this.hamilton(this.psi, this.t));
+    var kstart = new Psi(this.ode(this.psi, this.t));
 
     /* shallow water */
     for(var i = 0; i < s - 1; i++) {
@@ -314,7 +314,7 @@ VoidCode.Integrator.partitionedRK = function (matrixA, h) {
                     psi.p = psi._addP(EVector.scale(vectorK[2][j], h * matrixA[2][i][j]));
                 }
             }
-            var xdot = point.hamilton(psi);
+            var xdot = point.ode(psi);
             vectorK[1][i] = xdot.qdot;
             vectorK[2][i] = xdot.pdot;
         }
@@ -333,7 +333,7 @@ VoidCode.Integrator.partitionedRK = function (matrixA, h) {
         }
         return diffQ + diffP;
     };
-    var kstart = new Psi(this.hamilton(this.psi));
+    var kstart = new Psi(this.ode(this.psi));
 
     /* shallow water */
     for(var i = 0; i < s - 1; i++) {

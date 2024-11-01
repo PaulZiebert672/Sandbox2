@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.LotkaVolterra = {
     title: "Lotka-Volterra model",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         return {
             qdot: Math.exp(x.p) - 1,
             pdot: 1 - Math.exp(x.q),

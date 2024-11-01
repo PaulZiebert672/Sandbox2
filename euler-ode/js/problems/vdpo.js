@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.VanDerPohlOscillator = {
     title: "Van der Pohl oscillator",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var mu = this.params.mu;
         return {
             qdot: x.p,
