@@ -9,6 +9,7 @@ if(typeof require === 'function') {
     VoidCode.Problem.DoublePendulum = require('./dpm.js');
     VoidCode.Problem.VanDerPohlOscillator = require('./vdpo.js');
     VoidCode.Problem.LorenzAttractor = require('./lorenz.js');
+    VoidCode.Problem.JacobiElliptic = require('./jacobi.js');
     VoidCode.Problem.PendulumOnTube = require('./pot.js');
     VoidCode.Problem.CircularRestricted3_BodyProblem = require('./cr3bp.js');
 }
@@ -20,6 +21,7 @@ VoidCode.Problem.kepler = VoidCode.Problem.KeplerProblem;
 VoidCode.Problem.dpm = VoidCode.Problem.DoublePendulum;
 VoidCode.Problem.vdpo = VoidCode.Problem.VanDerPohlOscillator;
 VoidCode.Problem.lorenz = VoidCode.Problem.LorenzAttractor;
+VoidCode.Problem.jacobi = VoidCode.Problem.JacobiElliptic;
 VoidCode.Problem.pot = VoidCode.Problem.PendulumOnTube;
 VoidCode.Problem.cr3bp = VoidCode.Problem.CircularRestricted3_BodyProblem;
 

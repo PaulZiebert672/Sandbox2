@@ -22,6 +22,11 @@ _Van der Pohl oscillator_
 _Lorenz attractor_
 : system of ODE notable for having chaotic solutions for certain parameter values and initial conditions
 
+#### jacobi
+
+_Jacobi elliptic functions_
+: are the solution of a simple non-linear system of ODE with special initial values
+
 #### lv
 
 _Lotka-Volterra predator-prey model_
