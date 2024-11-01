@@ -5,4 +5,4 @@
 $ cat data/pot/set01.dat | awk 'BEGIN {print "q\tp"} {print $2, "\t", $3}' > data/pot/orbit01.tsv
 
 # Invariant table for one-dimensional problem
-$ cat data/pot/set01.dat | awk 'BEGIN {print "t\tdE"} {print $1, "\t", $4-(0.5)}' > data/pot/inv01.tsv
+cat data/pot/set01.dat | awk 'BEGIN {print "t\tdE"} NR==1 {x=$4} {print $1, "\t", $4-x}' > data/pot/inv01.tsv
