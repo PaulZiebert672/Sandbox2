@@ -2,6 +2,7 @@
 var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') {
+    VoidCode.Problem = require('./problems');
     VoidCode.EVector = require('./evector.js');
     VoidCode.Psi = require('./psi.js');
 }
@@ -42,7 +43,8 @@ if(typeof require === 'function') {
  * @returns {Integrator}
  */
 VoidCode.Integrator = function (name) {
-    var Integrator = VoidCode.Integrator;
+    var Integrator = VoidCode.Integrator,
+        Problem = VoidCode.Problem;
     /* partitioned methods contain array with flag and two matrices */
     var registry = {
         euler10: [                  /* Euler explicit */
@@ -149,9 +151,8 @@ VoidCode.Integrator = function (name) {
     var isImplicit = function (matrixA) {
         var s = matrixA.length;
         if(matrixA[0] === 'p') {
-            // console.log('@@>', JSON.stringify(this));
-            // console.log('+-> %s', this.Problem.isProblemSeparable);
-            if(this.Problem.isProblemSeparable) {
+            // console.log('+-> %s', Problem.isProblemSeparable);
+            if(Problem.isProblemSeparable) {
                 return isImplicitPart2(matrixA);
             }
             return true;
@@ -170,7 +171,7 @@ VoidCode.Integrator = function (name) {
     /* select method from registry */
     if(name in registry) {
         var matrixA = registry[name];
-        matrixA.imp = isImplicit.call(this, matrixA);
+        matrixA.imp = isImplicit(matrixA);
         if(matrixA[0] === 'p') {
             return function (h) {
                 Integrator.partitionedRK.call(this, matrixA, h);
