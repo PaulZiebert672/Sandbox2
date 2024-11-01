@@ -5,7 +5,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 VoidCode.Problem.LorenzAttractor = {
     title: "Lorenz attractor",
     /* no phase space concept */
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var params = this.params;
         var rho = params.rho, sigma = params.sigma, beta = params.beta;
         return {

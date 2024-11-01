@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.CircularRestricted3_BodyProblem = {
     title: "Circular restricted 3-body problem",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var mu = this.params.mu;
         var q1 = x.q[0] + mu;
         var q2 = x.q[0] + mu - 1;

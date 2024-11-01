@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.DoublePendulum = {
     title: "Double pendulum (mathematical)",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var d1 = Math.cos(x.q[0] - x.q[1]);
         var d2 = 2 - d1*d1;
         var w = (Math.sin(x.q[0] - x.q[1])/(d2*d2))*(

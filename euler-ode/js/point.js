@@ -37,7 +37,7 @@ if(typeof require === 'function') {
  * @typedef {Object} Point
  * @property {Number} t - time
  * @property {Psi} psi - position in phase space
- * @property {ODE} hamilton - system of ODE
+ * @property {ODE} ode - system of ODE
  * @property {Invariant} invariant
  * @property {Integrator} integrator
  * 
@@ -50,7 +50,8 @@ VoidCode.Point = function (t, psi) {
     this.t = t;
     this.psi = psi;
     /* these props must be defined in factory method */
-    // this.hamilton = function () {};
+    // this.params = {};
+    // this.ode = function () {};
     // this.invariant = function () {};
     // this.integrator = function () {};
 };
@@ -66,12 +67,13 @@ VoidCode.Point.prototype.toValue = function () { return this.invariant(this.psi)
  * @returns {Point}
  */
 VoidCode.Point.create = function (init, cfg) {
+    var Problem = VoidCode.Problem;
     var point = new VoidCode.Point(init.t, init.psi);
     point.params = cfg.params;
-    VoidCode.Problem.isProblemSeparable = !!(VoidCode.Problem[cfg.id].separable);
-    VoidCode.Point.prototype.hamilton = VoidCode.Problem[cfg.id].hamilton;
-    VoidCode.Point.prototype.invariant = VoidCode.Problem[cfg.id].invariant;
-    VoidCode.Point.prototype.integrator = VoidCode.Integrator(cfg.integrator);
+    point.ode = VoidCode.Problem[cfg.id].ode;
+    point.invariant = VoidCode.Problem[cfg.id].invariant;
+    point.integrator = VoidCode.Integrator(cfg.integrator);
+    Problem.isProblemSeparable = !!(VoidCode.Problem[cfg.id].separable);
     return point;
 };
 

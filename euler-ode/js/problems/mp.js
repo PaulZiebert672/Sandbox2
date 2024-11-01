@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.MathematicalPendulum = {
     title: "Mathematical pendulum",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         return {
             qdot: x.p,
             pdot: -Math.sin(x.q)
@@ -23,10 +23,10 @@ VoidCode.Problem.MathematicalPendulum = {
             return am;
         };
         if(e0 < 2 - DELTAE) {
-            return 2*Math.PI / agm(1, Math.sqrt((2 - e0)/2));
+            return 2*Math.PI/agm(1, Math.sqrt((2 - e0)/2));
         }
         else if (e0 > 2 + DELTAE) {
-            return Math.PI*Math.sqrt(2/e0) / agm(1, Math.sqrt((e0 - 2)/e0));
+            return Math.PI*Math.sqrt(2/e0)/agm(1, Math.sqrt((e0 - 2)/e0));
         }
         else {
             return +Infinity;

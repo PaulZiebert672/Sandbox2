@@ -9,7 +9,7 @@ if(typeof require === 'function') {
 
 VoidCode.Problem.PendulumOnTube = {
     title: "Mathematical pendulum hanging on the tube",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var rho = this.params.rho;
         var nu = 1 + rho*x.q;
         return {

@@ -4,7 +4,7 @@ VoidCode.Problem = VoidCode.Problem || {};
 
 VoidCode.Problem.KeplerProblem = {
     title: "Kepler problem",
-    hamilton: function (x, t) {
+    ode: function (x, t) {
         var r3by2 = Math.pow(x.q[0]*x.q[0] + x.q[1]*x.q[1], 3/2);
         return {
             qdot: x.p,
