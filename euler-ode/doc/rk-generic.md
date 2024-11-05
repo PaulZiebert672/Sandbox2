@@ -20,19 +20,20 @@ An $s$-stage Runge-Kutta method is given by
 
 $$
 \begin{align}
-i & = & 1, \dots ,s \\
-k_i & = & f(t_0 + c_i h, y_0 + h \sum_{j=1}^s a_{ij} k_j) \\
-y_1 & = & y_0 +h \sum_{i=1}^s b_i k_i
+k_i & = f(t_0 + c_i h, y_0 + h \sum_{j=1}^s a_{ij} k_j) \\
+y_1 & = y_0 + h \sum_{i=1}^s b_i k_i \\
+t_1 & = t_0 + h
 \end{align}
 $$
 
 The coefficients are usually displayed as follows:
 
 $$
-\begin{vmatrix}
+\begin{array}{c|c}
 \mathbf{c} & A \\
+\hline
 & \mathbf{b}^t
-\end{vmatrix}
+\end{array}
 \qquad
 A =
 \begin{pmatrix}
@@ -63,15 +64,17 @@ To check the order of a Runge Kutta method, one has to compute the Taylor series
 The explicit and implicit Euler methods
 
 $$
-\begin{vmatrix}
-0 \\ \\
+\begin{array}{c|c}
+0 \\
+\hline
 & 1
-\end{vmatrix}
+\end{array}
 \qquad \text{and} \qquad
-\begin{vmatrix}
-1 & 1 \\ \\
+\begin{array}{c|c}
+1 & 1 \\
+\hline
 & 1
-\end{vmatrix}
+\end{array}
 $$
 
 ### $p = 2$
@@ -79,56 +82,58 @@ $$
 The explicit trapezoidal and explicit midpoint rules
 
 $$
-\begin{vmatrix}
-0 \\ \\
+\begin{array}{c|cc}
+0 \\
 1 & 1 \\
-& \frac{1}{2} & \frac{1}{2}
-\end{vmatrix}
+\hline
+& 1/2 & 1/2
+\end{array}
 \qquad \text{and} \qquad
-\begin{vmatrix}
-0 \\ \\
-\frac{1}{2} & \frac{1}{2} \\
+\begin{array}{c|cc}
+0 \\
+1/2 & 1/2 \\
+\hline
 & 0 & 1
-\end{vmatrix}
+\end{array}
 $$
 
 The implicit trapezoidal and implicit midpoint rules
 
 $$
-\begin{vmatrix}
-0 \\ \\
-1 & \frac{1}{2} & \frac{1}{2} \\ \\
-& \frac{1}{2} & \frac{1}{2}
-\end{vmatrix}
+\begin{array}{c|cc}
+0 \\
+1 & 1/2 & 1/2 \\
+\hline
+& 1/2 & 1/2
+\end{array}
 \qquad \text{and} \qquad
-\begin{vmatrix}
-\frac{1}{2} & \frac{1}{2} \\ \\
-& 1
-\end{vmatrix}
+\begin{array}{c|cc}
+1/2 & 1/2 \\
+\hline
+& 1 \\
+\end{array}
 $$
 
 ### $p = 4$
 
-4-th order classical method of Kutta
+4-th order classical method of Kutta and alternative "3/8" method
 
 $$
-\begin{vmatrix}
-0 \\ \\
-\frac{1}{2} & \frac{1}{2} \\ \\
-\frac{1}{2} & 0 & \frac{1}{2} \\ \\
-1 & 0 & 0 & 1 \\ \\
-& \frac{1}{6} & \frac{2}{6} & \frac{2}{6} & \frac{1}{6}
-\end{vmatrix}
-$$
-
-Alternative "3/8" method
-
-$$
-\begin{vmatrix}
-0 \\ \\
-\frac{1}{3} & \frac{1}{3} \\ \\
-\frac{2}{3} & -\frac{1}{3} & 1 \\ \\
-1 & 1 & -1 & 1 \\ \\
-& \frac{1}{8} & \frac{3}{8} & \frac{3}{8} & \frac{1}{8}
-\end{vmatrix}
+\begin{array}{c|cccc}
+0 \\
+1/2 & 1/2 \\
+1/2 & 0 & 1/2 \\
+1 & 0 & 0 & 1 \\
+\hline
+& 1/6 & 2/6 & 2/6 & 1/6
+\end{array}
+\qquad \text{and} \qquad
+\begin{array}{c|cccc}
+0 \\
+1/3 & 1/3 \\
+2/3 & -1/3 & 1 \\
+1 & 1 & -1 & 1 \\
+\hline
+& 1/8 & 3/8 & 3/8 & 1/8
+\end{array}
 $$
