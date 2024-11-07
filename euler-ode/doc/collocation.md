@@ -107,4 +107,29 @@ The implicit trapezoidal rule.
 
 ### $s = 3$
 
+Lobatto IIIA collocation of order $4$
+
+$$
+\begin{array}{c|ccc}
+0 \\ \\
+\frac{1}{2} &  \frac{5}{24} & \frac{1}{3} & -\frac{1}{24} \\ \\
+1 & \frac{1}{6} & \frac{2}{3} & \frac{1}{6} \\ \\
+\hline \\
+& \frac{1}{6} & \frac{2}{3} & \frac{1}{6}
+\end{array}
+$$
+
 ### $s = 4$
+
+Lobatto IIIA collocation of order $6$
+
+$$
+\begin{array}{c|cccc}
+0 \\ \\
+\frac{5 - \sqrt{5}}{10} &  \frac{11 + \sqrt{5}}{120} & \frac{25 - \sqrt{5}}{120} & \frac{25 - 13\sqrt{5}}{120} & \frac{-1 + \sqrt{5}}{120} \\ \\
+\frac{5 + \sqrt{5}}{10} &  \frac{11 - \sqrt{5}}{120} & \frac{25 + \sqrt{5}}{120} & \frac{25 + 13\sqrt{5}}{120} & \frac{-1 - \sqrt{5}}{120} \\ \\
+1 & \frac{1}{12} & \frac{5}{12} & \frac{5}{12} & \frac{1}{12} \\ \\
+\hline \\
+& \frac{1}{12} & \frac{5}{12} & \frac{5}{12} & \frac{1}{12}
+\end{array}
+$$
