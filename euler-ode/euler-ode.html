@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="numerical integration">
+    <meta name="author" content="paul">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Numerical integration</title>
+</head>
+
+<body>
+    <div id="init">
+        <h1 id="head-model">Numerical integration</h1>
+        <form id="form-init" autocomplete="off" method="post" action="">
+        </form>
+        <script type="text/template" id="form-init-template">
+            <div>
+                <span class="vlabel">
+                    <label for="id">problem id:</label>
+                </span>
+                <span class="vselect">
+                    <input name="id" value="<%= id %>" size="24" type="text">
+                </span>
+                <span class="vlabel">
+                    <label for="integrator">method:</label>
+                </span>
+                <span class="vselect">
+                    <input name="integrator" value="<%= integrator %>" size="32" type="text">
+                </span>
+                <span class="vlabel">
+                    <label for="params">params:</label>
+                </span>
+                <span class="vselect">
+                    <input name="params" value="<%= params %>" size="40" type="text">
+                </span>
+            </div>
+            <div>
+                <span class="vlabel">
+                    <label for="time0">t0, t1:</label>
+                </span>
+                <span class="vfield">
+                    <input name="time0" value="<%= time0 %>" size="24" type="text">
+                    <input name="time1" value="<%= time1 %>" size="24" type="text">
+                </span>
+                <span class="vlabel">
+                    <label for="scale">scale:</label>
+                </span>
+                <span class="vcheck">
+                    <input name="scale" type="checkbox" checked="<%= scale %>">
+                </span>
+                <span class="vlabel">
+                    <label for="step">steps, skips:</label>
+                </span>
+                <span class="vfield">
+                    <input name="step" value="<%= step %>" size="18" type="text">
+                    <input name="skip" value="<%= skip %>" size="15" type="text">
+                </span>
+            </div>
+            <div>
+                <span class="vlabel">
+                    <label for="coordinate">(q, p) @ t0:</label>
+                </span>
+                <span class="vfield">
+                    <input name="coordinate" value="<%= coordinate %>" size="36" type="text">
+                    <input name="momentum" value="<%= momentum %>" size="36" type="text">
+                </span>
+                <span class="vbutton">
+                    <input name="submit" value="submit" type="submit">
+                </span>
+            </div>
+        </script>
+    </div>
+    <div id="output"></div>
+    <script type="text/template" id="div-output-template">
+        <%= title %> :: integrator: <%= integrator %>, time step: <%= h %>
+    </script>
+    <div id="tabular">
+        <table id="table-out"></table>
+        <script type="text/template" id="table-out-template">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>q</th>
+                    <th>p</th>
+                    <th>Invariant</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </script>
+        <script type="text/template" id="table-body-template">
+            <tr class="vpoint-data">
+                <td><%= time %></td>
+                <td><%= coordinate %></td>
+                <td><%= momentum %></td>
+                <td><%= invariant %></td>
+            </tr>
+        </script>
+    </div>
+    <div id="stat"></div>
+    <script  type="text/template" id="div-stat-template">
+        <%= nRecords %> rec. / <%= realT %> sec.
+    </script>
+    <script type="text/javascript" src="js/roots.js"></script>
+    <script type="text/javascript" src="js/quadrature.js"></script>
+    <script type="text/javascript" src="js/problems/mp.js"></script>
+    <script type="text/javascript" src="js/problems/kepler.js"></script>
+    <script type="text/javascript" src="js/problems/cr3bp.js"></script>
+    <script type="text/javascript" src="js/problems/dpm.js"></script>
+    <script type="text/javascript" src="js/problems/jacobi.js"></script>
+    <script type="text/javascript" src="js/problems/lorenz.js"></script>
+    <script type="text/javascript" src="js/problems/vdpo.js"></script>
+    <script type="text/javascript" src="js/problems/lv.js"></script>
+    <script type="text/javascript" src="js/problems/pot.js"></script>
+    <script type="text/javascript" src="js/problems/index.js"></script>
+    <script type="text/javascript" src="js/integrator.js"></script>
+    <script type="text/javascript" src="js/point.js"></script>
+    <script type="text/javascript" src="js/evector.js"></script>
+    <script type="text/javascript" src="js/psi.js"></script>
+    <script type="text/javascript" src="js/limit.js"></script>
+    <script type="text/javascript" src="ui/utility.js"></script>
+    <script type="text/javascript" src="ui/framework.js"></script>
+    <script type="text/javascript" src="ui/config.js"></script>
+    <script type="text/javascript" src="ui/application.js"></script>
+</body>
+</html>

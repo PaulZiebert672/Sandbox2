@@ -1,0 +1,72 @@
+#head-model {
+    font-family: helvetica;
+    text-align: center;
+    color: teal;
+    font-size: 24px;
+}
+
+#output {
+    font-family: arial;
+    margin: 2px 15px;
+    color: tomato;
+}
+
+#table-out {
+    margin-left: 12px;
+    width: 96%;
+}
+
+#table-out thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    background-color: lightseagreen;
+}
+
+#table-out tr.vpoint-data {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align: left;
+    font-family: monospace;
+    font-size: 14px;
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: lightseagreen;
+}
+
+#table-body {
+    display: block;
+    max-height: 30em;
+    overflow-y: auto;
+}
+
+#stat {
+    width: 99%;
+    text-align: right;
+    color: dimgray;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+#form-init {
+    margin-left: 12px;
+}
+
+span.vlabel {
+    text-align: right;
+    width: 90pt;
+    display: inline-block;
+}
+
+span.vselect input {
+    margin: 2px;
+}
+
+span.vfield input {
+    text-align: right;
+    margin: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    color: blue;
+}
