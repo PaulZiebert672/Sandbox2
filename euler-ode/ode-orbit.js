@@ -3,7 +3,14 @@ var VoidCode = VoidCode || {};
 
 if(typeof require === 'function') { /* we are in Node.js */
 
-    VoidCode.Config = require('./conf/config.json');
+    try {
+        VoidCode.Config = require('./conf/config.json');
+    }
+    catch(ex) {
+        console.error('config failure: no configuration file was found');
+        console.error('copy *conf/config-sample.json* to *conf/config.json*');
+        process.exit(-1);
+    }
 
     VoidCode.Problem = require('./js/problems');
     VoidCode.Point = require('./js/point.js');
