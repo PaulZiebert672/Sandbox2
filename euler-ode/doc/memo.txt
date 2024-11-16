@@ -1,8 +1,9 @@
 - recursive call of Integrator in integrator.js
 - flag isProblemSeparable ?
 
-# Orbit table for one-dimensional problem
-$ cat data/pot/set01.dat | awk 'BEGIN {print "q\tp"} {print $2, "\t", $3}' > data/pot/orbit01.tsv
-
-# Invariant table for one-dimensional problem
-cat data/pot/set01.dat | awk 'BEGIN {print "t\tdE"} NR==1 {x=$4} {print $1, "\t", $4-x}' > data/pot/inv01.tsv
+# Orbit thumb for Kepler problem
+node cli-orbit.js |
+    bin/kepler/filter-orbit.awk |
+    awk 'NR > 1 && NR < 800 {print $2, $3}' |
+    graph -Tpng --bitmap-size 384x384 -C -m 0 -S 16 0.03 >
+    img/thumbs/kepler.png
