@@ -1,16 +1,25 @@
 % Create plots using prepared tab separated values
 
 % Config
+cfg = jsondecode(fileread('../../conf/config.json'));
+if(!strcmp(cfg.id, "dpm"))
+  beep();
+  error(["Configuration id mismatch: ", cfg.id]);
+endif
+
+opt = jsondecode(fileread('plot_orbit.json'));
+
+% Problem invariant
+function e = energy(q, p)
+  cdiff = cos(q(1) - q(2));
+  e = (p(1)^2 + 2*p(2)^2 - 2*p(1)*p(2)*cdiff)/(2*(2 - cdiff^2)) + 3 - 2*cos(q(1)) - cos(q(2));
+endfunction
+
 global E0;
-E0 = 1.5;
-src_data = "orbit09.tsv";
-src_dir = "../../data/dpm/";
-dst_orbit_plot = "orbit-q1p1.eps";
-dst_inv_plot = "inv-error.eps";
-dst_dir = "../../plot/dpm/";
+E0 = energy(cfg.psi0(1, :), cfg.psi0(2, :));
 
 % Import calculated points
-data = dlmread([src_dir src_data], "\t", 1, 0);
+data = dlmread(fullfile(opt.src.dir, opt.src.data), "\t", 1, 0);
 
 % Plot orbit
 function hf = orbit_plot(x, y)
@@ -64,9 +73,9 @@ endfunction
 
 % Plot orbit
 hf = orbit_plot(data(:, [2]), data(:, [3]));
-print(hf, [dst_dir, dst_orbit_plot], "-S720,960");
+print(hf, fullfile(opt.dst.dir, opt.dst.plot.q1p1), "-S720,960");
 
 % Plot invariant error
 hf = inv_plot(data(:, 1), data(:, 4));
-print(hf, [dst_dir, dst_inv_plot], "-S960,720");
+print(hf, fullfile(opt.dst.dir, opt.dst.inv.error), "-S960,720");
 

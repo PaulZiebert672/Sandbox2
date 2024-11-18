@@ -1,23 +1,28 @@
 % Create plots using prepared tab separated values
 
 % Configuration
+cfg = jsondecode(fileread('../../conf/config.json'));
+if(!strcmp(cfg.id, "cr3bp"))
+  beep();
+  error(["Configuration id mismatch: ", cfg.id]);
+endif
+
+opt = jsondecode(fileread('plot_orbit.json'));
+
 global mu;
-mu = 1/10;
-src_data = "orbit09.tsv";
-src_dir = "../../data/cr3bp/";
-dst_corotating_plot = "orbit-cf.eps";
-dst_ptolemy_plot = "orbit-pt.eps";
-dst_dir = "../../plot/cr3bp/";
+global gap;
+mu = cfg.params.mu;
+gap = opt.dst.plot.gap;
 
 % Import calculated points
-data_phi = dlmread([src_dir, src_data], "\t", 1, 0);
+data_phi = dlmread(fullfile(opt.src.dir, opt.src.data), "\t", 1, 0);
 
 % Plot orbit
 function hf = orbit_plot(x, y, name)
 
   global mu;
-  marker_size = 0.5;
-  gap = 0.15;
+  global gap;
+  marker_size = 0.25;
 
   hf = figure();
   hold on
@@ -57,12 +62,11 @@ data_psi = cell2mat(arrayfun(
 hf = orbit_plot(data_phi(:, [2]), data_phi(:, [3]), "Corotating frame");
 plot([-mu], [0], 'bo', 'MarkerFaceColor', '#55A0CC', 'MarkerSize', 5);
 plot(1 - mu, 0, 'bo', 'MarkerFaceColor', '#FF8C00', 'MarkerSize', 3)
-print(hf, [dst_dir, dst_corotating_plot], "-S960,720");
+print(hf, fullfile(opt.dst.dir, opt.dst.plot.corotating), "-S960,720");
 
 % Plot orbit in Ptolemy view
 hf = orbit_plot(data_psi(:, [2]), data_psi(:, [3]), "Ptolemy view");
 plot([0], [0], 'bo', 'MarkerFaceColor', '#55A0CC', 'MarkerSize', 5);
 tau=2*pi*(1:200)/200;
 plot(cos(tau), sin(tau), 'bo', 'MarkerFaceColor', '#FF8C00', 'MarkerSize', 3)
-print(hf, [dst_dir, dst_ptolemy_plot], "-S960,720");
-
+print(hf, fullfile(opt.dst.dir, opt.dst.plot.ptolemy), "-S960,720");
