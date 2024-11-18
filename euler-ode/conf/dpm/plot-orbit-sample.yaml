@@ -1,0 +1,10 @@
+src:
+  dir: "data/dpm"
+  data: "orbit09.tsv"
+dst:
+  dir: "plot/dpm"
+  plot:
+    orbit:
+      q1p1: "orbit-q1p1.png"
+    invariant:
+      error: "inv-error.png"
