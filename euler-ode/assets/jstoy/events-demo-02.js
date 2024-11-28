@@ -124,18 +124,8 @@ var formModel = new Model({
 var infoModel = new Model({
   count: 0
 });
-infoModel.on('chunk/complete', function () {
-  print('<--', 'got it');
-  // log(this);
-  var count = this.get('count');
-  this.set({ count: ++count });
-}.bind(infoModel));
 
 var tbModel = new Model;
-tbModel.on('chunk/complete', function (data) {
-  print('<~~', 'got it:');
-  this.trigger(this.id + '/append', data);
-}.bind(tbModel));
 
 // Views
 
@@ -171,7 +161,6 @@ var tbView = new View({
   },
   reset: function () { $qsa(this.elementTable)[0].innerHTML = ''; },
 });
-tbView.on(tbModel.id + '/append', tbView.addElement.bind(tbView));
 
 // Controllers
 
@@ -196,6 +185,12 @@ var infoController = new Controller({
   view:  infoView,
   events: {}
 });
+infoController.model.on('chunk/complete', function () {
+    print('<--', 'got it');
+    // log(this);
+    var count = this.get('count');
+    this.set({ count: ++count });
+  }.bind(infoController.model));
 infoController.init();
 
 var tbController = new Controller({
@@ -203,6 +198,14 @@ var tbController = new Controller({
   view:  tbView,
   events: {}
 });
+tbController.model.on('chunk/complete', function (data) {
+    print('<~~', 'got it:');
+    this.trigger(this.id + '/append', data);
+  }.bind(tbController.model));
+tbController.view.on(
+    tbController.model.id + '/append',
+    tbController.view.addElement.bind(tbController.view)
+);
 tbController.init();
 
 // log(formModel);
