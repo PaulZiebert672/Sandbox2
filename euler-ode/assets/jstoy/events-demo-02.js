@@ -190,7 +190,7 @@ infoController.model.on('chunk/complete', function () {
     // log(this);
     var count = this.get('count');
     this.set({ count: ++count });
-  }.bind(infoController.model));
+  });
 infoController.init();
 
 var tbController = new Controller({
@@ -201,10 +201,10 @@ var tbController = new Controller({
 tbController.model.on('chunk/complete', function (data) {
     print('<~~', 'got it:');
     this.trigger(this.id + '/append', data);
-  }.bind(tbController.model));
+  });
 tbController.view.on(
     tbController.model.id + '/append',
-    tbController.view.addElement.bind(tbController.view)
+    tbController.view.addElement
 );
 tbController.init();
 
