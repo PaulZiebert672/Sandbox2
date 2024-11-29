@@ -9,13 +9,18 @@ var VoidCode = VoidCode || {};
 VoidCode.Event = (function () {
     var channel = {};
     var trigger = function (event, data) {
-        channel.hasOwnProperty(event) && channel[event](data);
+        if(channel.hasOwnProperty(event)) {
+            for(var id in channel[event]) { channel[event][id](data); }
+        }
     };
     var on = function (event, callback) {
-        channel[event] = callback;
+        !channel.hasOwnProperty(event) && (channel[event] = {});
+        channel[event][this.id || 'unknown'] = callback.bind(this);
     };
     var off = function (event) {
-        channel.hasOwnProperty(event) && delete channel[event];
+        if(channel.hasOwnProperty(event)) {
+            delete channel[event][this.id || 'unknown'];
+        }
     };
     return {
         trigger: trigger,
