@@ -1,0 +1,12 @@
+{
+    "src": {
+        "dir": "../../data/lorenz",
+        "data": "orbit09.tsv"
+    },
+    "dst": {
+        "dir": "../../plot/lorenz",
+        "plot": {
+            "xz": "orbit-xz.eps"
+        }
+    }
+}

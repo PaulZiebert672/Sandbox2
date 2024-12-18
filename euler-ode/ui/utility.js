@@ -27,11 +27,16 @@ VoidCode.Util = (function () {
         return fn.toString().split('\n').slice(1, -1).join('\n');
     };
     var template = function (text) {
-        var config = { interpolate: /<%=(.+?)%>/g, evaluate: /<%(.+?)%>/g };
+        var config = {
+            interpolate: /<%=(.+?)%>/g,
+            freevar: /<%~(.+?)%>/g,
+            evaluate: /<%(.+?)%>/g
+        };
         return new Function("data",
             "var output = " +
                 JSON.stringify(text)
                     .replace(config.interpolate, '" + (data.$1) + "')
+                    .replace(config.freevar, '" + ($1) + "')
                     .replace(config.evaluate, '"; $1\noutput += "') +
                 ";\nreturn output;"
         );
