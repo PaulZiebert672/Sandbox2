@@ -9,13 +9,18 @@ var VoidCode = VoidCode || {};
 VoidCode.Event = (function () {
     var channel = {};
     var trigger = function (event, data) {
-        channel.hasOwnProperty(event) && channel[event](data);
+        if(channel.hasOwnProperty(event)) {
+            for(var id in channel[event]) { channel[event][id](data); }
+        }
     };
     var on = function (event, callback) {
-        channel[event] = callback;
+        !channel.hasOwnProperty(event) && (channel[event] = {});
+        channel[event][this.id || 'unknown'] = callback.bind(this);
     };
     var off = function (event) {
-        channel.hasOwnProperty(event) && delete channel[event];
+        if(channel.hasOwnProperty(event)) {
+            delete channel[event][this.id || 'unknown'];
+        }
     };
     return {
         trigger: trigger,
@@ -34,19 +39,19 @@ void function (root, _util) {
     };
 }(VoidCode, VoidCode.Util);
 
-void function (Proto, Event, _util) {
-    Proto.get = function (attrName) {
+void function (proto, Event, _util) {
+    proto.get = function (attrName) {
         return this.attributes[attrName];
     };
-    Proto.set = function (attributes) {
+    proto.set = function (attributes) {
         _util.extend(this.attributes, attributes);
         this.change(attributes);
         return this;
     };
-    Proto.change = function (attributes) {
+    proto.change = function (attributes) {
         this.trigger(this.id + '/update', attributes);
     };
-    _util.extend(Proto, Event);
+    _util.extend(proto, Event);
 }(VoidCode.Model.prototype, VoidCode.Event, VoidCode.Util);
 
 /*
@@ -60,15 +65,15 @@ void function (root, _util) {
     };
 }(VoidCode, VoidCode.Util);
 
-void function (Proto, Event, _util) {
-    Proto.init = function (model) {
+void function (proto, Event, _util) {
+    proto.init = function (model) {
         this.render(model.attributes);
         this.on(model.id + '/update', this.render.bind(this));
     };
-    Proto.render = function (attributes) {
+    proto.render = function (attributes) {
         console.error(this.id, ': render must be redefined');
     };
-    _util.extend(Proto, Event);
+    _util.extend(proto, Event);
 }(VoidCode.View.prototype, VoidCode.Event, VoidCode.Util);
 
 /* Controllers are an intermediary between Models and
@@ -91,8 +96,8 @@ void function (root, _util) {
     };
 }(VoidCode, VoidCode.Util);
 
-void function (Proto, _util, $qsa) {
-    Proto.init = function () {
+void function (proto, _util, $qsa) {
+    proto.init = function () {
         this.model && this.view && this.view.init(this.model);
         if(this.events) {
             _util.each(this.events, function (method, eventName) {
