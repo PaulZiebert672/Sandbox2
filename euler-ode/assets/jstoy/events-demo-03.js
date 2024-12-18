@@ -1,4 +1,3 @@
-var log = function (s) { return print('<pre>' + escapeHtml(JSON.stringify(s, null, 4)) + '</pre>'); };
 print(heredoc(function () {/*
 
 <style>
@@ -91,10 +90,12 @@ print(heredoc(function () {/*
         <tbody id="table-body"></tbody>
     </script>
     <script type="text/template" id="table-body-template">
+        <% data.forEach(function (pt) { %>
         <tr class="vpoint-data">
-            <td><%= coordinate %></td>
-            <td><%= momentum %></td>
+            <td><%~ pt.coordinate %></td>
+            <td><%~ pt.momentum %></td>
         </tr>
+        <% }) %>
     </script>
     <script type="text/template" id="ode-info-template">
         <%= count %> record(s)
@@ -104,15 +105,25 @@ print(heredoc(function () {/*
 */}));
 
 load([
+    '/euler-ode/js/problems/mp.js',
+    '/euler-ode/js/problems/index.js',
+    '/euler-ode/js/evector.js',
+    '/euler-ode/js/psi.js',
+    '/euler-ode/js/point.js',
+    '/euler-ode/js/limit.js',
+    '/euler-ode/js/integrator.js',
     '/euler-ode/ui/utility.js',
-    '/euler-ode/ui/framework.js'
+    '/euler-ode/ui/framework.js',
+    '/euler-ode/ui/orbit-timeout.js'
 ], function () {
 
-var _util = VoidCode.Util;
 var $qsa = document.querySelectorAll.bind(document);
+var _util = VoidCode.Util;
+
 var Model = VoidCode.Model;
 var View = VoidCode.View;
 var Controller = VoidCode.Controller;
+var Orbit = VoidCode.Orbit;
 
 // Models
 
@@ -174,7 +185,15 @@ var formController = new Controller({
     },
     onSubmit: function (event) {
         event.preventDefault();
-        evolution();
+        var orb = new Orbit({
+            id: "mp",
+            integrator: "rk4",
+            psi0: [ 0, 1 ],
+            time: [ 0, 1 ],
+            scale: true,
+            step: [ 36, 1 ]
+        });
+        orb.evolve();
     }
 });
 formController.init();
@@ -184,11 +203,11 @@ var infoController = new Controller({
     view:  infoView,
     events: {}
 });
-infoController.model.on('chunk/complete', function () {
-    print('<--', 'got it');
-    // log(this);
+infoController.model.on('task/partial', function (data) {
+    print('<--', 'got it:', data.length);
     var count = this.get('count');
-    this.set({ count: ++count });
+    count += data.length;
+    this.set({ count: count });
 });
 infoController.init();
 
@@ -197,8 +216,8 @@ var tbController = new Controller({
     view:  tbView,
     events: {}
 });
-tbController.model.on('chunk/complete', function (data) {
-    print('<~~', 'got it:');
+tbController.model.on('task/partial', function (data) {
+    print('<~~', 'got it:', JSON.stringify(data));
     this.trigger(this.id + '/append', data);
 });
 tbController.view.on(
@@ -206,30 +225,5 @@ tbController.view.on(
     tbController.view.addElement
 );
 tbController.init();
-
-// log(formModel);
-// log(formView);
-log(tbController);
-
-var evolution = function () {
-  var NMAX = 24;
-  var sleepFor = function (time) {
-    var now = new Date().getTime();
-    while(new Date().getTime() < now + time) { /* do nothing */ }
-  };
-  var Event = VoidCode.Event;
-  for(var i = 0; i <= NMAX; i++) {
-    setTimeout(function (k, Event) {
-       var alpha = 2*Math.PI*k/NMAX;
-       sleepFor(600);
-       var result = {
-         coordinate: Math.cos(alpha),
-         momentum: Math.sin(alpha)
-       };
-       print('-->', JSON.stringify(result));
-       Event.trigger('chunk/complete', result);
-    }, 0, i, Event);
-  }
-};
 
 }); /* load */
