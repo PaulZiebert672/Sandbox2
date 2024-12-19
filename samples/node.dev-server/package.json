@@ -1,0 +1,23 @@
+{
+  "name": "node.dev-server",
+  "version": "1.0.0",
+  "description": "dev http server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.6.0",
+    "bootstrap": "^5.3.3",
+    "bulma": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "morgan": "^1.10.0",
+    "underscore": "^1.13.7"
+  }
+}

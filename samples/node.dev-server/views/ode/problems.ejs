@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/header') %>
+<body>
+    <div class="container">
+        <h1 id="head-title">List of problems</h1>
+        <div id="problems-list">
+            <% collection.forEach(function(item, idx) { %>
+                <div class="row">
+                    <div class="col-2">
+                        <img id="problems-item-thumb" src="/euler-ode/<%- item.thumb %>">
+                    </div>
+                    <div class="col">
+                        <dl class="row">
+                            <dt id="problems-item-title" class="col-4 fs-5">
+                                <%= item.title %>
+                            </dt>
+                            <dd id="problems-item-desc" class="col text-secondary">
+                                <%= item.desc %>
+                            </dd>
+                        </dl>
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="orbit?id=<%- item.id %>">Orbit</a>
+                            </div>
+                            <div class="col">
+                                Description
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            <% }) %>
+        </div>    
+    </div>
+<%- include('../partials/footer') %>
+</body>
+</html>

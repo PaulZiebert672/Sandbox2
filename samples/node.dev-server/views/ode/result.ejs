@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/header') %>
+<body>
+    <div class="container">
+        <h1 id="head-title">Data</h1>
+
+        <div id="integration-result-table"></div>
+
+        <div id="integration-config-model" class="small text-info">
+            <%= config %>
+        </div>
+
+    </div>
+
+    <!-- Parsed by client -->
+    <script type="text/template" id="integration-result-table-data-template" class="template">
+        <table id="integration-result-table-data" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" class="text-success">time</th>
+                    <th scope="col">coordinate</th>
+                    <th scope="col">momentum</th>
+                    <th scope="col" class="text-secondary">invariant</th>
+                </tr>
+            </thead>
+            <tbody id="integration-result-table-body"></tbody>
+        </table>
+    </script>
+
+    <!-- Parsed by client -->
+    <script type="text/template" id="integration-result-table-row-template" class="template">
+        <%% for(var idx in data) { %%>
+        <tr class="vpoint-data">
+            <td class="font-monospace text-success"><%%= data[idx].time %%></td>
+            <td class="font-monospace"><%%- data[idx].coordinate %%></td>
+            <td class="font-monospace"><%%- data[idx].momentum %%></td>
+            <td class="font-monospace text-secondary"><%%- data[idx].invariant %%></td>
+        </tr>
+        <%% } %%>
+    </script>
+
+    <script type="text/javascript" src="/public/contrib/js/ejs.js"></script>
+    <script type="text/javascript" src="/public/js/ode/script.js"></script>
+    <script type="text/javascript" src="/public/js/ode/table.js"></script>
+<%- include('../partials/footer') %>
+</body>
+</html>

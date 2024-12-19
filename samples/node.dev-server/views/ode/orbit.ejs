@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/header') %>
+<body>
+    <div class="container">
+        <h1 id="head-title">Numerical integration</h1>
+        <div id="data-input">
+            <form if="data-input-form" autocomplete="off" method="post" action="result">
+                <div class="row align-items-end">
+                    <div class="col-1">
+                        <label class="form-label" for="problem">problem:</label>
+                    </div>
+                    <div class="col-3">
+                        <small class="form-text text-muted opacity-50">Problem preset</small>
+                        <select id="data-inpit-problem" class="form-select" name="problem">
+                            <% collection.forEach(function(item, idx) { %>
+                                <option value="<%= item.id %>" <%= (item.id == settings.id)? 'selected': '' %>><%= item.title %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <div class="col-1">
+                        <label class="form-label" for="method">method:</label>
+                    </div>
+                    <div class="col-2">
+                        <small class="form-text text-muted opacity-50">Integration method</small>
+                        <input class="form-control" name="method" value="<%= settings.method %>" type="text">
+                    </div>
+                    <div class="col-1">
+                        <label class="form-label" for="params">params:</label>
+                    </div>
+                    <div class="col">
+                        <small class="form-text text-muted opacity-50">Parameters value</small>
+                        <input class="form-control" name="params" value="<%= settings.params %>" type="text">
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-1">
+                        <label class="form-label" for="time0">t0, t1:</label>
+                    </div>
+                    <div class="col-2">
+                        <small class="form-text text-muted opacity-50">Start time</small>
+                        <input class="form-control text-end" name="time0" value="<%= settings.time[0] %>" type="text">
+                    </div>
+                    <div class="col-2">
+                        <small class="form-text text-muted opacity-50">Stop time</small>
+                        <input class="form-control text-end" name="time1" value="<%= settings.time[1] %>" type="text">
+                    </div>
+                    <div class="col-1">
+                        <label class="form-check-label" for="scale">scale:</label>
+                    </div>
+                    <div class="col-1">
+                        <small class="form-text text-muted opacity-50">Time step</small>
+                        <input class="form-control form-check-input" name="scale" <%= settings.scale? 'checked': '' %> type="checkbox">
+                    </div>
+                    <div class="col-1">
+                        <label class="form-label" for="steps">steps, skips:</label>
+                    </div>
+                    <div class="col-2">
+                        <small class="form-text text-muted opacity-50">Total steps</small>
+                        <input class="form-control text-end" name="steps" value="<%= settings.step[0] %>" type="number">
+                    </div>
+                    <div class="col-2">
+                        <small class="form-text text-muted opacity-50">Output each n-th step</small>
+                        <input class="form-control text-end" name="skips" value="<%= settings.step[1] %>" type="number">
+                    </div>
+                </div>
+                <div class="row align-items-end">
+                    <div class="col-1">
+                        <label class="form-label" for="coordinate">(q, p) @ t0:</label>
+                    </div>
+                    <div class="col-4">
+                        <small class="form-text text-muted opacity-50">Coordinate</small>
+                        <input class="form-control text-end" name="coordinate" value="<%= settings.q0 %>" type="text">
+                    </div>
+                    <div class="col-4">
+                        <small class="form-text text-muted opacity-50">Momentum</small>
+                        <input class="form-control text-end" name="momentum" value="<%= settings.p0 %>" type="text">
+                    </div>
+                    <div class="col">
+                        <small class="form-text text-muted opacity-50">Calculate!</small>
+                        <input class="form-control btn btn-primary" name="submit" type="submit" value="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="message-input"></div>
+    <div id="table-output"></div>
+    <div id="stat-output"></div>
+
+<%- include('../partials/footer') %>
+</body>
+</html>
