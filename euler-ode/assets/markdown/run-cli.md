@@ -31,7 +31,7 @@ node cli-orbit.js |
 #### Node.js
 
 ```shell
-node.cli-orbit.js |
+node cli-orbit.js |
     node bin/${PROBLEM_ID}/filter-node.js
 ```
 

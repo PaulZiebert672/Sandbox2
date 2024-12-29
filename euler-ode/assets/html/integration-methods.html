@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="integration methods">
+    <meta name="author" content="paul">
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <link rel="stylesheet" href="../../css/methods.css" type="text/css">
+    <title>Integration methods</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="head-model">Integration methods</h1>
+        <div>
+            <h2 class="head-model">Generic</h2>
+            <table class="table-out">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Title</th>
+                        <th>Order</th>
+                        <th>Explicit</th>
+                        <th>Symmetric</th>
+                        <th>Symplectic</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>euler10</td>
+                        <td>Euler explicit</td>
+                        <td class="vfield">1</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>euler11</td>
+                        <td>Euler implicit</td>
+                        <td class="vfield">1</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>rk20</td>
+                        <td>explicit midpoint</td>
+                        <td class="vfield">2</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>rk21</td>
+                        <td>explicit trapezoidal</td>
+                        <td class="vfield">2</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>imp20</td>
+                        <td>implicit midpoint</td>
+                        <td class="vfield">2</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td>[euler11+euler10]</td>
+                    </tr>
+                    <tr>
+                        <td>imp21</td>
+                        <td>implicit trapezoidal</td>
+                        <td class="vfield">2</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td>[euler10+euler11]</td>
+                    </tr>
+                    <tr>
+                        <td>rk4</td>
+                        <td>classical Runge-Kutta</td>
+                        <td class="vfield">4</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td>most widely known</td>
+                    </tr>
+                    <tr>
+                        <td>rk6</td>
+                        <td>Runge-Kutta 6-th order</td>
+                        <td class="vfield">6</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>verner8</td>
+                        <td>Cooper-Verner</td>
+                        <td class="vfield">8</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>gauss4</td>
+                        <td>Gauss collocation</td>
+                        <td class="vfield">4</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>gauss6</td>
+                        <td>Gauss collocation</td>
+                        <td class="vfield">6</td>
+                        <td></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>           
+
+            <h2 class="head-model">Partitioned</h2>
+            <table class="table-out">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Title</th>
+                        <th>Order</th>
+                        <th>Explicit</th>
+                        <th>Symmetric</th>
+                        <th>Symplectic</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>euler1a</td>
+                        <td>Euler symplectic A</td>
+                        <td class="vfield">1</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>euler1b</td>
+                        <td>Euler symplectic B</td>
+                        <td class="vfield">1</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>verlet2</td>
+                        <td>Stoermer-Verlet</td>
+                        <td class="vfield">2</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td>[euler1a+euler1b]</td>
+                    </tr>
+                    <tr>
+                        <td>lobatto4</td>
+                        <td>Lobatto IIIA-IIIB pair</td>
+                        <td class="vfield">4</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>lobatto6</td>
+                        <td>Lobatto IIIA-IIIB pair</td>
+                        <td class="vfield">6</td>
+                        <td class="vlogical"></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>           
+
+            <h2 class="head-model">Composition</h2>
+            <table class="table-out">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Title</th>
+                        <th>Steps</th>
+                        <th>Order</th>
+                        <th>Symplectic</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>[.+.]</td>
+                        <td>simple composition</td>
+                        <td class="vfield">2</td>
+                        <td class="vfield"></td>
+                        <td class="vlogical"></td>
+                        <td>half step of method 1 and half step of method 2</td>
+                    </tr>
+                    <tr>
+                        <td>3j[.,<i>p</i>]</td>
+                        <td>three jump</td>
+                        <td class="vfield">3</td>
+                        <td class="vfield">+2</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td>second parameter is the order of symmetric method 1</td>
+                    </tr>
+                    <tr>
+                        <td>su[.,<i>p</i>]</td>
+                        <td>Suzuki composition</td>
+                        <td class="vfield">5</td>
+                        <td class="vfield">+2</td>
+                        <td class="vlogical"><input type="checkbox" checked="true" disabled></td>
+                        <td>second parameter is the order of symmetric method 1</td>
+                    </tr>
+                </tbody>
+            </table>           
+        </div>
+    </div>
+</body>
+</html>
+    

@@ -1,14 +1,15 @@
 #head-model {
-    font-family: helvetica;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     color: teal;
     font-size: 20px;
 }
 
 #output {
-    font-family: arial;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 2px 15px;
-    color: tomato;
+    color: seagreen;
+    font-size: 13px;
 }
 
 #table-out {
@@ -21,7 +22,8 @@
     display: table;
     width: 100%;
     table-layout: fixed;
-    background-color: lightseagreen;
+    background-color: turquoise;
+    color: teal;
 }
 
 #table-out tr.vpoint-data {
@@ -33,7 +35,7 @@
     font-size: 14px;
     border-bottom-width: thin;
     border-bottom-style: solid;
-    border-bottom-color: lightseagreen;
+    border-bottom-color: turquoise;
 }
 
 #table-body {
@@ -71,4 +73,12 @@ span.vfield input {
     font-family: monospace;
     font-size: 14px;
     color: blue;
+}
+
+span.vdata input {
+    text-align: left;
+    margin: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    color: slategrey;
 }

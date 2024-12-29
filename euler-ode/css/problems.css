@@ -1,0 +1,42 @@
+#head-model {
+    font-family: helvetica;
+    text-align: center;
+    color: teal;
+    font-size: 20px;
+}
+
+#table-out {
+    margin-left: 12px;
+    width: 96%;
+    min-width: 800px;
+    border-collapse: collapse;
+}
+
+#table-out thead {
+    width: 100%;
+    background-color: turquoise;
+    color: teal;
+}
+
+#table-out tr {
+    border-bottom-width: thin;
+    border-bottom-style: solid;
+    border-bottom-color: turquoise;
+}
+
+#table-out td.vdata {
+    text-align: left;
+    margin: 2px;
+    font-family: monospace;
+    font-size: 14px;
+    color: slategrey;
+}
+
+#table-out td.vfield {
+    text-align: right;
+    margin: 2px;
+    min-width: 120px;
+    font-family: monospace;
+    font-size: 14px;
+    color: blue;
+}

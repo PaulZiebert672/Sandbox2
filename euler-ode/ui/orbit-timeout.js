@@ -5,6 +5,31 @@ VoidCode.Orbit = function (config) {
     var _util = VoidCode.Util;
     this.id = _util.uniqueId('orbit');
     this.config = config;
+    this.collection = [];
+    this.instant = new Date().getTime();
+};
+
+VoidCode.Orbit.prototype.LIMIT = 600;
+VoidCode.Orbit.prototype.TIMEOUT = 180;
+
+VoidCode.Orbit.prototype.dump = function (pt) {
+    this.collection.push({
+        time: pt.t,
+        coordinate: pt.psi.q,
+        momentum: pt.psi.p,
+        invariant: pt.toValue()
+    });
+    var current = new Date().getTime();
+    if(this.collection.length >= this.LIMIT || current >= this.instant + this.TIMEOUT) {
+        // postMessage(this.collection);
+        this.collection = [];
+        this.instant = current;
+    }
+};
+
+VoidCode.Orbit.prototype.flush = function () {
+    // postMessage(this.collection);
+    this.collection = [];
 };
 
 VoidCode.Util.extend(
@@ -13,20 +38,17 @@ VoidCode.Util.extend(
 );
 
 VoidCode.Orbit.prototype.evolve = function () {
-    var Problem = VoidCode.Problem;
-    var Psi = VoidCode.Psi;
-    var Point = VoidCode.Point;
-    var Limit = VoidCode.Limit;
     var Config = this.config;
-    // console.log(JSON.stringify(Config));
+    var Problem = VoidCode.Problem,
+        Point = VoidCode.Point,
+        Psi = VoidCode.Psi,
+        Limit = VoidCode.Limit;
     var t0 = Config.time[0], t1 = Config.time[1];
     var pt = Point.create({
         "t": t0,
         "psi": new Psi(Config.psi0)
     }, Config);
-    var nMax = Config.step[0];
-    var nSkip = Config.step[1];
-    var i = 0; /* index of current time instance, i=0..nMax-1 */
+    var nMax = Config.step[0], nSkip = Config.step[1];
     var tau, h;
     var collection = [], dump = function (pt) {
         console.log(pt);
@@ -37,6 +59,7 @@ VoidCode.Orbit.prototype.evolve = function () {
             invariant: pt.toValue()
         });
     };
+    /* scale time if necessary */
     if(Config.scale && Problem[Config.id].hasOwnProperty('period')) {
         tau = Problem[Config.id].period.call(pt, pt.toValue());
         if(!isNaN(tau - parseFloat(tau))) {
@@ -45,12 +68,7 @@ VoidCode.Orbit.prototype.evolve = function () {
         }
     }
     pt.t = t0;
-    h = (t1 - t0) / nMax;
-    // outModel.set({
-    //     title: Problem[Config.id].title,
-    //     integrator: Config.integrator,
-    //     h: h,
-    // });
+    h = (t1 - t0)/nMax;
     /* try to hold coordinates in prescribed limits */
     var limits = null;
     if(Problem[Config.id].hasOwnProperty('limits')) {
@@ -58,6 +76,8 @@ VoidCode.Orbit.prototype.evolve = function () {
             return Limit.normalizeQ(q, Problem[Config.id].limits);
         };
     }
+
+    var i = 0; /* index of current time instance, i=0..nMax-1 */
     var chunk = function () {
         var k = 0; /* chunk counter */
         do {

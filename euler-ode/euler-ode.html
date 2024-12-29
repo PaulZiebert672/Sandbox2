@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="numerical integration">
     <meta name="author" content="paul">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Numerical integration</title>
 </head>
@@ -31,13 +32,13 @@
                 <span class="vlabel">
                     <label for="params">params:</label>
                 </span>
-                <span class="vselect">
+                <span class="vdata">
                     <input name="params" value="<%= params %>" size="40" type="text">
                 </span>
             </div>
             <div>
                 <span class="vlabel">
-                    <label for="time0">t0, t1:</label>
+                    <label for="time0">t<sub>0</sub>, t<sub>1</sub>:</label>
                 </span>
                 <span class="vfield">
                     <input name="time0" value="<%= time0 %>" size="24" type="text">
@@ -59,7 +60,7 @@
             </div>
             <div>
                 <span class="vlabel">
-                    <label for="coordinate">(q, p) @ t0:</label>
+                    <label for="coordinate">(q, p) @ t<sub>0</sub>:</label>
                 </span>
                 <span class="vfield">
                     <input name="coordinate" value="<%= coordinate %>" size="36" type="text">
@@ -80,7 +81,7 @@
         <script type="text/template" id="table-out-template">
             <thead>
                 <tr>
-                    <th>Time</th>
+                    <th>t</th>
                     <th>q</th>
                     <th>p</th>
                     <th>Invariant</th>

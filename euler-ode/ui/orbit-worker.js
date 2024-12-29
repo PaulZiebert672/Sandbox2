@@ -19,7 +19,7 @@ importScripts(
 );
 
 onmessage = function (e) {
-    const config = JSON.parse(e.data);
+    var config = JSON.parse(e.data);
     var Problem = VoidCode.Problem,
         Point = VoidCode.Point,
         Psi = VoidCode.Psi,
@@ -30,17 +30,7 @@ onmessage = function (e) {
         "psi": new Psi(config.psi0)
     }, config);
     var nMax = config.step[0], nSkip = config.step[1];
-    var i = 0; /* index of current time instance, i=0..nMax-1 */
     var tau, h;
-    var collection = [], dump = function (pt) {
-        collection.push({
-            time: pt.t,
-            coordinate: pt.psi.q,
-            momentum: pt.psi.p,
-            invariant: pt.toValue()
-        });
-    };
-    var limits = null;
     /* scale time if necessary */
     if(config.scale && Problem[config.id].hasOwnProperty('period')) {
         tau = Problem[config.id].period.call(pt, pt.toValue());
@@ -52,24 +42,47 @@ onmessage = function (e) {
     pt.t = t0;
     h = (t1 - t0)/nMax;
     /* try to keep coordinates in prescribed limits */
+    var limits = null;
     if(Problem[config.id].hasOwnProperty('limits')) {
         limits = function (q) {
             return Limit.normalizeQ(q, Problem[config.id].limits);
         };
     }
-    dump(pt);
+
+    var ResultBundle = function () {
+        this.collection = [];
+        this.instant = new Date().getTime();
+    };
+    ResultBundle.prototype.LIMIT = 600;
+    ResultBundle.prototype.TIMEOUT = 180;
+    ResultBundle.prototype.dump = function (pt) {
+        this.collection.push({
+            time: pt.t,
+            coordinate: pt.psi.q,
+            momentum: pt.psi.p,
+            invariant: pt.toValue()
+        });
+        var current = new Date().getTime();
+        if(this.collection.length >= this.LIMIT || current >= this.instant + this.TIMEOUT) {
+            postMessage(this.collection);
+            this.collection = [];
+            this.instant = current;
+        }
+    };
+    ResultBundle.prototype.flush = function () {
+        postMessage(this.collection);
+        this.collection = [];
+    };
+    var bundle = new ResultBundle();
+
+    var i = 0; /* index of current time instance, i=0..nMax-1 */
+    bundle.dump(pt);
     do {
         pt.integrator(h);
         limits && (pt.psi.q = limits(pt.psi.q));
         if(++i%nSkip === 0) {
-            dump(pt);
-        }
-        if(collection.length >= 12) { /* magic number */
-            postMessage(collection);
-            collection = [];
+            bundle.dump(pt);
         }
     } while(i < nMax);
-    if(collection.length > 0) {
-        postMessage(collection);
-    }
+    bundle.flush();
 };

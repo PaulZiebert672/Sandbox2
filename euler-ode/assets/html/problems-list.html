@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="problems list">
+    <meta name="author" content="paul">
+    <link rel="icon" type="image/png" href="../../img/favicon.png">
+    <link rel="stylesheet" href="../../css/problems.css" type="text/css">
+    <title>Problems list</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="head-model">Problems list</h1>
+        <div>
+            <table id="table-out">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Problem_id</th>
+                        <th rowspan="2">Title</th>
+                        <th rowspan="2">Params</th>
+                        <th rowspan="2">Scale</th>
+                        <th colspan="2">Initial values</th>
+                    </tr>
+                    <tr>
+                        <th>q @ t<sub>0</sub></th>
+                        <th>p @ t<sub>0</sub></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>mp</td>
+                        <td>Mathematical pendulum</td>
+                        <td class="vdata"></td>
+                        <td><input type="checkbox" name="select" checked="true"></td>
+                        <td class="vfield">0</td>
+                        <td class="vfield">1</td>
+                    </tr>
+                    <tr>
+                        <td>kepler</td>
+                        <td>Kepler problem</td>
+                        <td class="vdata"></td>
+                        <td><input type="checkbox" name="select" checked="true"></td>
+                        <td class="vfield">[ 1, 0 ]</td>
+                        <td class="vfield">[ 0, 1 ]</td>
+                    </tr>
+                    <tr>
+                        <td>lv</td>
+                        <td>Lotka-Volterra predator-prey model</td>
+                        <td class="vdata"></td>
+                        <td><input type="checkbox" name="select" checked="true"></td>
+                        <td class="vfield">1</td>
+                        <td class="vfield">0</td>
+                    </tr>
+                    <tr>
+                        <td>dpm</td>
+                        <td>Double pendulum (mathematical)</td>
+                        <td class="vdata"></td>
+                        <td></td>
+                        <td class="vfield">[ 0, 1.0471975511965976 ]</td>
+                        <td class="vfield">[ 0, 0 ]</td>
+                    </tr>
+                    <tr>
+                        <td>cr3bp</td>
+                        <td>Circular restricted 3-body problem</td>
+                        <td class="vdata">{ "mu": 0.001 }</td>
+                        <td></td>
+                        <td class="vfield">[ 0.5, 0.866, 0 ]</td>
+                        <td class="vfield">[ 0, 0, 0 ]</td>
+                    </tr>
+                    <tr>
+                        <td>vdpo</td>
+                        <td>Van der Pohl oscillator</td>
+                        <td class="vdata">{ "mu": 1.0 }</td>
+                        <td></td>
+                        <td class="vfield">0</td>
+                        <td class="vfield">1</td>
+                    </tr>
+                    <tr>
+                        <td>lorenz</td>
+                        <td>Lorenz attractor</td>
+                        <td class="vdata">{ "rho": 28.0, "sigma": 10.0, "beta": 2.6666666666666667 }</td>
+                        <td></td>
+                        <td class="vfield">[ 1, 1, 10 ]</td>
+                        <td class="vfield">[ 0, 0, 0 ]</td>
+                    </tr>
+                    <tr>
+                        <td>jacobi</td>
+                        <td>Jacobi elliptic functions</td>
+                        <td class="vdata">{ "k": 0.8 }</td>
+                        <td><input type="checkbox" name="select" checked="true"></td>
+                        <td class="vfield">[ 0, 1, 1 ]</td>
+                        <td class="vfield">[ 0, 0, 0 ]</td>
+                    </tr>
+                    <tr>
+                        <td>pot</td>
+                        <td>Pendulum on the circular tube</td>
+                        <td class="vdata">{ "rho": 0.5 }</td>
+                        <td><input type="checkbox" name="select" checked="true"></td>
+                        <td class="vfield">-1.5707963267948966</td>
+                        <td class="vfield">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
