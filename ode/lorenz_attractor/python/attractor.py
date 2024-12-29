@@ -1,12 +1,11 @@
 import matplotlib.pyplot as plt
-
 from scipy.integrate import solve_ivp
 
-u0 = [1.0, 0.0, 0.0]
+u0 = [1.0, 1.0, 10.0]
 params = [10.0, 28.0, 8/3]
 
-t_step = 0.01
-N_max = 10000
+t_step = 0.005
+N_max = 4801
 t_max = N_max*t_step
 
 def f(t, u):
@@ -20,15 +19,16 @@ sol = solve_ivp(
     u0,
     t_eval=[n*t_step for n in range(0, N_max)],
     method="DOP853",
-    rtol=1e-10,
-    atol=1e-9
+    rtol=5e-11,
+    atol=1e-11
 )
 
 fig = plt.figure(figsize=(8, 8))
-ax = fig.add_subplot(111, projection='3d')
+# ax = fig.add_subplot(111, projection='3d')
+ax = fig.add_subplot()
 ax.plot(
     sol.y[0, :],
-    sol.y[1, :],
+    # sol.y[1, :],
     sol.y[2, :],
     fillstyle='full',
     marker='o',
@@ -39,6 +39,7 @@ ax.plot(
 label = '%s' % params
 plt.suptitle("Lorenz attractor")
 plt.title(label, color='grey', size=8)
+plt.grid()
 
 plt.show()
 fig.savefig("orbit.png", dpi=150)

@@ -37,6 +37,6 @@ $$
 
 The system exhibits chaotic behavior for values near $\sigma = 10$, $\rho = 28$, $\beta = \frac{8}{3}$.
 
-For initial conditions $(1, 0, 0)$
+For initial conditions $(1, 1, 10)$
 
 ![lorenz-attractor-numeric-solution](plotutils/orbit.png)
